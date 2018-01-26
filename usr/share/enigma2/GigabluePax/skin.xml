@@ -172,19 +172,6 @@
 		<ePixmap name="menu-band" position="0,265" size="1280,242" pixmap="GigabluePax/construct/menu-band.png" alphatest="blend" zPosition="-3"/>
 		<eLabel position="645,91" zPosition="-2" size="412,565" backgroundColor="layer-a-background" foregroundColor="layer-a-background"/>
 	</screen>
-	<screen name="PANEL_BUTTONBAR_RGYB_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
-		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="353,680" size="30,40" alphatest="blend"/>
-		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="562,680" size="30,40" alphatest="blend"/>
-		<ePixmap pixmap="GigabluePax/buttons/key_yellow.png" position="771,680" size="30,40" alphatest="blend"/>
-		<ePixmap pixmap="GigabluePax/buttons/key_blue.png" position="976,680" size="30,40" alphatest="blend"/>
-		<widget name="key_red" position="378,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key_green" position="585,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key_yellow" position="795,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key_blue" position="998,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<ePixmap name="" position="358,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
-		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
-	</screen>
 	<screen name="PANEL_BUTTONBAR_SOURCE_RGYB_X">
 		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="353,680" size="30,40" alphatest="blend"/>
@@ -198,7 +185,7 @@
 		<ePixmap name="" position="358,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
-	<screen name="PANEL_BUTTONBAR_RGY_X">
+	<screen name="PANEL_BUTTONBAR_SOURCE_RGY_X">
 		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="777,680" size="30,40" alphatest="blend"/>
@@ -228,15 +215,6 @@
 		<widget source="key_red" render="Label" position="603,685" size="170,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<widget source="key_green" render="Label" position="800,685" size="170,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<widget source="key_yellow" render="Label" position="1005,685" size="170,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<ePixmap name="" position="583,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
-		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
-	</screen>
-	<screen name="PANEL_BUTTONBAR_RG_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
-		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
-		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="882,680" size="30,40" alphatest="blend"/>
-		<widget name="key_red" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<widget name="key_green" position="907,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<ePixmap name="" position="583,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
@@ -387,7 +365,7 @@
 	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_BUTTONBAR_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<eLabel position="0,75" zPosition="-10" size="1280,585" backgroundColor="layer-b-background"/>
 		<eLabel position="426,58" zPosition="-1" size="835,612" backgroundColor="layer-a-background"/>
 		<eLabel text="Channel selection" position="1,1" size="1,1" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-a-background"/>
@@ -447,7 +425,7 @@
 	<screen name="MovieSelection" position="0,0" size="1280,720" title="Select a movie" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_BUTTONBAR_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<eLabel text="Select a movie" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-a-background"/>
 		<eLabel position="0,90" zPosition="-10" size="1280,570" backgroundColor="layer-b-background"/>
 		<widget source="Title" render="Label" position="430,85" size="780,45" font="SetrixHD; 29" backgroundColor="layer-a-background" transparent="1"/>
@@ -474,7 +452,7 @@
 	</screen>
 	<screen name="EPGSelectionMulti" position="0,0" size="1280,720" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<panel name="PANEL_BUTTONBAR_MENU"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/epgselectionmulti.png" position="137,289" size="200,200" alphatest="blend"/>
 		<eLabel text="EPG Selection" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-a-background"/>
@@ -496,7 +474,7 @@
 	<screen name="EventView" position="0,0" size="1280,720" title="Eventview" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_BUTTONBAR_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/eventview.png" position="187,289" size="200,200" alphatest="blend"/>
 		<eLabel position="536,65" zPosition="-2" size="686,605" backgroundColor="layer-a-background"/>
 		<ePixmap name="menu-band" position="-50,265" size="1337,242" pixmap="GigabluePax/construct/menu-band.png" alphatest="blend" zPosition="-3"/>
@@ -764,7 +742,7 @@
 	<screen name="SimpleChannelSelection" position="0,0" size="1280,721" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap position="137,289" size="200,200" zPosition="2" pixmap="GigabluePax/construct/plugins/eventview.png" transparent="1" alphatest="blend"/>
 		<eLabel text="Channel Selection" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-a-background"/>
 		<widget source="Title" render="Label" position="476,75" size="744,45" font="SetrixHD; 29" backgroundColor="layer-a-background" transparent="1" noWrap="1"/>
@@ -1055,7 +1033,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	</screen>
 	<screen position="0,0" size="1280,721" name="ZapHistoryBrowser" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap name="menu-band" position="-50,265" size="1341,242" pixmap="GigabluePax/construct/menu-band.png" alphatest="blend" zPosition="-2"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/zaphistory.png" position="187,289" size="200,200" alphatest="blend"/>
 		<eLabel position="542,65" zPosition="-1" size="700,600" backgroundColor="layer-a-background"/>
@@ -1107,7 +1085,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 		<widget source="AboutHeader" render="Label" position="369,0" size="560,46" font="SetrixHD; 32" transparent="1" valign="top" zPosition="100" backgroundColor="layer-a-background" noWrap="1" />
 		<eLabel position="645,91" zPosition="-1" size="590,580" backgroundColor="layer-a-background" />
 		<widget name="AboutScrollLabel" split="1" dividechar=":" position="665,105" size="570,560" valign="top" font="Regular; 20" backgroundColor="layer-a-background" transparent="1" halign="left" noWrap="1" />
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/key_info.png" alphatest="blend" zPosition="0"/>
 	</screen>
 	<screen name="CommitInfo" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
@@ -1243,7 +1221,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	</screen>
 	<screen name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<panel name="PANEL_BUTTONBAR_MENU"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/eventview.png" position="137,289" size="200,200" alphatest="blend"/>
 		<eLabel text="EPG Selection" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
@@ -1529,11 +1507,12 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" backgroundColor="layer-a-background" transparent="1" noWrap="1"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
 		<widget name="config" position="484,79" size="725,570" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 	</screen>
 	<screen name="Satfinder" position="0,0" size="1280,720" title="Satfinder" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RG_X"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/setup/scan.png" position="137,289" size="200,200" alphatest="blend"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-a-background"/>
 		<widget name="header" position="486,76" size="720,28" font="Regular;24" backgroundColor="layer-a-background" transparent="1" halign="center" noWrap="1"/>
@@ -1697,7 +1676,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="HddPartitions" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/devices.png" position="137,289" size="200,200" alphatest="blend"/>
 		<eLabel text="Partitions" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget name="label_disk" position="483,85" font="SetrixHD; 28" halign="center" size="725,40" valign="center" transparent="1"/>
@@ -1717,7 +1696,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="HddSetup" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/devices.png" position="137,289" size="200,200" alphatest="blend"/>
 		<eLabel text="Device List" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget source="menu" render="Listbox" position="483,85" size="725,560" scrollbarMode="showOnDemand" transparent="1">
@@ -1736,7 +1715,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="FlashOnline" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_MEDIUM"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/flashonline.png" position="237,289" size="200,200" alphatest="blend"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget name="info-online" position="615,87" zPosition="1" size="534,233" font="Regular; 22" halign="left" valign="top" backgroundColor="layer-a-background" transparent="1"/>
@@ -1745,7 +1724,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="doFlashImage" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_MEDIUM"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/flashonline.png" position="237,289" size="200,200" alphatest="blend"/>
 		<eLabel text="Flash On the fly (select a image)" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget name="imageList" position="623,85" zPosition="1" size="520,545" font="Regular;20" scrollbarMode="showOnDemand" transparent="1"/>
@@ -1753,7 +1732,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="ImageBackup" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_MEDIUM"/>
-		<panel name="PANEL_BUTTONBAR_RGY_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGY_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/backup.png" position="237,289" size="200,200" alphatest="blend"/>
 		<eLabel text="Image Backup" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget name="info-hdd" position="615,87" zPosition="1" size="534,150" font="SetrixHD; 22" halign="left" valign="top" transparent="1" backgroundColor="layer-a-background"/>
@@ -1822,7 +1801,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<!-- B2 -->
 	<screen name="GraphMultiEPG" position="0, 0" flags="wfNoBorder" transparent="0" title="Electronic Program Guide" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<panel name="PANEL_BUTTONBAR_MENU"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<eLabel position="61,65" zPosition="-1" size="1170,605" backgroundColor="layer-a-background"/>
@@ -1856,7 +1835,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	</screen>
 	<screen name="GraphMultiEPGList" position="0,0" transparent="0" size="1280,720" title="GraphMultiEPG Listmodus" flags="wfNoBorder" backgroundColor="layer-b-background">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<panel name="PANEL_BUTTONBAR_MENU"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<eLabel position="27,109" zPosition="-1" size="1226,561" backgroundColor="#00000000" foregroundColor="#00000000"/>
@@ -1900,7 +1879,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<eLabel position="645,91" zPosition="-1" size="590,580" backgroundColor="layer-a-background" />
 		<widget name="infotext" noWrap="1" split="1" dividechar=":" font="Regular; 20" position="665,105" size="580,560" backgroundColor="layer-a-background" transparent="1" />
 		<widget name="infolist" font="SetrixHD; 22" itemHeight="40" enableWrapAround="1" selectionDisabled="1" position="0,0" size="1,1" backgroundColor="layer-a-background" transparent="1" />
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 	</screen> -->
 <screen name="ServiceInfo" position="0,0" size="1280, 720" title="Serviceinfo" flags="wfNoBorder" backgroundColor="transparent" >
 	<panel name="PANEL_GIGABLUE_TOP"/>
@@ -1909,12 +1888,12 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<widget source="Title" render="Label" position="369,0" size="540,46" font="SetrixHD; 35" backgroundColor="layer-a-background" transparent="1" noWrap="1"/>
 	<eLabel position="570,91" zPosition="-1" size="665,580" backgroundColor="layer-a-background" />
 	<widget name="infolist" font="SetrixHD; 22" itemHeight="40" enableWrapAround="1" selectionDisabled="1" position="590,105" size="655,560" backgroundColor="layer-a-background" transparent="1" />
-	<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+	<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 </screen>
 	<screen name="OSD3DSetupScreen" position="0, 0" flags="wfNoBorder" title="OSD 3D setup" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RG_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RG_X"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/3d.png" position="137,289" size="200,200" alphatest="blend"/>
 		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
@@ -1928,7 +1907,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	</screen>
 	<screen name="SwapManager" position="0, 0" flags="wfNoBorder" title="Swap File Manager" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<panel name="PANEL_BUTTONBAR_RGY_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGY_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/swap.png" position="237,289" size="200,200" alphatest="blend"/>
 		<ePixmap name="menu-band" position="-100,265" size="1381,242" pixmap="GigabluePax/construct/menu-band.png" alphatest="blend" zPosition="-3"/>
 		<eLabel position="645,91" zPosition="-2" size="450,500" backgroundColor="layer-a-background" foregroundColor="layer-a-background"/>
@@ -2030,7 +2009,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="TimerEditList" position="0, 0" flags="wfNoBorder" title="Timer Editor" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/main/timer.png" position="137,289" size="200,200" alphatest="blend"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget name="timerlist" position="482,84" size="728,480" scrollbarMode="showOnDemand" transparent="1"/>
@@ -2042,7 +2021,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="TimerLog" position="0, 0" flags="wfNoBorder" title="Timer Editor" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/main/timer.png" position="137,289" size="200,200" alphatest="blend"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget name="loglist" position="482,84" size="728,480" font="Regular; 20" scrollbarMode="showOnDemand" transparent="1"/>
@@ -2559,7 +2538,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="NetworkSamba" title="Samba Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/network.png" position="137,289" size="200,200" alphatest="blend"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget name="lab1" position="483,165" size="180,30" font="Regular; 24" valign="center" transparent="0" halign="left" zPosition="3"/>
@@ -2571,7 +2550,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="NetworkNfs" title="NFS Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/network.png" position="137,289" size="200,200" alphatest="blend"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget name="lab1" position="500,200" size="180,30" font="Regular; 24" valign="center" transparent="0" halign="left" zPosition="3"/>
@@ -2730,7 +2709,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="MovieInfoSetup" position="center,center" size="1280,720" title="Movie Information Download Setup" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RG_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RG_X"/>
 		<widget source="Title" render="Label" position="369,-1" size="550,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<ePixmap position="137,289" size="200,200" zPosition="2" pixmap="GigabluePax/construct/plugins/themoviedb.png" transparent="1" alphatest="blend"/>
 		<widget name="config" position="475,80" size="740,570" scrollbarMode="showOnDemand"/>
@@ -2843,7 +2822,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	</screen>
 	<screen name="GBIpboxMenu" position="0, 0" flags="wfNoBorder" title="GigaBlue IPBox Client" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP" />
-		<panel name="PANEL_BUTTONBAR_RGYB_X" />
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X" />
 		<ePixmap name="menu-band" position="-100,265" size="1381,242" pixmap="GigabluePax/construct/menu-band.png" alphatest="blend" zPosition="-3" />
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0" />
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background" />
@@ -2872,7 +2851,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="OMBManagerList" position="0, 0" flags="wfNoBorder" title="OMBManagerList" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/teamblue.png" position="137,289" size="200,200" alphatest="blend"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget source="list" render="Listbox" position="482,84" size="728,561" zPosition="3" scrollbarMode="showOnDemand" transparent="1">
@@ -2971,7 +2950,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	<screen name="MenuSort" position="0,0" size="1280,720" title="MenuSort" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/teamblue.png" position="137,289" size="200,200" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_blue.png" position="570,6" size="30,40" alphatest="blend"/>
 		<eLabel text="MenuSort" position="369,0" size="200,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
