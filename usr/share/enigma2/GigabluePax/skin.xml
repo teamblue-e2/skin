@@ -172,16 +172,44 @@
 		<ePixmap name="menu-band" position="0,265" size="1280,242" pixmap="GigabluePax/construct/menu-band.png" alphatest="blend" zPosition="-3"/>
 		<eLabel position="645,91" zPosition="-2" size="412,565" backgroundColor="layer-a-background" foregroundColor="layer-a-background"/>
 	</screen>
+	<screen name="PANEL_BUTTONBAR_KEY_RED">
+		<ePixmap objectTypes="key_red,Button,Label" pixmap="GigabluePax/buttons/key_red.png" position="353,680" size="30,40" alphatest="blend"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Pixmap" pixmap="GigabluePax/buttons/key_red.png" position="353,680" size="30,40" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget objectTypes="key_red,Label,Button" name="key_red" position="378,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="378,685" size="180,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
+	</screen>
+	<screen name="PANEL_BUTTONBAR_KEY_GREEN">
+		<ePixmap objectTypes="key_green,Button,Label" pixmap="GigabluePax/buttons/key_green.png" position="562,680" size="30,40" alphatest="blend"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Pixmap" pixmap="GigabluePax/buttons/key_green.png" position="562,680" size="30,40" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget objectTypes="key_green,Label,Button" name="key_green" position="585,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="585,685" size="180,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
+	</screen>
+	<screen name="PANEL_BUTTONBAR_KEY_YELLOW">
+		<ePixmap objectTypes="key_yellow,Button,Label" pixmap="GigabluePax/buttons/key_yellow.png" position="771,680" size="30,40" alphatest="blend"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Pixmap" pixmap="GigabluePax/buttons/key_yellow.png" position="771,680" size="30,40" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="795,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="795,685" size="180,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
+	</screen>
+	<screen name="PANEL_BUTTONBAR_KEY_BLUE">
+		<ePixmap objectTypes="key_blue,Button,Label" pixmap="GigabluePax/buttons/key_blue.png" position="976,680" size="30,40" alphatest="blend"/>
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Pixmap" pixmap="GigabluePax/buttons/key_blue.png" position="976,680" size="30,40" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="998,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="998,685" size="180,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
+	</screen>
 	<screen name="PANEL_BUTTONBAR_SOURCE_RGYB_X">
+		<panel name="PANEL_BUTTONBAR_KEY_RED"/>
+		<panel name="PANEL_BUTTONBAR_KEY_GREEN"/>
+		<panel name="PANEL_BUTTONBAR_KEY_YELLOW"/>
+		<panel name="PANEL_BUTTONBAR_KEY_BLUE"/>
 		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
-		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="353,680" size="30,40" alphatest="blend"/>
-		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="562,680" size="30,40" alphatest="blend"/>
-		<ePixmap pixmap="GigabluePax/buttons/key_yellow.png" position="771,680" size="30,40" alphatest="blend"/>
-		<ePixmap pixmap="GigabluePax/buttons/key_blue.png" position="976,680" size="30,40" alphatest="blend"/>
-		<widget source="key_red" render="Label" position="378,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<widget source="key_green" render="Label" position="585,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<widget source="key_yellow" render="Label" position="795,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<widget source="key_blue" render="Label" position="998,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<ePixmap name="" position="358,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
