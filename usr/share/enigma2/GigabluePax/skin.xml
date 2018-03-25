@@ -123,6 +123,10 @@
 		<color name="ListboxMarkedAndSelectedForeground" color="layer-a-foreground"/>
 		<color name="WindowTitleForeground" color="layer-a-foreground"/>
 	</windowstyle>
+	<switchpixmap>
+		<pixmap name="menu_on" filename="GigabluePax/skin_default/icons/menu_on.png" />
+		<pixmap name="menu_off" filename="GigabluePax/skin_default/icons/menu_off.png" />
+	</switchpixmap>
 	<!-- PANELS -->
 	<screen name="PANEL_GIGABLUE_TOP">
 		<!-- MENU-TOP -->
