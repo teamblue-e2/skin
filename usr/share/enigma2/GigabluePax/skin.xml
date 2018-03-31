@@ -1552,13 +1552,21 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget source="Frontend" render="Label" position="617,210" size="80,25" zPosition="2" font="Regular;21" backgroundColor="layer-a-background" halign="left" transparent="1">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
-		<eLabel name="snr" text="SNR:" position="486,125" size="70,25" font="Regular; 21" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<eLabel name="" position="571,137" backgroundColor="layer-a-accent1" size="545,1" zPosition="-1"/>
-		<widget source="Frontend" render="Progress" position="571,133" size="545,10" backgroundColor="layer-a-progress" transparent="1" zPosition="5">
+		<eLabel name="snr" text="SNR:" position="486,85" size="70,25" font="Regular; 21" halign="left" backgroundColor="layer-a-background" transparent="1"/>
+		<eLabel name="" position="571,97" backgroundColor="layer-a-accent1" size="545,1" zPosition="-1"/>
+		<widget source="Frontend" render="Progress" position="571,93" size="545,10" backgroundColor="layer-a-progress" transparent="1" zPosition="5">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="1125,125" size=" 80,25" font="Regular; 21" backgroundColor="layer-a-background" transparent="1" halign="right" valign="center">
+		<widget source="Frontend" render="Label" position="1125,85" size=" 80,25" font="Regular; 21" backgroundColor="layer-a-background" transparent="1" halign="right" valign="center">
 			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel name="agc" text="AGC:" position="486,125" size="70,25" font="Regular; 21" halign="left" backgroundColor="layer-a-background" transparent="1"/>
+		<eLabel name="" position="571,137" backgroundColor="layer-a-accent1" size="545,1" zPosition="-1"/>
+		<widget source="Frontend" render="Progress" position="571,133" size="545,10" backgroundColor="layer-a-progress" transparent="1" zPosition="5">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="1125,125" size=" 80,25" font="Regular; 21" backgroundColor="layer-a-background" transparent="1" halign="right" valign="center">
+			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<eLabel name="ber" text="BER:" position="486,167" size="70,25" font="Regular; 21" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<eLabel name="" position="571,177" backgroundColor="layer-a-accent1" size="545,1" zPosition="-1"/>
