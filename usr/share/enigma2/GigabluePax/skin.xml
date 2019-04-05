@@ -15,7 +15,7 @@
 		<color name="green" value="#00389416"/>
 		<color name="grey" value="#00bbbbbb"/>
 		<color name="layer-a-accent1" value="#00cccccc"/>
-		<color name="layer-a-accent2" value="#00007eff"/>
+		<color name="layer-a-accent2" value="#0099c1ff"/>
 		<color name="layer-a-background" value="#10000000"/>
 		<color name="layer-a-foreground" value="#00ffffff"/>
 		<color name="layer-a-progress" value="#00007eff"/>
@@ -403,7 +403,7 @@
 		<eLabel text="Channel selection" position="1,1" size="1,1" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-a-background"/>
 		<widget source="Title" render="Label" position="360,6" size="550,45" font="Regular; 26" backgroundColor="layer-a-background" transparent="1" noWrap="1" />
 		<eLabel position="87,275" size="256,1" backgroundColor="layer-a-accent1" foregroundColor="layer-a-accent1"/>
-		<widget name="list" position="435,62" size="820,604" scrollbarMode="showNever" colorServiceDescription="layer-a-accent1" colorServiceDescriptionSelected="layer-a-foreground" colorEventProgressbarBorder="selection-background" colorEventProgressbarBorderSelected="layer-a-foreground" foregroundColorServiceNotAvail="#00555555" serviceItemHeight="30" serviceNumberFont="SetrixHD;24" serviceNameFont="SetrixHD;24" serviceInfoFont="Regular;22" transparent="1" foregroundColor="layer-a-accent2" backgroundColor="layer-a-background" itemHeight="30"/>
+		<widget name="list" position="435,62" size="820,604" scrollbarMode="showNever" colorServiceDescription="layer-a-accent1" colorServiceDescriptionSelected="layer-a-foreground" colorEventProgressbarBorder="selection-background" colorEventProgressbarBorderSelected="layer-a-foreground" foregroundColorServiceNotAvail="#00555555" serviceItemHeight="30" serviceNumberFont="SetrixHD;24" serviceNameFont="Regular;24" serviceInfoFont="Regular;22" transparent="1" foregroundColor="layer-a-accent2" backgroundColor="layer-a-background" itemHeight="30"/>
 		<widget source="ServiceEvent" render="Label" position="20,210" size="400,50" font="SetrixHD; 30" backgroundColor="layer-b-background" transparent="1" valign="bottom" noWrap="1">
 			<convert type="EventName">Name</convert>
 		</widget>
