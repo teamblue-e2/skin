@@ -1025,6 +1025,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 			<convert type="ValueRange">721,1980</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
+		<widget pixmap="GigabluePax/construct/iconbar/uhd.png" position="664,10" render="Pixmap" size="59,30" source="session.CurrentService" zPosition="2" alphatest="blend">
+			<convert type="ServiceInfo">VideoWidth</convert>
+			<convert type="ValueRange">1981,4096</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<ePixmap alphatest="blend" pixmap="GigabluePax/construct/iconbar/wide-off.png" position="612,10" size="59,30" zPosition="1"/>
 		<widget alphatest="blend" pixmap="GigabluePax/construct/iconbar/wide.png" position="612,10" render="Pixmap" size="59,30" source="session.CurrentService" zPosition="2">
 			<convert type="ServiceInfo">IsWidescreen</convert>
