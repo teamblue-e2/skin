@@ -124,8 +124,8 @@
 		<color name="WindowTitleForeground" color="layer-a-foreground"/>
 	</windowstyle>
 	<switchpixmap>
-		<pixmap name="menu_on" filename="GigabluePax/skin_default/icons/menu_on.png" />
-		<pixmap name="menu_off" filename="GigabluePax/skin_default/icons/menu_off.png" />
+		<pixmap name="menu_on" filename="GigabluePax/icons/menu_on.png" />
+		<pixmap name="menu_off" filename="GigabluePax/icons/menu_off.png" />
 	</switchpixmap>
 	<!-- PANELS -->
 	<screen name="PANEL_GIGABLUE_TOP">
@@ -1040,11 +1040,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/stream.png" size="26,23" position="1110,699" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="GigabluePax/icons/stream.png" size="26,23" position="1110,699" zPosition="1" alphatest="blend">
 			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.HddSleepingState" render="Pixmap" pixmap="skin_default/icons/hdd.png" size="24,21" position="1147,699" zPosition="1" alphatest="blend">
+		<widget source="session.HddSleepingState" render="Pixmap" pixmap="GigabluePax/icons/hdd.png" size="24,21" position="1147,699" zPosition="1" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.CurrentService" render="CiModuleControl" allVisible="1" position="1016,699" size="80,20" halign="left" valign="center" borderWidth="1" zPosition="1" backgroundColor="layer-a-background" foregroundColor="layer-a-accent1" transparent="1" font="Regular;16"/>
@@ -1584,11 +1584,11 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<eLabel name="lock" text="Lock:" position="486,210" size="90,25" font="Regular; 21" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<widget name="config" position="480,250" size="726,365" itemHeight="30" scrollbarMode="showOnDemand" transparent="1"/>
 		<widget name="introduction" position="486,622" size="720,31" font="Regular; 22" halign="center" backgroundColor="layer-a-background" transparent="1"/>
-		<widget source="Frontend" render="Pixmap" position="584,210" size=" 25,24" pixmap="skin_default/icons/lock_on.png" zPosition="1" alphatest="on">
+		<widget source="Frontend" render="Pixmap" position="584,210" size=" 25,24" pixmap="GigabluePax/icons/lock_on.png" zPosition="1" alphatest="on">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="Frontend" render="Pixmap" position="584,210" size=" 25,24" pixmap="skin_default/icons/lock_off.png" zPosition="1" alphatest="on">
+		<widget source="Frontend" render="Pixmap" position="584,210" size=" 25,24" pixmap="GigabluePax/icons/lock_off.png" zPosition="1" alphatest="on">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
@@ -1957,8 +1957,8 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<ePixmap name="menu-band" position="-100,265" size="1381,242" pixmap="GigabluePax/construct/menu-band.png" alphatest="blend" zPosition="-3"/>
 		<eLabel position="645,91" zPosition="-2" size="450,500" backgroundColor="layer-a-background" foregroundColor="layer-a-background"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
-		<widget name="autostart_off" pixmap="skin_default/icons/lock_off.png" position="660,107" size="24,24" zPosition="20" alphatest="blend"/>
-		<widget name="autostart_on" pixmap="skin_default/icons/lock_on.png" position="660,107" size="24,24" zPosition="20" alphatest="blend"/>
+		<widget name="autostart_off" pixmap="GigabluePax/icons/lock_off.png" position="660,107" size="24,24" zPosition="20" alphatest="blend"/>
+		<widget name="autostart_on" pixmap="GigabluePax/icons/lock_on.png" position="660,107" size="24,24" zPosition="20" alphatest="blend"/>
 		<widget name="lab1" position="696,106" size="380,60" font="Regular;20" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" valign="top" transparent="1"/>
 		<widget name="lab2" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" position="656,180" size="150,30" font="Regular;20" valign="center" transparent="1"/>
 		<widget name="lab3" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" position="657,230" size="150,30" font="Regular;20" valign="center" transparent="1"/>
@@ -2954,11 +2954,11 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget name="labstop" position="770,190" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
 		<widget name="labrun" position="770,190" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
 		<widget name="ci0" position="560,550" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1"/>
-		<widget name="ci0active" position="520,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on"/>
-		<widget name="ci0inactive" position="520,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on"/>
+		<widget name="ci0active" position="520,550" zPosition="1" pixmap="GigabluePax/icons/lock_on.png" size="32,32" alphatest="on"/>
+		<widget name="ci0inactive" position="520,550" zPosition="2" pixmap="GigabluePax/icons/lock_off.png" size="32,32" alphatest="on"/>
 		<widget name="ci1" position="890,550" size="300,30" font="Regular;22" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1"/>
-		<widget name="ci1active" position="850,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on"/>
-		<widget name="ci1inactive" position="850,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on"/>
+		<widget name="ci1active" position="850,550" zPosition="1" pixmap="GigabluePax/icons/lock_on.png" size="32,32" alphatest="on"/>
+		<widget name="ci1inactive" position="850,550" zPosition="2" pixmap="GigabluePax/icons/lock_off.png" size="32,32" alphatest="on"/>
 	</screen>
 	<screen name="CIHelperSetup" title="CIHelper Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
