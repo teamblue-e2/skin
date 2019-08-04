@@ -154,7 +154,7 @@
 		<!--	WEATHER WIDGET */ -->
 	</screen>
 	<screen name="PANEL_BUTTONBAR_MENUEDIT">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="562,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_yellow.png" position="771,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_blue.png" position="976,680" size="30,40" alphatest="blend"/>
@@ -213,12 +213,12 @@
 		<panel name="PANEL_BUTTONBAR_KEY_GREEN"/>
 		<panel name="PANEL_BUTTONBAR_KEY_YELLOW"/>
 		<panel name="PANEL_BUTTONBAR_KEY_BLUE"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="358,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_SOURCE_RGY_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="777,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_yellow.png" position="981,680" size="30,40" alphatest="blend"/>
@@ -229,7 +229,7 @@
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_SOURCE_RGB_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="777,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_blue.png" position="981,680" size="30,40" alphatest="blend"/>
@@ -240,7 +240,7 @@
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_SOURCE_RGY_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="777,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_yellow.png" position="981,680" size="30,40" alphatest="blend"/>
@@ -251,7 +251,7 @@
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_SOURCE_RG_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="882,680" size="30,40" alphatest="blend"/>
 		<widget source="key_red" render="Label" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
@@ -260,7 +260,7 @@
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_SOURCE_RB_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_blue.png" position="882,680" size="30,40" alphatest="blend"/>
 		<widget source="key_red" render="Label" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
@@ -269,7 +269,7 @@
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_RGB_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="564,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="772,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_blue.png" position="976,680" size="30,40" alphatest="blend"/>
@@ -280,25 +280,25 @@
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_MENU">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_menu.png" alphatest="blend" zPosition="10"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_menu.png" alphatest="blend" zPosition="10"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_R_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="879,680" size="30,40" alphatest="blend"/>
 		<widget name="key_red" position="903,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<ePixmap name="" position="883,680" size="400,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_SOURCE_R_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="879,680" size="30,40" alphatest="blend"/>
 		<widget source="key_red" render="Label" position="903,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<ePixmap name="" position="883,680" size="400,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_RY_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_yellow.png" position="882,680" size="30,40" alphatest="blend"/>
 		<widget name="key_red" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
@@ -307,7 +307,7 @@
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_SOURCE_RY_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_yellow.png" position="882,680" size="30,40" alphatest="blend"/>
 		<widget source="key_red" render="Label" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
@@ -316,19 +316,19 @@
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_OK_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_INFO_MENU_OK_X">
-		<ePixmap name="" position="943,680" size="94,40" pixmap="GigabluePax/buttons/key_info.png" alphatest="blend" zPosition="0"/>
-		<ePixmap name="" position="1023,680" size="94,40" pixmap="GigabluePax/buttons/key_menu.png" alphatest="blend" zPosition="0"/>
+		<ePixmap name="" position="943,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_info.png" alphatest="blend" zPosition="0"/>
+		<ePixmap name="" position="1023,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_menu.png" alphatest="blend" zPosition="0"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_X">
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="10"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="10"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_SOURCE_RGYB_MENU_X">
@@ -340,8 +340,8 @@
 		<widget source="key_green" render="Label" position="505,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<widget source="key_yellow" render="Label" position="715,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<widget source="key_blue" render="Label" position="918,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/key_menu.png" alphatest="blend" zPosition="1"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_menu.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="278,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
@@ -354,8 +354,8 @@
 		<widget name="key_green" position="505,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<widget name="key_yellow" position="715,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<widget name="key_blue" position="918,685" size="180,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
-		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/key_menu.png" alphatest="blend" zPosition="1"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_menu.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="278,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
@@ -365,7 +365,7 @@
 		<widget name="config" position="470,90" size="720,453" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" valign="top"/>
 		<eLabel position="450,70" zPosition="-1" size="760,585" backgroundColor="layer-a-background"/>
 		<!-- /*Buttons-->
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="882,680" size="30,40" alphatest="blend"/>
 		<widget name="key_red" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
@@ -760,7 +760,7 @@
 		<eLabel text="Tomorrow" position="1125,15" size="85,35" font="Regular; 16" foregroundColor="layer-a-accent1" transparent="1" zPosition="15" backgroundColor="layer-c-background" halign="left"/>
 		<ePixmap position="920,0" size="360,51" alphatest="blend" pixmap="GigabluePax/construct/general/weather-back.png" zPosition="11"/>
 		<!-- /*Buttons-->
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="882,680" size="30,40" alphatest="blend"/>
 		<widget name="key_red" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
@@ -806,7 +806,7 @@
 		<eLabel position="607,65" zPosition="-1" size="550,605" backgroundColor="layer-a-background"/>
 		<widget name="list" position="607,73" size="550,580" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" enableWrapAround="1" transparent="1"/>
 		<!-- /*Buttons-->
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="540,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="757,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_blue.png" position="1011,680" size="30,40" alphatest="blend"/>
@@ -845,7 +845,7 @@
 		</widget>
 		<!-- /*ClockWidget-->
 		<!-- /*Buttons-->
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_menu.png" alphatest="blend"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_menu.png" alphatest="blend"/>
 		<ePixmap name="" position="1083,680" size="150,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 		<!--Button */-->
@@ -1123,7 +1123,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 		<eLabel position="645,91" zPosition="-1" size="590,580" backgroundColor="layer-a-background" />
 		<widget name="AboutScrollLabel" split="1" dividechar=":" position="665,105" size="570,560" valign="top" font="Regular; 20" backgroundColor="layer-a-background" transparent="1" halign="left" noWrap="1" />
 		<panel name="PANEL_BUTTONBAR_SOURCE_RGYB_X"/>
-		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/key_info.png" alphatest="blend" zPosition="0"/>
+		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_info.png" alphatest="blend" zPosition="0"/>
 	</screen>
 	<screen name="CommitInfo" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -1298,7 +1298,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	</screen>
 	<screen name="ChoiceBox" position="0,0" size="1308,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/construct/general/choicebox.png" position="137,289" size="200,200" alphatest="blend"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
@@ -1315,7 +1315,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 		<ePixmap pixmap="GigabluePax/construct/plugins/gpaspectratio.png" zPosition="10" position="137,289" size="200,200" alphatest="blend"/>
 		<widget name="config" position="494,88" size="734,495" scrollbarMode="showOnDemand"/>
 		<widget name="label" position="493,589" size="734,60" font="SetrixHD;35" halign="center"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="882,680" size="30,40" alphatest="blend"/>
 		<widget name="buttonred" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
@@ -1369,7 +1369,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	</screen>
 	<screen name="DefaultWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="794,680" size="30,40" alphatest="blend"/>
 		<ePixmap name="" position="798,680" size="400,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
@@ -1392,7 +1392,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	</screen>
 	<screen name="StartWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="794,680" size="30,40" alphatest="blend"/>
 		<ePixmap name="" position="798,680" size="400,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
@@ -1424,7 +1424,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	</screen>
 	<screen name="RestoreWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="794,680" size="30,40" alphatest="blend"/>
 		<ePixmap name="" position="798,680" size="400,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
@@ -1446,7 +1446,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	</screen>
 	<screen name="ImageWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="794,680" size="30,40" alphatest="blend"/>
 		<ePixmap name="" position="798,680" size="400,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
@@ -1468,7 +1468,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
 	</screen>
 	<screen name="NetworkWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="794,680" size="30,40" alphatest="blend"/>
 		<ePixmap name="" position="798,680" size="400,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
@@ -1907,7 +1907,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<panel name="PANEL_BUTTONBAR_SOURCE_RG_X"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/eventview.png" position="137,289" size="200,200" alphatest="blend"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="882,680" size="30,40" alphatest="blend"/>
 		<widget name="canceltext" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
@@ -1941,7 +1941,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<panel name="PANEL_BUTTONBAR_SOURCE_RG_X"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/3d.png" position="137,289" size="200,200" alphatest="blend"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="882,680" size="30,40" alphatest="blend"/>
 		<widget name="cancel" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
@@ -1975,7 +1975,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<ePixmap pixmap="GigabluePax/construct/menu/main/timer.png" position="137,289" size="200,200" alphatest="blend"/>
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget name="entries" position="482,84" size="728,561" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="562,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_yellow.png" position="771,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_blue.png" position="976,680" size="30,40" alphatest="blend"/>
@@ -2043,7 +2043,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background"/>
 		<widget name="HelpWindow" position="31,79" size="1,1" zPosition="1" transparent="1" alphatest="blend"/>
 		<widget name="config" position="482,84" size="728,426" itemHeight="30" scrollbarMode="showOnDemand" transparent="1"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="583,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 		<panel name="PANEL_BUTTONBAR_SOURCE_RGY_X"/>
@@ -2215,7 +2215,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 			</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="480,605" size="730,40" font="Regular;22" halign="right" backgroundColor="layer-a-background" transparent="1"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 	</screen>
 	<screen name="UserManager" position="0, 0" flags="wfNoBorder" title="UserManager" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2347,7 +2347,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="883,685" size="290,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="358,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 		<eLabel name="" position="485,295" size="730,1" backgroundColor="layer-a-accent1" zPosition="1"/>
@@ -2396,7 +2396,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget name="activityslider" position="483,240" size="730,5" borderWidth="0" pixmap="GigabluePax/colors/00007eff.png" transparent="1" zPosition="30"/>
 		<eLabel backgroundColor="layer-a-accent1" position="483,177" size="730,1"/>
 		<eLabel backgroundColor="layer-a-accent1" position="483,242" size="730,1"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 	</screen>
 	<screen name="IpkgInstaller" position="0, 0" flags="wfNoBorder" title="IpkgInstaller" transparent="0" backgroundColor="transparent" size="1280, 720">
@@ -2448,7 +2448,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	</screen>
 	<screen name="LanguageWizard" position="0, 0" flags="wfNoBorder" title="Welcome..." transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="794,680" size="30,40" alphatest="blend"/>
 		<ePixmap name="" position="798,680" size="400,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
@@ -2472,7 +2472,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 	</screen>
 	<screen name="VideoWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="794,680" size="30,40" alphatest="blend"/>
 		<ePixmap name="" position="798,680" size="400,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
@@ -2623,7 +2623,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget source="eta" render="Label" position="17,621" size="615,40" font="Regular;23" foregroundColor="white" backgroundColor="#00000000" text="Time:"/>
 		<widget source="speed" render="Label" position="641,621" size="615,40" halign="left" font="Regular; 23" foregroundColor="green" backgroundColor="#00000000" text="Speed:"/>
 		<widget source="progress" render="Progress" position="18,600" size="1237,15"/>
-		<ePixmap name="" position="274,680" size="94,40" pixmap="GigabluePax/buttons/key_menu.png" alphatest="blend" zPosition="10"/>
+		<ePixmap name="" position="274,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_menu.png" alphatest="blend" zPosition="10"/>
 	</screen>
 	<screen name="FTPQueueManager" title="FTP Warteschlange" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2708,8 +2708,8 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget source="Manage Cover" render="Label" position="855,685" size="170,26" zPosition="1" font="SetrixHD; 23" halign="left" backgroundColor="layer-a-background" transparent="1"/>
 		<ePixmap name="" position="433,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
-		<ePixmap name="" position="1023,680" size="94,40" pixmap="GigabluePax/buttons/key_menu.png" alphatest="blend" zPosition="10"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1023,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_menu.png" alphatest="blend" zPosition="10"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
 	</screen>
 	<screen name="imdbSetup" position="center,center" size="1280,720" title="EMC Cover search setup" backgroundColor="transparent">
@@ -2870,7 +2870,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget source="Title" render="Label" position="369,-1" size="540,46" font="SetrixHD; 35" transparent="1" valign="top" zPosition="0" backgroundColor="layer-b-background" />
 		<ePixmap pixmap="GigabluePax/picon_default.png" position="125,320" size="220,132" alphatest="blend" />
 		<eLabel position="462,65" zPosition="-2" size="769,605" backgroundColor="layer-a-background" />
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1" />
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1" />
 		<ePixmap name="" position="583,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend" />
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend" />
 		<widget name="config" position="482,79" size="728,450" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" transparent="1" zPosition="1" />
@@ -2884,7 +2884,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget source="Title" render="Label" position="333,3" size="596,45" font="Regular; 32" backgroundColor="layer-a-background" transparent="1" noWrap="1"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/main/timer.png" position="137,289" size="200,200" alphatest="blend"/>
 		<ePixmap name="" position="1103,680" size="94,40" pixmap="GigabluePax/buttons/ok.png" alphatest="blend" zPosition="0"/>
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend" zPosition="1"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
 		<ePixmap name="" position="583,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<ePixmap name="" position="1187,680" size="200,40" pixmap="GigabluePax/construct/general/button-back-light.png" zPosition="-1" alphatest="blend"/>
 		<widget name="config" position="450,79" size="800,466" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" font="Regular; 18"/>
@@ -2909,7 +2909,7 @@ MultiContentEntryText(pos = (50, 43), size = (640, 60), font = 1, flags = RT_HAL
 		<widget name="choosen" position="842,86" size="350,555" scrollbarMode="showOnDemand"/>
 		<eLabel position="476,70" zPosition="-1" size="735,585" backgroundColor="layer-a-background"/>
 		<!-- /*Buttons-->
-		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/key_exit.png" alphatest="blend"/>
+		<ePixmap name="" position="1183,680" size="94,40" pixmap="GigabluePax/buttons/buttonbar_exit.png" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_red.png" position="580,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePax/buttons/key_green.png" position="882,680" size="30,40" alphatest="blend"/>
 		<widget name="key_red" position="603,685" size="270,26" zPosition="1" font="Regular; 20" halign="left" backgroundColor="layer-a-background" transparent="1"/>
