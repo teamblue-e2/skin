@@ -83,7 +83,7 @@
 		<!-- PluginBrowser -->
 		<parameter name="PluginBrowserName" value="140,1,30"/>
 		<parameter name="PluginBrowserDescr" value="140,27,26"/>
-		<parameter name="PluginBrowserIcon" value="26,5,100,40"/>
+		<parameter name="PluginBrowserIcon" value="10,5,100,40"/>
 		<parameter name="PluginBrowserDownloadName" value="83,1,30"/>
 		<parameter name="PluginBrowserDownloadDescr" value="83,27,26"/>
 	</parameters>
@@ -870,21 +870,21 @@
 		<!-- MENU-TOP -->
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/setup/ci.png" position="237,289" size="200,200" alphatest="blend"/>
-		<panel name="PANEL_MENU_BAND_2"/>
+		<panel name="PANEL_MENU_BAND_2_100"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
 		<panel name="PANEL_BUTTONBAR_X"/>
-		<eLabel position="607,65" zPosition="-1" size="550,605" backgroundColor="Paxbg1"/>
 		<eLabel text="Common Interface" position="369,-1" size="540,46" font="SetrixHD2; 35" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
-		<widget name="text" position="616,73" size="530,60" font="SetrixHD2; 28" backgroundColor="Paxbg1" transparent="1"/>
-		<widget name="entries" position="616,145" size="530,500" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="text" position="484,74" size="725,60" font="SetrixHD2; 28" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="entries" position="484,144" size="725,480" itemHeight="32" font="Regular;21" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="CIconfigMenu" position="0,0" size="1280,720" title="CI Assignments" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/setup/ci.png" position="237,289" size="200,200" alphatest="blend"/>
-		<panel name="PANEL_MENU_BAND_2"/>
-		<eLabel position="607,65" zPosition="-1" size="654,605" backgroundColor="Paxbg1"/>
+		<panel name="PANEL_MENU_BAND_2_100"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
 		<eLabel text="CI Assignments" position="369,-1" size="540,46" font="SetrixHD2; 35" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
-		<widget name="ServiceList" position="617,76" size="630,583" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="ServiceList" position="484,84" size="725,512" itemHeight="32" font="Regular;21" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="menu_shutdown" position="0,0" size="1280,720" title="Main menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
@@ -1015,7 +1015,7 @@
 		<panel name="PANEL_MENU"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/system/general.png" position="237,289" size="200,200" alphatest="blend"/>
 	</screen>
-	<screen name="menu_scan" position="0,0" size="1280,721" title="Scan menu" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="menu_scan" position="0,0" size="1280,720" title="Scan menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
 		<panel name="BAR_ICON_SET_SCAN"/>
 	</screen>
@@ -1085,7 +1085,7 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
-	<screen name="menu_harddisk_menu" position="0,0" size="1280,721" title="Scan menu" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="menu_harddisk_menu" position="0,0" size="1280,720" title="Scan menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
 		<panel name="BAR_ICON_DEVICES"/>
 	</screen>
@@ -1110,7 +1110,7 @@
 		<ePixmap position="920,0" size="360,51" alphatest="blend" pixmap="GigabluePax/construct/general/weather-back.png" zPosition="11"/>
 		<panel name="PANEL_BUTTONBAR_RG_X"/>
 	</screen>
-	<screen name="SimpleChannelSelection" position="0,0" size="1280,721" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="SimpleChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
@@ -1137,13 +1137,13 @@
 		<widget name="UnhandledKeyPixmap" pixmap="GigabluePax/construct/general/forbidden.png" position="365,0" size="48,48" zPosition="1" transparent="0" alphatest="blend"/>
 		<eLabel position="450,-1" size="400,43" font="SetrixHD2; 35" transparent="1" valign="center" zPosition="1" text="Unsupported"/>
 	</screen>
-	<screen name="PluginBrowser" position="0,0" size="1280,721" title="Plugin browser" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_BUTTONBAR_RGB_MENU_X_PB"/>
 		<eLabel text="Plugin Browser" position="369,-1" size="540,46" font="SetrixHD2; 35" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/main/plugins.png" position="237,289" size="200,200" alphatest="blend"/>
-		<panel name="PANEL_WINDOW_MEDIUM"/>
-		<widget name="list" enableWrapAround="1" scrollbarMode="showOnDemand" position="595,94" size="574,550" transparent="1" />
+		<panel name="PANEL_WINDOW_LARGE"/>
+		<widget backgroundColor="Paxbg1" name="list" position="484,88" size="725,550" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	</screen>
 	<screen name="MediaPlayer" position="center,center" size="1280,720" title="MediaPlayer" flags="wfNoBorder" transparent="0" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -1323,7 +1323,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="yellow" position="270,415" zPosition="1" size="135,40" transparent="1" alphatest="on" />
 		<widget name="blue" position="405,415" zPosition="1" size="135,40" transparent="1" alphatest="on" />
 	</screen>
-	<screen name="InfoBar" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,721">
+	<screen name="InfoBar" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<!-- InfoWidget -->
 		<ePixmap name="info-widget" position="821,534" size="460,51" pixmap="GigabluePax/construct/infowidget.png" alphatest="blend" zPosition="-1"/>
@@ -1447,14 +1447,23 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			<convert type="ServiceInfo">VideoHeight</convert>
 		</widget>
 	</screen>
-	<screen name="ZapHistoryBrowser" position="0,0" size="1280,721" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="ZapHistoryBrowser" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 		<pannel name="PANEL_MENU_BAND_2_100"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/zaphistory.png" position="237,289" size="200,200" alphatest="blend"/>
 		<eLabel position="542,65" zPosition="-1" size="700,600" backgroundColor="Paxbg1"/>
 		<eLabel text="Zap-History Browser" noWrap="1" position="369,-1" size="540,46" font="SetrixHD2; 35" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
-		<widget name="list" position="557,78" size="672,576" scrollbarMode="showOnDemand" itemHeight="50"/>
+		<widget name="list" position="557,78" size="672,576" scrollbarMode="showOnDemand" itemHeight="50" transparent="1"/>
+	</screen>
+	<screen name="ZapHistoryConfigurator" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+		<eLabel text="Zap-History Browser" noWrap="1" position="369,-1" size="540,46" font="SetrixHD2; 35" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
+		<ePixmap pixmap="GigabluePax/construct/plugins/zaphistory.png" position="237,289" size="200,200" alphatest="blend"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
+		<panel name="PANEL_KEY_OK_2"/>
+		<panel name="PANEL_KEY_EXIT"/>
+		<widget name="config" position="482,84" size="725,480" font="Regular;21" itemHeight="32" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="FileBrowser" position="0,0" size="1280,720" title="DVD File Browser" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -1641,7 +1650,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="chapter" position="35,15" size="110,25" font="SetrixHD2;23"/>
 		<widget name="number" position="145,15" size="80,25" halign="right" font="SetrixHD2;23"/>
 	</screen>
-	<screen name="NumberZap" position="0,0" size="1280,721" title="QuickZap" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="NumberZap" position="0,0" size="1280,720" title="QuickZap" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/numberzap.png" position="237,289" size="200,200" alphatest="blend"/>
 		<eLabel text="QuickZap" position="369,-1" size="540,46" font="SetrixHD2; 35" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
@@ -1733,12 +1742,12 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<ePixmap pixmap="GigabluePax/construct/plugins/hdmicec.png" position="237,289" size="200,200" alphatest="blend"/>
 		<panel name="TITLE_UC"/>
 		<panel name="PANEL_MENU_BAND_2_100"/>
-		<eLabel position="477,66" size="769,600" backgroundColor="Paxbg1" zPosition="-1" />
-		<widget name="config" zPosition="2" position="491,76" size="741,491" scrollbarMode="showOnDemand" transparent="1"/>
-		<widget source="current_address" render="Label" position="493,581" size="500,30" zPosition="10" font="Regular;21" halign="left" valign="center"/>
-		<widget source="fixed_address" render="Label" position="493,621" size="500,30" zPosition="10" font="Regular;21" halign="left" valign="center"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
+		<widget name="config" position="484,84" size="725,448" itemHeight="32" font="Regular;21" backgroundColor="Paxbg1" scrollbarMode="showOnDemand" transparenz="1"/>
+		<widget source="current_address" render="Label" position="484,545" size="725,27" font="Regular;20" foregroundColor="PaxDescription" halign="center" transparenz="1"/>
+		<widget source="fixed_address" render="Label" position="484,580" size="725,27" font="Regular;20" foregroundColor="PaxDescription" halign="center" transparenz="1"/>
 	</screen>
-	<screen name="OpenWebifConfig" position="0,0" size="1280,721" title="OpenWebif Configuration" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="OpenWebifConfig" position="0,0" size="1280,720" title="OpenWebif Configuration" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_BUTTONBAR_RG_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/openwebif.png" position="237,289" size="200,200" alphatest="blend"/>
@@ -2174,9 +2183,18 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	<screen name="RemoteControlCode" position="0,0" size="1280,720" title="Select Medium" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_BUTTONBAR_RG_OK_X"/>
-		<panel name="PANEL_WINDOW_MEDIUM"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="615,87" zPosition="1" size="534,571" font="SetrixHD2; 30" itemHeight="60" backgroundColor="Paxbg1" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="484,84" size="725,512" itemHeight="32" font="Regular;21" backgroundColor="Paxbg1" scrollbarMode="showOnDemand" transparenz="1"/>
+		<ePixmap pixmap="GigabluePax/construct/plugins/remote.png" position="237,289" size="200,200" alphatest="blend"/>
+	</screen>
+	<screen name="InputDeviceSetup" position="0,0" size="1280,720" title="" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+		<panel name="PANEL_BUTTONBAR_RG_OK_X"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
+		<panel name="TITLE_UC"/>
+		<widget name="config" position="484,84" size="725,480" itemHeight="32" font="Regular;21" backgroundColor="Paxbg1" scrollbarMode="showOnDemand" transparenz="1"/>
+		<widget source="introduction" render="Label" position="484,580" size="725,27" font="Regular;20" backgroundColor="Paxbg1" foregroundColor="PaxDescription" halign="center" transparenz="1"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/remote.png" position="237,289" size="200,200" alphatest="blend"/>
 	</screen>
 	<screen name="AdapterSetup" position="0,0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
@@ -2272,7 +2290,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="temp" position="483,330" size="520,25" font="SetrixHD2; 22"/>
 		<widget name="config" position="483,360" scrollbarMode="showOnDemand" size="728,30"/>
 	</screen>
-	<screen name="setup_harddisk" title="Hard disk setup" position="0,0" size="1280,721" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="setup_harddisk" title="Hard disk setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
 		<panel name="PANEL_BUTTONBAR_RG_X"/>
@@ -2626,8 +2644,8 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RGY_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="484,84" size="725,501" font="Regular;21" itemHeight="32" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
-		<widget source="introduction" render="Label" position="484,600" size="725,27" font="Regular;20" backgroundColor="Paxbg1" foregroundColor="PaxDescription" halign="center" transparent="1"/>
+		<widget name="config" position="484,84" size="725,480" font="Regular;21" itemHeight="32" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget source="introduction" render="Label" position="484,580" size="725,27" font="Regular;20" backgroundColor="Paxbg1" foregroundColor="PaxDescription" halign="center" transparent="1"/>
 	</screen>
 	<screen name="NetworkAdapterTest" position="0, 0" flags="wfNoBorder" transparent="0" title="Network test..." backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2635,38 +2653,38 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RG_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget name="Adaptertext" position="483,119" size="400,25" zPosition="1" font="Regular;22" backgroundColor="Paxbg1" transparent="1"/>
-		<widget name="Adapter" position="483,150" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="Adaptertext" position="483,119" size="400,27" zPosition="1" font="Regular;20" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="Adapter" position="483,150" size="400,27" zPosition="1" font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="AdapterInfo_OK" position="938,134" size=" 30,30" pixmap="GigabluePax/buttons/key_green.png" zPosition="2" alphatest="blend"/>
-		<widget name="AdapterInfo_Text" position="976,131" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="AdapterInfo_Text" position="976,131" size="200,34" zPosition="2" font="Regular;20" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="AdapterInfo" position="976,131" size="200,34" pixmaps="GigabluePax/construct/general/lan-seloff.png,GigabluePax/construct/general/lan-sel.png" zPosition="1" alphatest="blend"/>
 		<eLabel position="483,185" size="700, 2" backgroundColor="PaxLine2"/>
-		<widget name="Networktext" position="483,200" size="400,25" zPosition="1" font="Regular;22" backgroundColor="Paxbg1" transparent="1"/>
-		<widget name="Network" position="483,230" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="Networktext" position="483,200" size="400,27" zPosition="1" font="Regular;20" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="Network" position="483,230" size="400,27" zPosition="1" font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="NetworkInfo_Check" position="938,216" size=" 30,30" pixmaps="GigabluePax/buttons/key_green.png,GigabluePax/buttons/key_red.png" zPosition="2" alphatest="blend"/>
-		<widget name="NetworkInfo_Text" position="976,211" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="NetworkInfo_Text" position="976,211" size="200,34" zPosition="2" font="Regular;20" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="NetworkInfo" position="976,210" size="200,35" pixmaps="GigabluePax/construct/general/lan-seloff.png,GigabluePax/construct/general/lan-sel.png" zPosition="1" alphatest="blend"/>
 		<eLabel position="483,265" size="700, 2" backgroundColor="PaxLine2"/>
-		<widget name="Dhcptext" position="483,280" size="400,25" zPosition="1" font="Regular;22" backgroundColor="Paxbg1" transparent="1"/>
-		<widget name="Dhcp" position="483,310" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="Dhcptext" position="483,280" size="400,27" zPosition="1" font="Regular;20" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="Dhcp" position="483,310" size="400,27" zPosition="1" font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="DhcpInfo_Check" position="938,296" size=" 30,30" pixmaps="GigabluePax/buttons/key_green.png,GigabluePax/buttons/key_red.png" zPosition="2" alphatest="blend"/>
-		<widget name="DhcpInfo_Text" position="976,290" size="200,35" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="DhcpInfo_Text" position="976,290" size="200,35" zPosition="2" font="Regular;20" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="DhcpInfo" position="976,290" size="200,35" pixmaps="GigabluePax/construct/general/lan-seloff.png,GigabluePax/construct/general/lan-sel.png" zPosition="1" alphatest="blend"/>
 		<eLabel position="483,345" size="700, 2" backgroundColor="PaxLine2"/>
-		<widget name="IPtext" position="483,360" size="400,25" zPosition="1" font="Regular;22" backgroundColor="Paxbg1" transparent="1"/>
-		<widget name="IP" position="483,390" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="IPtext" position="483,360" size="400,27" zPosition="1" font="Regular;20" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="IP" position="483,390" size="400,27" zPosition="1" font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="IPInfo_Check" position="938,376" size=" 30,30" pixmaps="GigabluePax/buttons/key_green.png,GigabluePax/buttons/key_red.png" zPosition="2" alphatest="blend"/>
-		<widget name="IPInfo_Text" position="976,371" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="IPInfo_Text" position="976,371" size="200,34" zPosition="2" font="Regular;20" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="IPInfo" position="976,370" size="200,35" pixmaps="GigabluePax/construct/general/lan-seloff.png,GigabluePax/construct/general/lan-sel.png" zPosition="1" alphatest="blend"/>
 		<eLabel position="483,425" size="700, 2" backgroundColor="PaxLine2"/>
-		<widget name="DNStext" position="483,440" size="400,25" zPosition="1" font="Regular;22" backgroundColor="Paxbg1" transparent="1"/>
-		<widget name="DNS" position="483,470" size="400,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="DNStext" position="483,440" size="400,27" zPosition="1" font="Regular;20" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="DNS" position="483,470" size="400,27" zPosition="1" font="Regular;20" foregroundColors="#8c8c93,#f23d21,#1cff1c" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="DNSInfo_Check" position="938,456" size=" 30,30" pixmaps="GigabluePax/buttons/key_green.png,GigabluePax/buttons/key_red.png" zPosition="2" alphatest="blend"/>
-		<widget name="DNSInfo_Text" position="976,451" size="200,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="DNSInfo_Text" position="976,451" size="200,34" zPosition="2" font="Regular;20" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="DNSInfo" position="976,450" size="200,35" pixmaps="GigabluePax/construct/general/lan-seloff.png,GigabluePax/construct/general/lan-sel.png" zPosition="1" alphatest="blend"/>
-		<widget name="EditSettings_Text" position="485,531" size="300,34" zPosition="2" font="Regular;22" halign="center" valign="center" foregroundColors="grey,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="EditSettings_Text" position="485,530" size="300,34" zPosition="2" font="Regular;20" halign="center" valign="center" foregroundColors="grey,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="EditSettingsButton" position="485,530" size="300,35" pixmaps="GigabluePax/construct/general/lan-seloff.png,GigabluePax/construct/general/lan-sel300.png" zPosition="2" alphatest="blend"/>
-		<widget name="InfoText" position="482,118" size="700,387" zPosition="25" font="Regular;22" valign="center" halign="center" transparent="0"/>
+		<widget name="InfoText" position="482,118" size="700,387" zPosition="25" font="Regular;20" valign="center" halign="center" transparent="0"/>
 	</screen>
 	<screen name="NetworkAdapterSelection" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2674,7 +2692,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<eLabel text="Select a network adapter" position="369,-1" size="540,46" font="SetrixHD2; 35" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
-		<widget source="list" render="Listbox" position="483,85" size="725,500" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="484,84" size="725,450" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (10, 10), size = (54, 54), png = 3), # index 3 is the interface pixmap
@@ -2682,12 +2700,12 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 					MultiContentEntryText(pos = (100, 2), size = (520, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
 					MultiContentEntryText(pos = (100, 42), size = (520, 25), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
 				],
-				"fonts": [gFont("SetrixHD2", 28),gFont("SetrixHD2", 20)],
+				"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
 				"itemHeight": 75
 				}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="483,600" size="725,30" font="SetrixHD2;22" halign="center" backgroundColor="Paxbg2" transparent="1" zPosition="5"/>
+		<widget source="introduction" render="Label" position="483,580" size="725,27" font="Regular;20" halign="center" backgroundColor="Paxbg2" foregroundColor="PaxDescription" transparent="1" zPosition="5"/>
 	</screen>
 	<screen name="ScanIP" position="0, 0" flags="wfNoBorder" title="Network Neighbourhood" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2695,7 +2713,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RGY_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="480,90" size="730,500" zPosition="3" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="484,84" size="725,480" itemHeight="32" font="Regular;21" zPosition="3" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="AutoMountManager" position="0, 0" flags="wfNoBorder" title="AutoMountManager" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2703,19 +2721,19 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_R_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget source="config" render="Listbox" position="480,80" size="730,480" scrollbarMode="showOnDemand" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" transparent="1">
+		<widget source="config" render="Listbox" position="484,84" size="725,480" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (60, 5), size = (620, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
-						MultiContentEntryText(pos = (70, 35), size = (610, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
+						MultiContentEntryText(pos = (60, 3), size = (620, 29), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+						MultiContentEntryText(pos = (70, 33), size = (610, 22), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
 						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 3), # index 4 is the pixmap
 					],
-				"fonts": [gFont("Regular", 22),gFont("Regular", 16)],
+				"fonts": [gFont("Regular", 21),gFont("Regular", 16)],
 				"itemHeight": 60
 				}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="484,600" size="725,27" font="Regular;20" halign="center" foregroundColor="PaxDescription" backgroundColor="Paxbg1" transparent="1"/>
+		<widget source="introduction" render="Label" position="484,580" size="725,27" font="Regular;20" halign="center" foregroundColor="PaxDescription" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="AutoMountEdit" position="0, 0" flags="wfNoBorder" title="MountEdit" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2723,7 +2741,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_R_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="480,80" size="730,363" itemHeight="30" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="config" position="484,84" size="725,320" itemHeight="32" font="Regular;21" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" transparent="1"/>
 		<widget name="HelpWindow" position="560,505" zPosition="1" size="1,1" transparent="1" alphatest="blend"/>
 		<widget source="introduction" render="Label" position="484,450" size="725,27" font="Regular;20" halign="center" foregroundColor="PaxDescription" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
@@ -2733,20 +2751,20 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RY_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget source="legend1" render="Label" position="480,90" size="189,65" font="Regular;20" halign="center" valign="center" transparent="1"/>
-		<widget source="legend2" render="Label" position="674,90" size="360,65" font="Regular;20" halign="center" valign="center" transparent="1"/>
-		<widget source="legend3" render="Label" position="1036,90" size="172,65" font="Regular;20" halign="center" valign="center" transparent="1"/>
-		<widget source="config" render="Listbox" position="480,165" size="730,420" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" scrollbarMode="showOnDemand" transparent="1">
+		<widget backgroundColor="Paxbg1" source="legend1" render="Label" position="480,90" size="189,65" font="Regular;20" halign="center" valign="center" transparent="1"/>
+		<widget backgroundColor="Paxbg1" source="legend2" render="Label" position="674,90" size="360,65" font="Regular;20" halign="center" valign="center" transparent="1"/>
+		<widget backgroundColor="Paxbg1" source="legend3" render="Label" position="1036,90" size="172,65" font="Regular;20" halign="center" valign="center" transparent="1"/>
+		<widget source="config" render="Listbox" position="484,165" size="725,420" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (40, 6), size = (48, 48), png = 0), # index 0 is the isMounted pixmap
-						MultiContentEntryText(pos = (210, 5), size = (200, 28), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the sharename
-						MultiContentEntryText(pos = (390, 8), size = (250, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the IPdescription
-						MultiContentEntryText(pos = (210, 35), size = (350, 20), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the DIRdescription
+						MultiContentEntryText(pos = (210, 3), size = (200, 29), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the sharename
+						MultiContentEntryText(pos = (390, 6), size = (250, 22), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the IPdescription
+						MultiContentEntryText(pos = (210, 33), size = (350, 22), font=1, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the DIRdescription
 						MultiContentEntryPixmapAlphaTest(pos = (600, 15), size = (48, 48), png = 4), # index 4 is the activepng pixmap
 						MultiContentEntryPixmapAlphaTest(pos = (630, 6), size = (48, 48), png = 5), # index 4 is the mounttype pixmap
 					],
-				"fonts": [gFont("SetrixHD2", 22),gFont("SetrixHD2", 17)],
+				"fonts": [gFont("Regular", 21),gFont("Regular", 16)],
 				"itemHeight": 60
 				}
 			</convert>
@@ -2760,18 +2778,18 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RY_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget source="config" render="Listbox" position="480,90" size="730,480" zPosition="3" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="config" render="Listbox" position="484,84" size="725,480" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (80, 4), size = (590, 50), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 3), # index 4 is the status pixmap
 					],
-				"fonts": [gFont("SetrixHD2", 40)],
+				"fonts": [gFont("Regular", 40)],
 				"itemHeight": 60
 				}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="484,600" size="725,27" font="Regular;20" halign="center" foregroundColor="PaxDescription" backgroundColor="Paxbg1" transparent="1"/>
+		<widget source="introduction" render="Label" position="484,580" size="725,27" font="Regular;20" halign="center" foregroundColor="PaxDescription" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="NetworkBrowser" position="0, 0" flags="wfNoBorder" title="Network Neighbourhood" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2779,22 +2797,22 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget source="list" render="Listbox" position="480,90" size="730,480" zPosition="3" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="484,84" size="725,480" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 1), # index 1 is the expandable/expanded/verticalline icon
 						MultiContentEntryText(pos = (70, 4), size = (600, 26), font=2, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the Hostname
-						MultiContentEntryText(pos = (160, 5), size = (510, 25), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the sharename
-						MultiContentEntryText(pos = (160, 32), size = (510, 17), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 4 is the sharedescription
+						MultiContentEntryText(pos = (160, 3), size = (510, 29), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is the sharename
+						MultiContentEntryText(pos = (160, 33), size = (510, 22), font=1, flags = RT_HALIGN_LEFT, text = 4), # index 4 is the sharedescription
 						MultiContentEntryPixmapAlphaTest(pos = (65, 6), size = (48, 48), png = 5), # index 5 is the nfs/cifs icon
 						MultiContentEntryPixmapAlphaTest(pos = (110, 6), size = (48, 48), png = 6), # index 6 is the isMounted icon
 					],
-				"fonts": [gFont("SetrixHD2", 22),gFont("SetrixHD2", 17),gFont("SetrixHD2", 24)],
+				"fonts": [gFont("Regular", 21),gFont("Regular", 16),gFont("Regular", 24)],
 				"itemHeight": 60
 				}
 			</convert>
 		</widget>
-		<widget source="infotext" render="Label" position="484,600" size="725,27" font="Regular;20" halign="center" foregroundColor="PaxDescription" backgroundColor="Paxbg1" transparent="1"/>
+		<widget source="infotext" render="Label" position="484,580" size="725,27" font="Regular;20" halign="center" foregroundColor="PaxDescription" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="NetworkPassword" position="0, 0" flags="wfNoBorder" title="Password" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2802,9 +2820,9 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RG_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="480,80" size="730,363" itemHeight="30" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" scrollbarMode="showOnDemand" transparent="1"/>
-		<widget name="HelpWindow" position="560,480" zPosition="1" size="1,1" transparent="1" alphatest="blend"/>
-		<widget source="description" render="Label" position="483,515" size="725,135" font="Regular;20" halign="center" valign="center" backgroundColor="Paxbg1" transparent="1" zPosition="2" foregroundColor="PaxDescription"/>
+		<widget name="config" position="484,84" size="725,64" itemHeight="32" font="Regular;21" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+		<widget name="HelpWindow" position="560,505" zPosition="1" size="1,1" transparent="1" alphatest="blend"/>
+		<widget source="description" render="Label" position="484,300" size="725,135" font="Regular;20" halign="center" valign="center" backgroundColor="Paxbg1" transparent="1" zPosition="2" foregroundColor="PaxDescription"/>
 	</screen>
 	<screen name="NetworkMacSetup" position="0, 0" title="MAC-adress settings" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2812,8 +2830,8 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RG_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="480,80" size="730,363" itemHeight="30" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" scrollbarMode="showOnDemand" transparent="1"/>
-		<widget source="introduction" render="Label" position="480,630" size="730,27" font="Regular;20" halign="center" valign="center" backgroundColor="Paxbg1" transparent="1" foregroundColor="PaxDescription"/>
+		<widget name="config" position="484,84" size="725,384" itemHeight="32" font="Regular;21" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+		<widget source="introduction" render="Label" position="484,580" size="725,27" font="Regular;20" halign="center" valign="center" backgroundColor="Paxbg1" transparent="1" foregroundColor="PaxDescription"/>
 	</screen>
 	<screen name="IPv6Setup" position="0, 0" title="IPv6 setup" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2821,8 +2839,8 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RG_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="480,80" size="730,363" itemHeight="30" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" scrollbarMode="showOnDemand" transparent="1"/>
-		<widget source="introduction" render="Label" position="480,630" size="730,27" font="Regular;20" halign="center" valign="center" backgroundColor="Paxbg1" transparent="1" foregroundColor="PaxDescription"/>
+		<widget name="config" position="484,84" size="725,384" itemHeight="32" font="Regular;21" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+		<widget source="introduction" render="Label" position="484,580" size="725,27" font="Regular;20" halign="center" valign="center" backgroundColor="Paxbg1" transparent="1" foregroundColor="PaxDescription"/>
 	</screen>
 	<screen name="LanguageSelection" position="0, 0" flags="wfNoBorder" transparent="0" title="Setup Language" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2830,13 +2848,13 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_OK_X"/>
 		<ePixmap pixmap="GigabluePax/construct/plugins/language.png" position="237,289" size="200,200" alphatest="blend"/>
 		<panel name="TITLE_UC"/>
-		<widget source="languages" render="Listbox" position="480,85" size="730,560" zPosition="3" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="languages" render="Listbox" position="484,84" size="725,540" zPosition="3" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (130, 17), size = (550, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
 				MultiContentEntryPixmap(pos = (20, 10), size = (60, 40), png = 2), # index 2 is the pixmap
 				],
-				"fonts": [gFont("SetrixHD2", 24)],
+				"fonts": [gFont("Regular", 24)],
 				"itemHeight": 60
 				}
 			</convert>
@@ -2851,7 +2869,8 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_OK_X"/>
 		<panel name="BAR_ICON_SYS_SOFT"/>
 		<panel name="TITLE_UC"/>
-		<widget name="list" position="482,94" size="725,550" zPosition="4" scrollbarMode="showOnDemand" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" transparent="1"/>
+		<widget name="list" position="484,84" size="725,500" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+		<widget backgroundColor="Paxbg1" font="Regular;20" foregroundColor="PaxDescription" halign="center" name="text" position="484,605" size="725,27" transparent="1" valign="center" zPosition="1" />
 	</screen>
 	<screen name="VirtualKeyBoard" position="0, 0" flags="wfNoBorder" zPosition="100" transparent="0" title="Virtual KeyBoard" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -2952,7 +2971,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RG_X"/>
 		<panel name="BAR_ICON_SYS_SOFT"/>
 		<panel name="TITLE_UC"/>
-		<widget name="list" position="483,90" size="730,550" itemHeight="30" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="list" position="484,84" size="725,480" itemHeight="32" font="Regular;21" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	</screen>
 	<screen name="SecondInfoBar" title="InfoBar" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="InfoBar"/>
@@ -3043,7 +3062,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_WINDOW_LARGE"/>
 		<panel name="TITLE_UC"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/main/setup.png" position="237,289" size="200,200" alphatest="blend"/>
-		<widget name="menu" position="480,80" size="730,540" itemHeight="35" scrollbarMode="showNever" enableWrapAround="1" transparent="1"/>
+		<widget name="menu" position="484,84" size="725,480" itemHeight="32" font="Regular;21" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	</screen>
 	<screen name="MovieBrowserConfiguration" position="center,center" size="1280,720" title="Film Liste Einstellungen" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -3051,9 +3070,9 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<ePixmap pixmap="GigabluePax/construct/menu/main/setup.png" position="237,289" size="200,200" alphatest="blend"/>
 		<panel name="TITLE_UC"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
-		<widget name="config" position="480,80" size="730,363" itemHeight="30" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="config" position="484,84" size="725,480" itemHeight="32" font="Regular;21" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 		<widget name="HelpWindow" position="560,505" zPosition="1" size="1,1" transparent="1" alphatest="blend"/>
-		<widget name="description" position="480,450" size="730,25" font="Regular; 18" halign="right" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="description" position="484,450" size="725,27" font="Regular; 20" halign="right" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="BouquetSelector" position="center,center" size="1280,720" title="Bouquets add services" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -3071,11 +3090,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget name="lab1" position="483,165" size="180,30" font="Regular; 24" valign="center" transparent="0" halign="left" zPosition="3"/>
-		<widget name="labactive" position="693,166" size="200,30" font="Regular; 24" valign="center" transparent="0" zPosition="3"/>
-		<widget name="lab2" position="483,332" size="180,30" font="Regular; 24" valign="center" transparent="0" halign="left" zPosition="3"/>
-		<widget name="labstop" position="693,332" size="200,30" font="Regular; 24" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
-		<widget name="labrun" position="693,332" size="200,30" zPosition="3" font="Regular; 24" valign="center" halign="center" backgroundColor="green"/>
+		<widget name="lab1" position="500,200" size="180,30" font="Regular; 21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labactive" position="750,200" size="200,30" font="Regular; 21" valign="center" transparent="0" zPosition="3"/>
+		<widget name="lab2" position="500,120" size="180,30" font="Regular; 21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labstop" position="750,120" size="200,30" font="Regular; 21" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
+		<widget name="labrun" position="750,120" size="200,30" zPosition="3" font="Regular; 21" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
 	<screen name="NetworkNfs" title="NFS Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -3083,13 +3102,13 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
-		<widget name="lab1" position="500,200" size="180,30" font="Regular; 24" valign="center" transparent="0" halign="left" zPosition="3"/>
-		<widget name="labactive" position="750,200" size="200,30" font="Regular; 24" valign="center" transparent="0" zPosition="3"/>
-		<widget name="lab2" position="500,120" size="180,30" font="Regular; 24" valign="center" transparent="0" halign="left" zPosition="3"/>
-		<widget name="labstop" position="750,120" size="200,30" font="Regular; 24" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
-		<widget name="labrun" position="750,120" size="200,30" zPosition="3" font="Regular; 24" valign="center" halign="center" backgroundColor="green"/>
-		<widget name="lab3" position="500,450" size="715,126" font="Regular; 24" valign="top" transparent="0" halign="left" zPosition="3"/>
-		<widget name="lab4" position="500,400" size="360,30" font="Regular; 24" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="lab1" position="500,200" size="180,30" font="Regular; 21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labactive" position="750,200" size="200,30" font="Regular; 21" valign="center" transparent="0" zPosition="3"/>
+		<widget name="lab2" position="500,120" size="180,30" font="Regular; 21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labstop" position="750,120" size="200,30" font="Regular; 21" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
+		<widget name="labrun" position="750,120" size="200,30" zPosition="3" font="Regular; 21" valign="center" halign="center" backgroundColor="green"/>
+		<widget name="lab3" position="500,450" size="715,126" font="Regular; 21" valign="top" transparent="0" halign="left" zPosition="3"/>
+		<widget name="lab4" position="500,400" size="360,30" font="Regular; 21" valign="center" transparent="0" halign="left" zPosition="3"/>
 	</screen>
 	<screen name="InetdRecovery" position="0,0" size="1280,720" title="Inetd Recovery" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -3097,7 +3116,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_MENU_BAND_2_100"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="482,84" size="725,450" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1" valign="top"/>
+		<widget name="config" position="484,84" size="725,480" itemHeight="32" font="Regular;21" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 		<panel name="PANEL_BUTTONBAR_RB_X"/>
 	</screen>
 	<screen name="NetworkLog" title="Network Log" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -3391,30 +3410,28 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	<screen name="HotkeySetup" position="0,0" size="1280,720" title="Input" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_BUTTONBAR_R_X"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
 		<ePixmap position="237,289" size="200,200" zPosition="2" pixmap="GigabluePax/construct/plugins/remote.png" transparent="1" alphatest="blend"/>
-		<panel name="PANEL_MENU_BAND_2_100"/>
-		<widget name="list" position="492,86" size="350,480" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
-		<widget name="choosen" position="842,86" size="350,505" scrollbarMode="showOnDemand"/>
-		<eLabel position="476,70" zPosition="-1" size="735,585" backgroundColor="Paxbg1"/>
-		<widget name="description" position="492,530" size="728,104" scrollbarMode="showOnDemand" backgroundColor="Paxbg1" transparent="1" zPosition="1" foregroundColor="PaxDescription" font="Regular;20"/>
+		<widget name="list" position="484,84" size="350,480" itemHeight="32" font="Regular;21" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="choosen" position="842,84" size="350,480" itemHeight="32" font="Regular;21" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="description" position="484,580" size="725,54" font="Regular;20" backgroundColor="Paxbg1" foregroundColor="PaxDescription" halign="center" valign="center" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="HotkeySetupSelect" position="0,0" size="1280,720" title="Input" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
-		<panel name="PANEL_BUTTONBAR_RG_X"/>
+		<panel name="PANEL_BUTTONBAR_R_X"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
 		<ePixmap position="237,289" size="200,200" zPosition="2" pixmap="GigabluePax/construct/plugins/remote.png" transparent="1" alphatest="blend"/>
-		<panel name="PANEL_MENU_BAND_2_100"/>
-		<widget name="list" position="492,86" size="710,480" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
-		<eLabel position="476,70" zPosition="-1" size="735,585" backgroundColor="Paxbg1"/>
-		<widget name="description" position="492,530" size="728,104" scrollbarMode="showOnDemand" backgroundColor="Paxbg1" transparent="1" zPosition="1" foregroundColor="PaxDescription" font="Regular;20"/>
+		<widget name="list" position="484,84" size="350,480" itemHeight="32" font="Regular;21" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="choosen" position="842,84" size="350,480" itemHeight="32" font="Regular;21" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="description" position="484,580" size="725,54" font="Regular;20" backgroundColor="Paxbg1" foregroundColor="PaxDescription" halign="center" valign="center" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
-
 	<screen name="AnimationSetupScreen" title="Animations Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_WINDOW_LARGE"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 		<panel name="BAR_ICON_TB"/>
 		<panel name="TITLE_UC"/>
-		<widget name="list" position="492,86" size="710,555" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="list" position="484,84" size="725,512" itemHeight="32" font="Regular;21" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="AnimationSetupConfig" title="Animations Speed" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -3422,7 +3439,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RGY_X"/>
 		<panel name="BAR_ICON_TB"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="492,86" size="710,555" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="config" position="484,84" size="725,512" itemHeight="32" font="Regular;21" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="ResolutionLabel" position="0,50" size="250,40" flags="wfNoBorder" backgroundColor="Paxbg1">
 		<widget name="content" position="10,0" size="230,20" font="SetrixHD2;16" valign="center"/>
@@ -3454,15 +3471,15 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_R_X"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/setup/ci.png" position="237,289" size="200,200" alphatest="blend"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="480,80" size="730,363" itemHeight="30" backgroundColor="Paxbg1" foregroundColor="PaxFont1" backgroundColorSelected="PaxSelection" foregroundColorSelected="PaxSelFont" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="config" position="484,84" size="725,480" itemHeight="32" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 	</screen>
 	<screen name="SoftcamStartup" title="SoftcamSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<panel name="PANEL_BUTTONBAR_RG_X"/>
 		<ePixmap pixmap="GigabluePax/construct/menu/setup/ci.png" position="128,285" size="200,200" alphatest="blend"/>
-		<panel name="PANEL_MENU_BAND_3"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="621,136" size="506,164" itemHeight="22" transparent="1" font="Regular; 18"/>
+		<widget name="config" position="484,84" size="725,480" itemHeight="32" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
 		<eLabel position="597,111" zPosition="-2" size="550,500" backgroundColor="Paxbg1"/>
 	</screen>
 	<screen name="StreamingClientsInfo" position="0,0" size="1280, 720" flags="wfNoBorder" title="StreamingClientsInfo" backgroundColor="transparent" >
