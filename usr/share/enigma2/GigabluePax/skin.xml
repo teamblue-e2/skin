@@ -1287,11 +1287,11 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	<screen name="InfoBar" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<!-- InfoWidget -->
-		<ePixmap name="info-widget" position="780,534" size="500,51" pixmap="GigabluePax/construct/infowidget.png" alphatest="blend" zPosition="-1"/>
-		<widget source="session.CurrentService" render="Label" position="900,538" size="373,40" font="SetrixHD; 29" halign="center" valign="center" noWrap="1" backgroundColor="Paxbg3" transparent="1" zPosition="1">
+		<ePixmap name="info-widget" position="760,534" size="520,51" pixmap="GigabluePax/construct/infowidget.png" alphatest="blend" zPosition="-1"/>
+		<widget source="session.CurrentService" render="Label" position="878,538" size="395,40" font="SetrixHD; 29" halign="center" valign="center" noWrap="1" backgroundColor="Paxbg3" transparent="1" zPosition="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.CurrentService" render="ChannelNumber" position="797,538" size="85,40" font="SetrixHD; 29" halign="center" valign="center" noWrap="1" backgroundColor="Paxbg1" transparent="1" zPosition="1"/>
+		<widget source="session.CurrentService" render="ChannelNumber" position="777,538" size="85,40" font="SetrixHD; 29" halign="center" valign="center" noWrap="1" backgroundColor="Paxbg1" transparent="1" zPosition="1"/>
 		<!-- InfoBar -->
 		<eLabel name="infobar-back" position="0,584" size="1280,136" zPosition="-2"/>
 		<widget source="session.CurrentService" render="Picon" position="19,595" size="190,114" transparent="1" alphatest="blend" zPosition="1">
