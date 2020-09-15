@@ -44,7 +44,7 @@ def main(session, **kwargs):
 		traceback.print_exc()
 
 def Plugins(**kwargs):
-	if config.skin.primary_skin.value == "GigabluePax/skin.xml":
+	if config.skin.primary_skin.value == "GigabluePaxV2/skin.xml":
 		list = []
 		list.append(PluginDescriptor(name="PaxWeather", description=_("PaxWeather-Settings"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main))
 		return list

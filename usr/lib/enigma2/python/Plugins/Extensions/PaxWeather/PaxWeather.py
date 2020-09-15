@@ -82,8 +82,8 @@ class PaxWeather(ConfigListScreen, Screen):
 				<widget source="global.CurrentTime" render="Label" position="227,3" size="100,45" font="Regular; 32" backgroundColor="#10000000" transparent="1" zPosition="1" halign="center">
 					<convert type="ClockToText">Default</convert>
 				</widget>
-				<ePixmap position="0,0" size="940,53" pixmap="/usr/share/enigma2/GigabluePax/construct/menu-top.png" alphatest="blend" zPosition="-2"/>
-				<ePixmap position="0,265" size="1280,242" pixmap="/usr/share/enigma2/GigabluePax/construct/menu-band.png" alphatest="blend" zPosition="-2"/>
+				<ePixmap position="0,0" size="940,53" pixmap="/usr/share/enigma2/GigabluePaxV2/construct/menu-top.png" alphatest="blend" zPosition="-2"/>
+				<ePixmap position="0,265" size="1280,242" pixmap="/usr/share/enigma2/GigabluePaxV2/construct/menu-band.png" alphatest="blend" zPosition="-2"/>
 				<widget source="Title" render="Label" position="369,0" size="540,46" font="SetrixHD; 35" backgroundColor="#10000000" transparent="1"/>
 				<widget name="config" position="492,86" size="700,150" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#10000000" transparent="1"/>
 				<eLabel position="476,70" zPosition="-1" size="735,585" backgroundColor="#10000000"/>
@@ -91,13 +91,13 @@ class PaxWeather(ConfigListScreen, Screen):
 				<widget source="key_red" render="Label" position="500,685" size="180,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="#10000000" transparent="1"/>
 				<widget source="key_green" render="Label" position="700,685" size="180,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="#10000000" transparent="1"/>
 				<widget source="key_yellow" render="Label" position="900,685" size="215,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="#10000000" transparent="1"/>
-				<ePixmap pixmap="/usr/share/enigma2/GigabluePax/construct/plugins/teamblue.png" position="237,289" size="200,200" alphatest="blend"/>
-				<ePixmap pixmap="/usr/share/enigma2/GigabluePax/buttons/key_red.png" position="475,680" size="30,40" alphatest="blend"/>
-				<ePixmap pixmap="/usr/share/enigma2/GigabluePax/buttons/key_green.png" position="675,680" size="30,40" alphatest="blend"/>
-				<ePixmap pixmap="/usr/share/enigma2/GigabluePax/buttons/key_yellow.png" position="875,680" size="30,40" alphatest="blend"/>
-				<ePixmap position="1103,680" size="94,40" pixmap="/usr/share/enigma2/GigabluePax/buttons/ok.png" alphatest="blend" zPosition="1"/>
-				<ePixmap position="1183,680" size="94,40" pixmap="/usr/share/enigma2/GigabluePax/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
-				<ePixmap position="475,680" size="900,40" pixmap="/usr/share/enigma2/GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
+				<ePixmap pixmap="/usr/share/enigma2/GigabluePaxV2/construct/plugins/teamblue.png" position="237,289" size="200,200" alphatest="blend"/>
+				<ePixmap pixmap="/usr/share/enigma2/GigabluePaxV2/buttons/key_red.png" position="475,680" size="30,40" alphatest="blend"/>
+				<ePixmap pixmap="/usr/share/enigma2/GigabluePaxV2/buttons/key_green.png" position="675,680" size="30,40" alphatest="blend"/>
+				<ePixmap pixmap="/usr/share/enigma2/GigabluePaxV2/buttons/key_yellow.png" position="875,680" size="30,40" alphatest="blend"/>
+				<ePixmap position="1103,680" size="94,40" pixmap="/usr/share/enigma2/GigabluePaxV2/buttons/ok.png" alphatest="blend" zPosition="1"/>
+				<ePixmap position="1183,680" size="94,40" pixmap="/usr/share/enigma2/GigabluePaxV2/buttons/buttonbar_exit.png" alphatest="blend" zPosition="1"/>
+				<ePixmap position="475,680" size="900,40" pixmap="/usr/share/enigma2/GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 			</screen>
 			"""
 
@@ -105,9 +105,9 @@ class PaxWeather(ConfigListScreen, Screen):
 		self.skin_lines = []
 		Screen.__init__(self, session)
 		self.session = session
-		copyfile("/usr/share/enigma2/GigabluePax/skin.xml", "/usr/lib/enigma2/python/Plugins/Extensions/PaxWeather/skin.xml")
+		copyfile("/usr/share/enigma2/GigabluePaxV2/skin.xml", "/usr/lib/enigma2/python/Plugins/Extensions/PaxWeather/skin.xml")
 		self.xmlfile = "/usr/lib/enigma2/python/Plugins/Extensions/PaxWeather/skin.xml"
-		self.skinfile = "/usr/share/enigma2/GigabluePax/skin.xml"
+		self.skinfile = "/usr/share/enigma2/GigabluePaxV2/skin.xml"
 		self.skinfile_tmp = self.skinfile + ".tmp"
 
 		list = []
