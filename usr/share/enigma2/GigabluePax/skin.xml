@@ -1326,7 +1326,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="229,661" size="903,50" font="Regular; 30" halign="left" backgroundColor="Paxbg1" transparent="1" foregroundColor="PaxFont1" valign="top" zPosition="-1" noWrap="1">
+		<widget source="session.Event_Next" render="Label" position="229,658" size="903,52" font="Regular; 30" halign="left" backgroundColor="Paxbg1" transparent="1" foregroundColor="PaxFont1" valign="top" zPosition="-1" noWrap="1">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="1175,684" size="82,28" font="Regular; 19" halign="right" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1">
@@ -1380,31 +1380,31 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="GigabluePaxV2/icons/stream.png" size="26,23" position="1110,699" zPosition="1" alphatest="blend">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="GigabluePaxV2/icons/stream.png" size="26,23" position="1110,697" zPosition="1" alphatest="blend">
 			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.HddSleepingState" render="Pixmap" pixmap="GigabluePaxV2/icons/hdd.png" size="24,21" position="1147,699" zPosition="1" alphatest="blend">
+		<widget source="session.HddSleepingState" render="Pixmap" pixmap="GigabluePaxV2/icons/hdd.png" size="24,21" position="1147,697" zPosition="1" alphatest="blend">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="CiModuleControl" allVisible="1" position="1016,699" size="80,20" halign="left" valign="center" borderWidth="1" zPosition="1" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" font="Regular;16"/>
+		<widget source="session.CurrentService" render="CiModuleControl" allVisible="1" position="1016,697" size="80,22" halign="left" valign="center" borderWidth="1" zPosition="1" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" font="Regular;16"/>
 		<eLabel text="TUNER:" position="730,6" size="250,20" font="Regular; 16" halign="center" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1"/>
 		<widget source="session.FrontendInfo" render="Label" position="730,23" size="250,20" font="Regular; 16" halign="center" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1">
 			<convert type="FrontendInfo">STRING,10</convert>
 		</widget>
-		<eLabel text="SNR:" position="700,699" size="50,20" font="Regular; 16" halign="left" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1"/>
-		<widget source="session.FrontendStatus" render="Label" position="740,699" size="70,20" font="Regular; 16" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" halign="left">
+		<eLabel text="SNR:" position="700,697" size="50,22" font="Regular; 16" halign="left" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1"/>
+		<widget source="session.FrontendStatus" render="Label" position="740,697" size="70,22" font="Regular; 16" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" halign="left">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<eLabel text="AGC:" position="800,699" size="35,20" font="Regular; 16" halign="left" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1"/>
-		<widget source="session.FrontendStatus" render="Label" position="840,699" size="40,20" font="Regular; 16" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" halign="left">
+		<eLabel text="AGC:" position="800,697" size="35,22" font="Regular; 16" halign="left" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1"/>
+		<widget source="session.FrontendStatus" render="Label" position="840,697" size="40,22" font="Regular; 16" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" halign="left">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="880,699" size="60,20" font="Regular; 16" halign="right" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="880,697" size="60,22" font="Regular; 16" halign="right" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1">
 			<convert type="ServiceInfo">VideoWidth</convert>
 		</widget>
-		<eLabel text="x" position="940,699" size="16,20" font="Regular; 16" halign="center" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1"/>
-		<widget source="session.CurrentService" render="Label" position="955,699" size="60,20" font="Regular; 16" halign="left" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1">
+		<eLabel text="x" position="940,697" size="16,22" font="Regular; 16" halign="center" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1"/>
+		<widget source="session.CurrentService" render="Label" position="955,697" size="60,22" font="Regular; 16" halign="left" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1">
 			<convert type="ServiceInfo">VideoHeight</convert>
 		</widget>
 	</screen>
@@ -2842,7 +2842,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget backgroundColor="Paxbg1" foregroundColor="PaxFont1" font="Regular; 23" halign="right" position="473,315" render="Label" size="765,33" source="session.Event_Next" transparent="0" valign="bottom" noWrap="1" zPosition="2">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.CurrentService" position="229,699" size="400,20" render="Label" font="Regular;16" halign="left" valign="top" backgroundColor="Paxbg1" transparent="0" noWrap="1" foregroundColor="PaxFont1">
+		<widget source="session.CurrentService" position="229,697" size="400,22" render="Label" font="Regular;16" halign="left" valign="top" backgroundColor="Paxbg1" transparent="0" noWrap="1" foregroundColor="PaxFont1">
 			<convert type="PaxCaidDisplay">Default</convert>
 		</widget>
 	</screen>
@@ -3203,7 +3203,8 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 		<panel name="TITLE_UC"/>
 		<ePixmap pixmap="GigabluePaxV2/picon_default.png" position="125,320" size="220,132" alphatest="blend"/>
-		<widget name="config" position="517,80" size="726,570" font="Regular;20" itemHeight="30" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+		<widget name="config" position="517,80" size="726,480" font="Regular;20" itemHeight="30" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+		<widget source="text" render="Label" position="517,594" size="726,54" font="Regular;20" backgroundColor="Paxbg1" halign="center" valign="center" transparent="1" foregroundColor="PaxFont2"/>
 	</screen>
 	<screen name="SleepTimerSetup" position="0, 0" flags="wfNoBorder" title="SleepTimerSetup" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_WINDOW_MENU"/>
@@ -3226,14 +3227,16 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	<screen name="HotkeySetup" position="0,0" size="1280,720" title="Input" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_BUTTONBAR_R_X"/>
 		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="TITLE_UC"/>
 		<ePixmap position="149,284" size="200,200" zPosition="2" pixmap="GigabluePaxV2/construct/plugins/remote.png" transparent="1" alphatest="blend"/>
 		<widget name="list" position="517,84" size="350,480" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="choosen" position="875,84" size="350,480" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="description" position="517,594" size="726,54" font="Regular;20" backgroundColor="Paxbg1" foregroundColor="PaxFont2" halign="center" valign="center" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="HotkeySetupSelect" position="0,0" size="1280,720" title="Input" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="PANEL_BUTTONBAR_R_X"/>
+		<panel name="PANEL_BUTTONBAR_RGY_OK_X"/>
 		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="TITLE_UC"/>
 		<ePixmap position="149,284" size="200,200" zPosition="2" pixmap="GigabluePaxV2/construct/plugins/remote.png" transparent="1" alphatest="blend"/>
 		<widget name="list" position="517,84" size="350,480" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="choosen" position="875,84" size="350,480" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
