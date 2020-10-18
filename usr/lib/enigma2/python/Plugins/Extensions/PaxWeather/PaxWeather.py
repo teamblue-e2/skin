@@ -61,7 +61,6 @@ config.plugins.PaxWeather.activate = ConfigSelection(default="weather-off", choi
 config.plugins.PaxWeather.searchby = ConfigSelection(default="auto-ip", choices = [
 				("auto-ip", _("IP")),
 				("location", _("Enter location manually")),
-				("gmcode", _("Enter GM-Code manually")),
 				("weatherplugin", _("WeatherPlugin"))
 				])
 				
@@ -87,11 +86,11 @@ class PaxWeather(ConfigListScreen, Screen):
 				<widget source="Title" render="Label" position="369,0" size="540,46" font="SetrixHD; 35" backgroundColor="#10000000" transparent="1"/>
 				<widget name="config" position="492,86" size="700,150" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#10000000" transparent="1"/>
 				<eLabel position="476,70" zPosition="-1" size="735,585" backgroundColor="#10000000"/>
-				<widget source="help" render="Label" position="492,420" size="700,310" backgroundColor="#10000000" transparent="1" zPosition="1" foregroundColor="#00fcc000" font="Regular; 20" halign="center" valign="center"/>
+				<widget source="help" render="Label" position="492,380" size="700,310" backgroundColor="#10000000" transparent="1" zPosition="1" foregroundColor="#00fcc000" font="Regular; 20" halign="center" valign="center"/>
 				<widget source="key_red" render="Label" position="500,685" size="180,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="#10000000" transparent="1"/>
 				<widget source="key_green" render="Label" position="700,685" size="180,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="#10000000" transparent="1"/>
 				<widget source="key_yellow" render="Label" position="900,685" size="215,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="#10000000" transparent="1"/>
-				<ePixmap pixmap="/usr/share/enigma2/GigabluePaxV2/construct/plugins/teamblue.png" position="237,289" size="200,200" alphatest="blend"/>
+				<ePixmap pixmap="/usr/share/enigma2/GigabluePaxV2/construct/plugins/teamblue.png" position="149,284" size="200,200" alphatest="blend"/>
 				<ePixmap pixmap="/usr/share/enigma2/GigabluePaxV2/buttons/key_red.png" position="475,680" size="30,40" alphatest="blend"/>
 				<ePixmap pixmap="/usr/share/enigma2/GigabluePaxV2/buttons/key_green.png" position="675,680" size="30,40" alphatest="blend"/>
 				<ePixmap pixmap="/usr/share/enigma2/GigabluePaxV2/buttons/key_yellow.png" position="875,680" size="30,40" alphatest="blend"/>
@@ -146,11 +145,9 @@ class PaxWeather(ConfigListScreen, Screen):
 		list = []
 		list.append(getConfigListEntry(_("PaxWeather"), config.plugins.PaxWeather.activate, _("Activate or deactivate the weather widget.")))
 		if config.plugins.PaxWeather.activate.value == "weather-on":
-			list.append(getConfigListEntry(_("Search option"), config.plugins.PaxWeather.searchby, _("Choose from different options to enter your settings.")))
+			list.append(getConfigListEntry(_("Search option"), config.plugins.PaxWeather.searchby, _("Choose from different options to enter your settings.\nPress the yellow button to search for the weather code.")))
 			if config.plugins.PaxWeather.searchby.value == "location":
-				list.append(getConfigListEntry(_("Location "), config.plugins.PaxWeather.cityname, _("Enter your location.\nPress OK to use the virtual keyboard.")))
-			elif config.plugins.PaxWeather.searchby.value == "gmcode":
-				list.append(getConfigListEntry(_("GM-Code"), config.plugins.PaxWeather.gmcode, _("Enter the GM-Code for your location.\nPress OK to use the virtual keyboard.")))
+				list.append(getConfigListEntry(_("Location "), config.plugins.PaxWeather.cityname, _("Enter your location.\nPress OK to use the virtual keyboard.\nPress the yellow button to search for the weather code.")))
 
 		self["config"].list = list
 		self["config"].l.setList(list)
@@ -165,9 +162,7 @@ class PaxWeather(ConfigListScreen, Screen):
 	def showYellowText(self):
 		option = self["config"].getCurrent()[1]
 		if option.value == "auto-ip" or option.value == "location" or option == config.plugins.PaxWeather.cityname:
-			self["key_yellow"].text = _("Search GM-Code")
-		elif option.value == "gmcode" or option == config.plugins.PaxWeather.gmcode:
-			self["key_yellow"].text = _("Check location")
+			self["key_yellow"].text = _("Search Code")
 		elif option.value == "weatherplugin":
 			self["key_yellow"].text = _("WeatherPlugin")
 		else:
@@ -201,20 +196,6 @@ class PaxWeather(ConfigListScreen, Screen):
 	def checkCode(self):
 		if self.InternetAvailable and config.plugins.PaxWeather.activate.value == "weather-on":
 			option = self["config"].getCurrent()[1]
-			if option.value == "gmcode":
-				try:
-					res_gc = requests.get('http://weather.service.msn.com/data.aspx?src=windows&weadegreetype=C&culture=de-DE&wealocations=wc:%s' % str(config.plugins.PaxWeather.gmcode.value), timeout=1)
-					data_gc = fromstring(res_gc.text)
-					for childs in data_gc:
-						if childs.tag == "weather":
-							gmcity = childs.attrib.get("weatherlocationname").encode("utf-8", 'ignore')
-							SearchResultList.append(gmcity)
-							config.plugins.PaxWeather.list.value = str(gmcity)
-							config.plugins.PaxWeather.list.save()
-							self.session.open(MessageBox, _("Location found:\n") + str(config.plugins.PaxWeather.list.value), MessageBox.TYPE_INFO, timeout = 10)
-				except:
-					self.session.open(MessageBox, _('No valid location found.\nPlease check your GM-Code and try again.'), MessageBox.TYPE_INFO, timeout = 10)
-
 			if option.value == "auto-ip":
 				cityip = self.getCityByIP()
 				iplist = []
@@ -224,16 +205,16 @@ class PaxWeather(ConfigListScreen, Screen):
 
 					for weather in data_gc.findall("./weather"):
 						ipcity = weather.get('weatherlocationname').encode("utf-8", 'ignore')
-						gmcode = weather.get('weatherlocationcode').split('wc:')[1]
-						iplist.append((ipcity, gmcode))
+						code = weather.get('weatherlocationcode').split('wc:')[1]
+						iplist.append((ipcity, code))
 
-					def GMCodeCallBack(callback):
+					def CodeCallBack(callback):
 						callback = callback and callback[1]
 						if callback:
 							config.plugins.PaxWeather.gmcode.value = str(callback)
 							config.plugins.PaxWeather.gmcode.save()
-							self.session.open(MessageBox, _("GM-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout = 10)
-					self.session.openWithCallback(GMCodeCallBack, ChoiceBox, title = _("Choose your location:"), list = iplist)
+							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout = 10)
+					self.session.openWithCallback(CodeCallBack, ChoiceBox, title = _("Choose your location:"), list = iplist)
 
 				except:
 					self.session.open(MessageBox, _('No valid location found.'), MessageBox.TYPE_INFO, timeout = 10)
@@ -254,11 +235,11 @@ class PaxWeather(ConfigListScreen, Screen):
 						if callback:
 							config.plugins.PaxWeather.gmcode.value = str(callback)
 							config.plugins.PaxWeather.gmcode.save()
-							self.session.open(MessageBox, _("GM-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout = 10)
+							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout = 10)
 					self.session.openWithCallback(LocationCallBack, ChoiceBox, title = _("Choose your location:"), list = citylist)
 
 				except:
-					self.session.open(MessageBox, _('No valid GM-Code found.'), MessageBox.TYPE_INFO, timeout = 10)
+					self.session.open(MessageBox, _('No valid Weather-Code found.'), MessageBox.TYPE_INFO, timeout = 10)
 
 			if option.value == "weatherplugin":
 				if self.InternetAvailable:
@@ -293,12 +274,6 @@ class PaxWeather(ConfigListScreen, Screen):
 			title = _("Enter your location:")
 			self.session.openWithCallback(self.VirtualKeyBoardCallBack, VirtualKeyBoard, title = title, text = text)
 			config.plugins.PaxWeather.cityname.save()
-
-		if option == config.plugins.PaxWeather.gmcode:
-			text = self["config"].getCurrent()[1].value
-			title = _("Enter the GM-Code for your location:")
-			self.session.openWithCallback(self.VirtualKeyBoardCallBack, VirtualKeyBoard, title = title, text = text)
-			config.plugins.PaxWeather.gmcode.save()
 
 	def askInstall(self):
 		askInstall = self.session.openWithCallback(self.doInstall,MessageBox,_("Systemplugin \"weathercomponenthandler\" is not installed.\nDo you want to install the plugin now?"), MessageBox.TYPE_YESNO)
