@@ -650,6 +650,12 @@
 		<panel name="PANEL_KEY_EXIT"/>
 		<ePixmap name="" position="580,680" size="900,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 	</screen>
+	<screen name="PANEL_BUTTONBAR_GY_X">
+		<panel name="PANEL_KEY_GREEN_2_1_WIDE"/>
+		<panel name="PANEL_KEY_YELLOW_1_1_WIDE"/>
+		<panel name="PANEL_KEY_EXIT"/>
+		<ePixmap name="" position="580,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
+	</screen>
 	<screen name="PANEL_BUTTONBAR_RGY_X">
 		<panel name="PANEL_KEY_RED_3_1"/>
 		<panel name="PANEL_KEY_GREEN_2_1"/>
@@ -2935,6 +2941,58 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="labstop" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
 		<widget name="labrun" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="green" zPosition="3"/>
 	</screen>
+
+	<screen name="NetworkOpenvpn" title="OpenVpn Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="BAR_ICON_NETWORK"/>
+		<panel name="TITLE_UC"/>
+		<widget name="lab1" position="517,200" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labactive" position="767,200" size="200,30" font="Regular;21" valign="center" transparent="0" zPosition="3"/>
+		<widget name="lab2" position="517,120" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labstop" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
+		<widget name="labrun" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="green" zPosition="3"/>
+		<widget name="labconfig" position="517,250" size="520,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
++		<widget name="labconfigfilename" position="900,250" size="180,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+	</screen>
+	<screen name="NetworkSABnzbd" title="SABnzbd Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
+		<panel name="PANEL_BUTTONBAR_RGY_X"/>
+		<panel name="BAR_ICON_NETWORK"/>
+		<panel name="TITLE_UC"/>
+		<widget name="lab1" position="517,200" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labactive" position="767,200" size="200,30" font="Regular;21" valign="center" transparent="0" zPosition="3"/>
+		<widget name="lab2" position="517,120" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labstop" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
+		<widget name="labrun" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="green" zPosition="3"/>
+	</screen>
+
+	<screen name="NetworkTelnet" title="Telnet Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
+		<panel name="PANEL_BUTTONBAR_RGY_X"/>
+		<panel name="BAR_ICON_NETWORK"/>
+		<panel name="TITLE_UC"/>
+		<widget name="lab1" position="517,200" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labactive" position="767,200" size="200,30" font="Regular;21" valign="center" transparent="0" zPosition="3"/>
+		<widget name="lab2" position="517,120" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labstop" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
+		<widget name="labrun" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="green" zPosition="3"/>
+	</screen>
+	<screen name="NetworkFTP" title="FTP Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
+		<panel name="PANEL_BUTTONBAR_GY_X"/>
+		<panel name="BAR_ICON_NETWORK"/>
+		<panel name="TITLE_UC"/>
+		<widget name="lab1" position="517,200" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labactive" position="767,200" size="200,30" font="Regular;21" valign="center" transparent="0" zPosition="3"/>
+		<widget name="lab2" position="517,120" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+		<widget name="labstop" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
+		<widget name="labrun" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="green" zPosition="3"/>
+	</screen>
 	<screen name="NetworkNfs" title="NFS Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
@@ -2947,6 +3005,176 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="labrun" position="767,120" size="200,30" zPosition="3" font="Regular; 21" valign="center" halign="center" backgroundColor="green"/>
 		<widget name="lab3" position="517,450" size="715,126" font="Regular; 21" valign="top" transparent="0" halign="left" zPosition="3"/>
 		<widget name="lab4" position="517,400" size="360,30" font="Regular; 21" valign="center" transparent="0" halign="left" zPosition="3"/>
+	</screen>
+	<screen name="NetworkInadyn" title="Inadyn Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_MENU_X"/>
+		<panel name="BAR_ICON_NETWORK"/>
+		<panel name="TITLE_UC"/>
+		<widget name="autostart" position="517,130" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labdisabled" position="767,130" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+		<widget name="labactive" position="767,130" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+		<widget name="status" position="517,190" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labstop" position="767,190" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+		<widget name="labrun" position="767,190" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+		<widget name="time" position="517,250" size="240,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labtime" position="767,250" size="100,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="username" position="517,310" size="220,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labuser" position="767,310" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="password" position="517,370" size="220,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labpass" position="767,370" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="alias" position="517,430" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labalias" position="767,430" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="sinactive" position="517,490" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="sactive" position="517,490" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="system" position="557,490" size="100,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labsys" position="767,490" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+	</screen>
+	<screen name="NetworkInadynSetup" title="Inadyn Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+                <panel name="PANEL_WINDOW_LARGE"/>
+                <panel name="PANEL_BUTTONBAR_R_X"/>
+                <panel name="BAR_ICON_NETWORK"/>
+                <panel name="TITLE_UC"/>
+                <widget name="config" position="517,80" size="708,510" itemHeight="30" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="HelpWindow" position="576,480" zPosition="1" size="1,1" transparent="1" alphatest="blend"/>
+        </screen>
+        <screen name="NetworkInadynLog" title="Inadyn Log" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+                <panel name="PANEL_WINDOW_LARGE"/>
+                <panel name="PANEL_BUTTONBAR_X"/>
+                <panel name="BAR_ICON_NETWORK"/>
+                <panel name="TITLE_UC"/>
+                <widget name="infotext" position="517,80" size="722,500" font="Regular;18" zPosition="3" transparent="1" />
+        </screen>
+	<screen name="NetworkAfp" position="0,0" size="1280,720" title="AFP Setup" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+                <panel name="PANEL_WINDOW_LARGE"/>
+                <panel name="PANEL_BUTTONBAR_RGY_X"/>
+                <panel name="BAR_ICON_NETWORK"/>
+                <panel name="TITLE_UC"/>
+                <widget name="lab1" position="517,200" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+                <widget name="labactive" position="767,200" size="200,30" font="Regular;21" valign="center" transparent="0" zPosition="3"/>
+                <widget name="lab2" position="517,120" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+                <widget name="labstop" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
+                <widget name="labrun" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="green" zPosition="3"/>
+	</screen>
+	<screen name="NetworkMiniDLNA" title="MiniDLNA Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+                <panel name="PANEL_WINDOW_LARGE"/>
+                <panel name="PANEL_BUTTONBAR_RGYB_X"/>
+                <panel name="BAR_ICON_NETWORK"/>
+                <panel name="TITLE_UC"/>
+		<widget name="autostart" position="517,130" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labdisabled" position="767,130" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+		<widget name="labactive" position="767,130" size="350,30" font="Regular;24" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+		<widget name="status" position="517,190" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labstop" position="767,190" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+		<widget name="labrun" position="767,190" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+		<widget name="username" position="517,250" size="240,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labuser" position="767,250" size="100,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="iface" position="517,310" size="220,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labiface" position="767,310" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="port" position="517,370" size="220,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labport" position="767,370" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="serialno" position="517,430" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labserialno" position="767,430" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="sharedir" position="517,490" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labsharedir" position="767,490" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="inotify" position="807,550" size="300,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="inotifyactive" position="767,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="inotifyinactive" position="767,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="tivo" position="557,550" size="300,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="tivoactive" position="517,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="tivoinactive" position="517,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="dlna" position="807,580" size="300,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="dlnaactive" position="767,580" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="dlnainactive" position="767,580" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+	</screen>
+	<screen name="NetworkSABnzbd" title="SABnzbd Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+                <panel name="PANEL_WINDOW_LARGE"/>
+                <panel name="PANEL_BUTTONBAR_RGY_X"/>
+                <panel name="BAR_ICON_NETWORK"/>
+                <panel name="TITLE_UC"/>
+                <widget name="lab1" position="517,200" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+                <widget name="labactive" position="767,200" size="200,30" font="Regular;21" valign="center" transparent="0" zPosition="3"/>
+                <widget name="lab2" position="517,120" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+                <widget name="labstop" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
+                <widget name="labrun" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="green" zPosition="3"/>
+	</screen>
+	<screen name="NetworkuShare" title="uShare Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+                <panel name="PANEL_WINDOW_LARGE"/>
+                <panel name="PANEL_BUTTONBAR_RGYB_MENU_X"/>
+                <panel name="BAR_ICON_NETWORK"/>
+                <panel name="TITLE_UC"/>
+		<widget name="autostart" position="517,130" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labdisabled" position="767,130" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+		<widget name="labactive" position="767,130" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+		<widget name="status" position="517,190" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labstop" position="767,190" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+		<widget name="labrun" position="767,190" size="172,30" font="Regular;24" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+		<widget name="username" position="517,250" size="240,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labuser" position="767,250" size="100,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="iface" position="517,310" size="220,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labiface" position="767,310" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="port" position="517,370" size="220,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labport" position="767,370" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="telnetport" position="517,430" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labtelnetport" position="767,430" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="sharedir" position="517,490" size="150,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="labsharedir" position="767,490" size="350,30" font="Regular;24" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="web" position="807,550" size="300,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="webactive" position="767,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="webinactive" position="767,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="telnet" position="557,550" size="300,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="telnetactive" position="517,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="telnetinactive" position="517,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="xbox" position="807,580" size="300,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="xboxactive" position="767,580" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="xboxinactive" position="767,580" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="dlna" position="557,580" size="300,30" font="Regular;24" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
+		<widget name="dlnaactive" position="517,580" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="dlnainactive" position="517,580" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+	</screen>
+	<screen name="NetworkuShareSetup" title="uShare Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+                <panel name="PANEL_WINDOW_LARGE"/>
+                <panel name="PANEL_BUTTONBAR_RG_X"/>
+                <panel name="BAR_ICON_NETWORK"/>
+                <panel name="TITLE_UC"/>
+		<widget name="config" position="517,100" size="700,510" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" itemHeight="30" font="screen_text;20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="HelpWindow" position="577,480" zPosition="1" size="1,1" transparent="1" alphatest="blend"/>
+	</screen>
+        <screen name="NetworkuShareLog" title="Inadyn Log" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+                <panel name="PANEL_WINDOW_LARGE"/>
+                <panel name="PANEL_BUTTONBAR_X"/>
+                <panel name="BAR_ICON_NETWORK"/>
+                <panel name="TITLE_UC"/>
+                <widget name="infotext" position="517,80" size="722,500" font="Regular;18" zPosition="3" transparent="1" />
+        </screen>
+	<screen name="uShareSelection" title="uShare Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+                <panel name="PANEL_WINDOW_LARGE"/>
+                <panel name="PANEL_BUTTONBAR_RGY_X"/>
+                <panel name="BAR_ICON_NETWORK"/>
+                <panel name="TITLE_UC"/>
+		<widget name="checkList" position="517,100" size="700,510" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" itemHeight="30" font="screen_text;20" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+	<screen name="NetworkSATPI" title="Satpi Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+		<panel name="PANEL_WINDOW_LARGE"/>
+		<panel name="PANEL_BUTTONBAR_RGY_X"/>
+		<panel name="BAR_ICON_NETWORK"/>
+		<panel name="TITLE_UC"/>
+                <widget name="lab1" position="517,200" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+                <widget name="labactive" position="767,200" size="200,30" font="Regular;21" valign="center" transparent="0" zPosition="3"/>
+                <widget name="lab2" position="517,120" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
+                <widget name="labstop" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="red" zPosition="2"/>
+                <widget name="labrun" position="767,120" size="200,30" font="Regular;21" valign="center" halign="center" backgroundColor="green" zPosition="3"/>
 	</screen>
 	<screen name="InetdRecovery" position="0,0" size="1280,720" title="Inetd Recovery" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="BAR_ICON_NETWORK"/>
