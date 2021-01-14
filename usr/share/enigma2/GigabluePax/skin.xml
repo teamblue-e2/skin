@@ -1892,9 +1892,16 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_WINDOW_MENU"/>
 		<panel name="PANEL_BUTTONBAR_RG_OK_X"/>
 		<panel name="TITLE_UC"/>
-		<widget name="SkinList" position="517,79" size="726,510" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
-		<widget name="Preview" position="111,280" size="280,210" alphatest="blend"/>
-		<widget source="introduction" render="Label" position="517,621" size="726,27" font="Regular;20" foregroundColor="PaxFont2" backgroundColor="Paxbg1" halign="center" transparent="1" />
+		<widget source="skins" render="Listbox" position="517,79" size="726,510" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1">
+			<convert type="TemplatedMultiContent">
+	      {"template": [ MultiContentEntryText(pos = (10, 1), size = (706, 28), flags = RT_HALIGN_LEFT, text = 0) ],
+	      "fonts": [gFont("Regular", 20)],
+	      "itemHeight": 30
+	      }
+			</convert>
+		</widget>
+		<widget name="preview" position="111,280" size="280,210" alphatest="blend"/>
+		<widget source="description" render="Label" position="517,621" size="726,27" font="Regular;20" foregroundColor="PaxFont2" backgroundColor="Paxbg1" halign="center" transparent="1" />
 	</screen>
 	<screen name="LCDSkinSelectorOLD" position="0,0" size="1280,720" title="Skin Selector" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
