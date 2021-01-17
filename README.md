@@ -5,7 +5,7 @@ teamBlue skin based on GigabluePax
 ##**Screenshots**
 
 ###InfoBar
-![alt tag](/raw/DEV/Pax-INFO/InfoBar.jpg)
+![alt tag](https://github.com/teamblue-e2/skin/raw/DEV/Pax-INFO/InfoBar.jpg)
 
 ###InfoBar with WeatherWidget
 ![alt tag](https://github.com/teamblue-e2/skin/raw/DEV/Pax-INFO/InfoBar-WeatherWidget.jpg)
