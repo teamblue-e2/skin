@@ -16,7 +16,7 @@
 		<color name="grey" value="#00bbbbbb"/>
 		<color name="PaxFont1" value="#00ffffff"/>
 		<color name="PaxFont2" value="#00fcc000"/>
-		<color name="Paxbg1" value="#10000000"/>
+		<color name="Paxbg1" value="#2f000000"/>
 		<color name="Paxbg2" value="#55001123"/>
 		<color name="Paxbg3" value="#00001ec9"/>
 		<color name="PaxSelFont" value="#00ffffff"/>
@@ -1467,7 +1467,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	</screen>
 	<screen name="About" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_INFO_X"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 		<panel name="BAR_ICON_TB"/>
 		<widget source="AboutHeader" render="Label" position="345,2" size="564,45" font="SetrixHD; 32" transparent="1" valign="top" zPosition="100" backgroundColor="Paxbg1" noWrap="1"/>
 		<widget name="AboutScrollLabel" split="1" dividechar=":" position="517,77" size="726,580" font="Regular;21" backgroundColor="Paxbg1" transparent="1"/>
