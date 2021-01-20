@@ -621,6 +621,11 @@
 		<panel name="PANEL_KEY_EXIT"/>
 		<ePixmap name="" position="496,680" size="900,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 	</screen>
+	<screen name="PANEL_BUTTONBAR_RGYB_OK_X">
+		<panel name="PANEL_BUTTONBAR_RGYB_2"/>
+		<panel name="PANEL_KEY_OK_2"/>
+		<panel name="PANEL_KEY_EXIT"/>
+	</screen>
 	<screen name="PANEL_BUTTONBAR_RG_INFO_X">
 		<panel name="PANEL_KEY_RED_2_2_WIDE"/>
 		<panel name="PANEL_KEY_GREEN_1_2_WIDE"/>
@@ -2950,7 +2955,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	</screen>
 	<screen name="NetworkOpenvpn" title="OpenVpn Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
 		<widget name="lab1" position="517,100" size="180,30" font="Regular;21" valign="center" transparent="0" halign="left" zPosition="3"/>
@@ -3009,7 +3014,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	</screen>
 	<screen name="NetworkInadyn" title="Inadyn Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
 		<widget name="autostart" position="517,100" size="150,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
@@ -3024,12 +3029,12 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="labuser" position="817,250" size="350,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
 		<widget name="password" position="517,300" size="220,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
 		<widget name="labpass" position="817,300" size="350,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="alias" position="517,350" size="150,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="labalias" position="817,350" size="350,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="system" position="517,400" size="100,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="sinactive" position="817,400" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-		<widget name="sactive" position="817,400" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="labsys" position="859,400" size="350,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
+		<widget name="system" position="517,350" size="100,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
+		<widget name="sinactive" position="817,350" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="sactive" position="817,350" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="labsys" position="859,350" size="350,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
+		<widget name="alias" position="517,400" size="150,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
+		<widget name="labalias" position="817,400" size="350,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
 	</screen>
 	<screen name="NetworkInadynSetup" title="Inadyn Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
@@ -3059,7 +3064,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	</screen>
 	<screen name="NetworkMiniDLNA" title="MiniDLNA Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
 		<widget name="autostart" position="517,100" size="150,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
@@ -3078,12 +3083,12 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="labserialno" position="817,350" size="350,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
 		<widget name="sharedir" position="517,400" size="150,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
 		<widget name="labsharedir" position="817,400" size="350,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="tivo" position="517,450" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="tivoactive" position="817,450" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="tivoinactive" position="817,450" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-		<widget name="inotify" position="517,500" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="inotifyactive" position="817,500" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="inotifyinactive" position="817,500" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="inotify" position="517,450" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
+		<widget name="inotifyactive" position="817,450" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="inotifyinactive" position="817,450" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="tivo" position="517,500" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
+		<widget name="tivoactive" position="817,500" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="tivoinactive" position="817,500" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 		<widget name="dlna" position="517,550" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
 		<widget name="dlnaactive" position="817,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
 		<widget name="dlnainactive" position="817,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
@@ -3101,7 +3106,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	</screen>
 	<screen name="NetworkuShare" title="uShare Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
 		<widget name="autostart" position="517,100" size="150,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
@@ -3120,18 +3125,18 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="labtelnetport" position="817,350" size="350,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
 		<widget name="sharedir" position="517,400" size="150,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
 		<widget name="labsharedir" position="817,400" size="350,30" font="Regular;21" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="telnet" position="517,450" size="244,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="telnetactive" position="817,450" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="telnetinactive" position="817,450" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-		<widget name="dlna" position="517,500" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="dlnaactive" position="817,500" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="dlnainactive" position="817,500" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-		<widget name="web" position="517,550" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="webactive" position="817,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="webinactive" position="817,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
-		<widget name="xbox" position="517,600" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
-		<widget name="xboxactive" position="817,600" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
-		<widget name="xboxinactive" position="817,600" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="web" position="517,450" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
+		<widget name="webactive" position="817,450" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="webinactive" position="817,450" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="telnet" position="517,500" size="244,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
+		<widget name="telnetactive" position="817,500" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="telnetinactive" position="817,500" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="xbox" position="517,550" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
+		<widget name="xboxactive" position="817,550" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="xboxinactive" position="817,550" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+		<widget name="dlna" position="517,600" size="290,30" font="Regular;21" valign="center" halign="left" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" />
+		<widget name="dlnaactive" position="817,600" zPosition="1" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+		<widget name="dlnainactive" position="817,600" zPosition="2" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
 	</screen>
 	<screen name="NetworkuShareSetup" title="uShare Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
