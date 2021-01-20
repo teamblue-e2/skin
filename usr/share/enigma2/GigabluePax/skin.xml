@@ -659,7 +659,7 @@
 		<panel name="PANEL_KEY_GREEN_2_1_WIDE"/>
 		<panel name="PANEL_KEY_YELLOW_1_1_WIDE"/>
 		<panel name="PANEL_KEY_EXIT"/>
-		<ePixmap name="" position="580,680" size="900,40" pixmap="GigabluePax/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
+		<ePixmap name="" position="580,680" size="900,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_RGY_X">
 		<panel name="PANEL_KEY_RED_3_1"/>
