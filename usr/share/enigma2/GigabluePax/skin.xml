@@ -1097,19 +1097,19 @@
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<widget name="Volume" position="425,22" size="390,5" zPosition="3" foregroundColor="PaxProgress" transparent="1"/>
 		<ePixmap position="365,0" size="48,48" zPosition="1" pixmap="GigabluePaxV2/construct/general/sound.png" transparent="0" alphatest="blend"/>
-		<widget position="835,2" size="80,45" font="SetrixHD; 32" transparent="1" zPosition="1" foregroundColor="PaxFont1" backgroundColor="Paxbg1" render="Volume2Text" source="global.CurrentTime"/>
+		<widget source="global.CurrentTime" render="Volume2Text" position="835,2" size="80,45" font="SetrixHD; 32" foregroundColor="PaxFont1" backgroundColor="Paxbg1" zPosition="1" transparent="1"/>
 		<eLabel position="425,24" size="390,1" backgroundColor="PaxLine3" foregroundColor="PaxLine3"/>
 	</screen>
 	<screen name="Mute" position="0,0" size="1280,53" title="Volume" zPosition="10" flags="wfNoBorder" transparent="0" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<ePixmap position="365,0" size="48,48" zPosition="1" pixmap="GigabluePaxV2/construct/general/sound.png" transparent="0" alphatest="blend"/>
 		<ePixmap position="415,12" size="24,24" zPosition="1" pixmap="GigabluePaxV2/construct/general/cross.png" transparent="0" alphatest="blend"/>
-		<eLabel position="460,2" size="400,45" font="SetrixHD; 32" backgroundColor="Paxbg1" transparent="1" zPosition="1" text="Mute"/>
+		<eLabel text="Mute" position="460,2" size="400,45" font="SetrixHD; 32" foregroundColor="PaxFont1" backgroundColor="Paxbg1" zPosition="1" transparent="1"/>
 	</screen>
 	<screen name="UnhandledKey" position="0,0" size="1280,53" title="Volume" zPosition="10" flags="wfNoBorder" transparent="0" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<widget name="UnhandledKeyPixmap" pixmap="GigabluePaxV2/construct/general/forbidden.png" position="365,0" size="48,48" zPosition="1" transparent="0" alphatest="blend"/>
-		<eLabel position="450,2" size="400,45" font="SetrixHD; 32" transparent="1" zPosition="1" text="Unsupported"/>
+		<eLabel text="Unsupported" position="450,2" size="400,45" font="SetrixHD; 32" foregroundColor="PaxFont1" backgroundColor="Paxbg1" zPosition="1" transparent="1"/>
 	</screen>
 	<screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_BUTTONBAR_RGB_MENU_X_PB"/>
