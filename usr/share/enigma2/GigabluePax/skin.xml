@@ -2331,6 +2331,23 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="TITLE_UC"/>
 		<widget name="filelist" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
+	<screen name="RestorePlugins" position="0,0" size="1280,720" title="Select Plugins" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="PANEL_BUTTONBAR_RG_X"/>
+		<panel name="BAR_ICON_SYS_SOFT"/>
+		<panel name="TITLE_UC"/>
+		<widget source="menu" render="Listbox" position="517,99" size="726,540" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (5, 3), size = (24, 24), png = 1),
+					MultiContentEntryText(pos = (34, 1), size = (687, 27), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+					],
+					"fonts": [gFont("Regular", 20), gFont("Regular", 18)],
+					"itemHeight": 30
+				}
+			</convert>
+		</widget>
+	</screen>
 	<!-- B2 -->
 	<screen name="GraphMultiEPG" position="0, 0" flags="wfNoBorder" transparent="0" title="Electronic Program Guide" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
