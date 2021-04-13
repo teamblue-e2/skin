@@ -29,11 +29,13 @@ gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 gettext.textdomain("enigma2")
 gettext.bindtextdomain("PaxWeather", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PaxWeather/locale/"))
 
+
 def _(txt):
 	t = gettext.dgettext("PaxWeather", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
+
 
 def main(session, **kwargs):
 	reload(PaxWeather)
@@ -42,6 +44,7 @@ def main(session, **kwargs):
 	except:
 		import traceback
 		traceback.print_exc()
+
 
 def Plugins(**kwargs):
 	if config.skin.primary_skin.value == "GigabluePaxV2/skin.xml":

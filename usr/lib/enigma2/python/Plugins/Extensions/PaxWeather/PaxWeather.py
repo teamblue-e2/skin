@@ -43,17 +43,20 @@ gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 gettext.textdomain("enigma2")
 gettext.bindtextdomain("PaxWeather", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PaxWeather/locale/"))
 
+
 def _(txt):
 	t = gettext.dgettext("PaxWeather", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
 
+
 def translateBlock(block):
 	for x in TranslationHelper:
 		if block.__contains__(x[0]):
 			block = block.replace(x[0], x[1])
 	return block
+
 
 config.plugins.PaxWeather = ConfigSubsection()
 config.plugins.PaxWeather.activate = ConfigSelection(default="weather-off", choices=[
@@ -77,6 +80,7 @@ config.plugins.PaxWeather.list = ConfigSelection(default="", choices=SearchResul
 
 config.plugins.PaxWeather.cityname = ConfigText(default="")
 config.plugins.PaxWeather.gmcode = ConfigText(default="")
+
 
 class PaxWeather(ConfigListScreen, Screen):
 	skin = """
