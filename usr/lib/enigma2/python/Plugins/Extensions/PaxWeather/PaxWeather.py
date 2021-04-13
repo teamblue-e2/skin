@@ -6,11 +6,11 @@
 #  Based on teamBlue image source code
 #  Thankfully inspired by MyMetrix by iMaxxx
 #
-#  This code is licensed under the Creative Commons 
-#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  This code is licensed under the Creative Commons
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported
 #  License. To view a copy of this license, visit
-#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
-#  or send a letter to Creative Commons, 559 Nathan 
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/
+#  or send a letter to Creative Commons, 559 Nathan
 #  Abbott Way, Stanford, California 94305, USA.
 #
 #  If you think this license infringes any rights,
@@ -69,7 +69,7 @@ config.plugins.PaxWeather.searchby = ConfigSelection(default="auto-ip", choices=
 				("location", _("Enter location manually")),
 				("weatherplugin", _("WeatherPlugin"))
 				])
-				
+
 config.plugins.PaxWeather.refreshInterval = ConfigSelection(default="0", choices=[
 				("0", _("0")),
 				("120", _("120"))
