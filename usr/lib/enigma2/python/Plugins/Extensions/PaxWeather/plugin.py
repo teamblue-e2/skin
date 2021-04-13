@@ -5,11 +5,11 @@
 #  Coded/Modified/Adapted by örlgrey
 #  Based on teamBlue image source code
 #
-#  This code is licensed under the Creative Commons 
-#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  This code is licensed under the Creative Commons
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported
 #  License. To view a copy of this license, visit
-#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
-#  or send a letter to Creative Commons, 559 Nathan 
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/
+#  or send a letter to Creative Commons, 559 Nathan
 #  Abbott Way, Stanford, California 94305, USA.
 #
 #  If you think this license infringes any rights,
@@ -29,11 +29,13 @@ gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 gettext.textdomain("enigma2")
 gettext.bindtextdomain("PaxWeather", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PaxWeather/locale/"))
 
+
 def _(txt):
 	t = gettext.dgettext("PaxWeather", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
+
 
 def main(session, **kwargs):
 	reload(PaxWeather)
@@ -43,10 +45,11 @@ def main(session, **kwargs):
 		import traceback
 		traceback.print_exc()
 
+
 def Plugins(**kwargs):
 	if config.skin.primary_skin.value == "GigabluePaxV2/skin.xml":
 		list = []
-		list.append(PluginDescriptor(name="PaxWeather", description=_("PaxWeather-Settings"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main))
+		list.append(PluginDescriptor(name="PaxWeather", description=_("PaxWeather-Settings"), where=PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main))
 		return list
 	else:
 		list = []
