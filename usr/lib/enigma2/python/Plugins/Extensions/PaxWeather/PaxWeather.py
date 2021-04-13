@@ -56,27 +56,27 @@ def translateBlock(block):
 	return block
 
 config.plugins.PaxWeather = ConfigSubsection()
-config.plugins.PaxWeather.activate = ConfigSelection(default="weather-off", choices = [
+config.plugins.PaxWeather.activate = ConfigSelection(default="weather-off", choices=[
 				("weather-off", _("off")),
 				("weather-on", _("on"))
 				])
 
-config.plugins.PaxWeather.searchby = ConfigSelection(default="auto-ip", choices = [
+config.plugins.PaxWeather.searchby = ConfigSelection(default="auto-ip", choices=[
 				("auto-ip", _("IP")),
 				("location", _("Enter location manually")),
 				("weatherplugin", _("WeatherPlugin"))
 				])
 				
-config.plugins.PaxWeather.refreshInterval = ConfigSelection(default="0", choices = [
+config.plugins.PaxWeather.refreshInterval = ConfigSelection(default="0", choices=[
 				("0", _("0")),
 				("120", _("120"))
 				])
 
 SearchResultList = []
-config.plugins.PaxWeather.list = ConfigSelection(default = "", choices = SearchResultList)
+config.plugins.PaxWeather.list = ConfigSelection(default="", choices=SearchResultList)
 
-config.plugins.PaxWeather.cityname = ConfigText(default = "")
-config.plugins.PaxWeather.gmcode = ConfigText(default = "")
+config.plugins.PaxWeather.cityname = ConfigText(default="")
+config.plugins.PaxWeather.gmcode = ConfigText(default="")
 
 class PaxWeather(ConfigListScreen, Screen):
 	skin = """
@@ -103,7 +103,7 @@ class PaxWeather(ConfigListScreen, Screen):
 			</screen>
 			"""
 
-	def __init__(self, session, args = None):
+	def __init__(self, session, args=None):
 		self.skin_lines = []
 		Screen.__init__(self, session)
 		self.session = session
@@ -194,7 +194,7 @@ class PaxWeather(ConfigListScreen, Screen):
 			if data_city['status'] == 'success':
 				return str(data_city['city'])
 		except:
-			self.session.open(MessageBox, _('No valid location found.'), MessageBox.TYPE_INFO, timeout = 10)
+			self.session.open(MessageBox, _('No valid location found.'), MessageBox.TYPE_INFO, timeout=10)
 
 	def checkCode(self):
 		if self.InternetAvailable and config.plugins.PaxWeather.activate.value == "weather-on":
@@ -216,11 +216,11 @@ class PaxWeather(ConfigListScreen, Screen):
 						if callback:
 							config.plugins.PaxWeather.gmcode.value = str(callback)
 							config.plugins.PaxWeather.gmcode.save()
-							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout = 10)
-					self.session.openWithCallback(CodeCallBack, ChoiceBox, title = _("Choose your location:"), list = iplist)
+							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout=10)
+					self.session.openWithCallback(CodeCallBack, ChoiceBox, title=_("Choose your location:"), list=iplist)
 
 				except:
-					self.session.open(MessageBox, _('No valid location found.'), MessageBox.TYPE_INFO, timeout = 10)
+					self.session.open(MessageBox, _('No valid location found.'), MessageBox.TYPE_INFO, timeout=10)
 
 			if option.value == "location" or option == config.plugins.PaxWeather.cityname:
 				citylist = []
@@ -238,11 +238,11 @@ class PaxWeather(ConfigListScreen, Screen):
 						if callback:
 							config.plugins.PaxWeather.gmcode.value = str(callback)
 							config.plugins.PaxWeather.gmcode.save()
-							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout = 10)
-					self.session.openWithCallback(LocationCallBack, ChoiceBox, title = _("Choose your location:"), list = citylist)
+							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout=10)
+					self.session.openWithCallback(LocationCallBack, ChoiceBox, title=_("Choose your location:"), list=citylist)
 
 				except:
-					self.session.open(MessageBox, _('No valid Weather-Code found.'), MessageBox.TYPE_INFO, timeout = 10)
+					self.session.open(MessageBox, _('No valid Weather-Code found.'), MessageBox.TYPE_INFO, timeout=10)
 
 			if option.value == "weatherplugin":
 				if self.InternetAvailable:
@@ -256,7 +256,7 @@ class PaxWeather(ConfigListScreen, Screen):
 					except:
 						self.askInstall()
 				else:
-					self.session.open(MessageBox, _("Your box needs an internet connection to display the weather widget.\nPlease solve the problem."), MessageBox.TYPE_INFO, timeout = 10)
+					self.session.open(MessageBox, _("Your box needs an internet connection to display the weather widget.\nPlease solve the problem."), MessageBox.TYPE_INFO, timeout=10)
 					config.plugins.PaxWeather.activate.value = "weather-off"
 					self.mylist()
 
@@ -275,7 +275,7 @@ class PaxWeather(ConfigListScreen, Screen):
 		if option == config.plugins.PaxWeather.cityname:
 			text = self["config"].getCurrent()[1].value
 			title = _("Enter your location:")
-			self.session.openWithCallback(self.VirtualKeyBoardCallBack, VirtualKeyBoard, title = title, text = text)
+			self.session.openWithCallback(self.VirtualKeyBoardCallBack, VirtualKeyBoard, title=title, text=text)
 			config.plugins.PaxWeather.cityname.save()
 
 	def askInstall(self):
@@ -288,10 +288,10 @@ class PaxWeather(ConfigListScreen, Screen):
 			os.system("opkg install enigma2-plugin-systemplugins-weathercomponenthandler")
 			check_installed = os.popen("opkg list-installed enigma2-plugin-systemplugins-weathercomponenthandler | cut -d ' ' -f1").read()
 			if "enigma2-plugin-systemplugins-weathercomponenthandler" in str(check_installed):
-				self.session.open(MessageBox, _("Systemplugin \"weathercomponenthandler\" was installed successfully."), MessageBox.TYPE_INFO, timeout = 10)
+				self.session.open(MessageBox, _("Systemplugin \"weathercomponenthandler\" was installed successfully."), MessageBox.TYPE_INFO, timeout=10)
 				self.mylist()
 			else:
-				self.session.open(MessageBox, _("Systemplugin \"weathercomponenthandler\" could not be installed."), MessageBox.TYPE_INFO, timeout = 10)
+				self.session.open(MessageBox, _("Systemplugin \"weathercomponenthandler\" could not be installed."), MessageBox.TYPE_INFO, timeout=10)
 				config.plugins.PaxWeather.activate.value = "weather-off"
 				self.mylist()
 		else:
@@ -321,7 +321,7 @@ class PaxWeather(ConfigListScreen, Screen):
 						self.appendSkinFile(self.xmlfile)
 						self.generateSkin()
 					else:
-						self.session.open(MessageBox, _("Systemplugin \"weathercomponenthandler\" is not installed.\nPlease check your settings."), MessageBox.TYPE_INFO, timeout = 10)
+						self.session.open(MessageBox, _("Systemplugin \"weathercomponenthandler\" is not installed.\nPlease check your settings."), MessageBox.TYPE_INFO, timeout=10)
 						config.plugins.PaxWeather.activate.value = "weather-off"
 						self.mylist()
 				else:
@@ -330,7 +330,7 @@ class PaxWeather(ConfigListScreen, Screen):
 					self.appendSkinFile(self.xmlfile)
 					self.generateSkin()
 			else:
-				self.session.open(MessageBox, _("Your box needs an internet connection to display the weather widget.\nPlease solve the problem."), MessageBox.TYPE_INFO, timeout = 10)
+				self.session.open(MessageBox, _("Your box needs an internet connection to display the weather widget.\nPlease solve the problem."), MessageBox.TYPE_INFO, timeout=10)
 				config.plugins.PaxWeather.activate.value = "weather-off"
 				self.mylist()
 		else:
