@@ -279,7 +279,7 @@ class PaxWeather(ConfigListScreen, Screen):
 			config.plugins.PaxWeather.cityname.save()
 
 	def askInstall(self):
-		askInstall = self.session.openWithCallback(self.doInstall,MessageBox,_("Systemplugin \"weathercomponenthandler\" is not installed.\nDo you want to install the plugin now?"), MessageBox.TYPE_YESNO)
+		askInstall = self.session.openWithCallback(self.doInstall, MessageBox, _("Systemplugin \"weathercomponenthandler\" is not installed.\nDo you want to install the plugin now?"), MessageBox.TYPE_YESNO)
 		askInstall.setTitle(_("Restart GUI"))
 
 	def doInstall(self, answer):
@@ -299,7 +299,7 @@ class PaxWeather(ConfigListScreen, Screen):
 			self.mylist()
 
 	def reboot(self):
-		restartbox = self.session.openWithCallback(self.restartGUI,MessageBox,_("Do you really want to reboot now?"), MessageBox.TYPE_YESNO)
+		restartbox = self.session.openWithCallback(self.restartGUI, MessageBox, _("Do you really want to reboot now?"), MessageBox.TYPE_YESNO)
 		restartbox.setTitle(_("Restart GUI"))
 
 	def save(self):
@@ -356,7 +356,7 @@ class PaxWeather(ConfigListScreen, Screen):
 
 	def restart(self):
 		configfile.save()
-		restartbox = self.session.openWithCallback(self.restartGUI,MessageBox,_("GUI needs a restart to apply the settings.\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
+		restartbox = self.session.openWithCallback(self.restartGUI, MessageBox, _("GUI needs a restart to apply the settings.\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
 		restartbox.setTitle(_("Restart GUI"))
 
 	def appendSkinFile(self, appendFileName):
@@ -387,10 +387,10 @@ class PaxWeather(ConfigListScreen, Screen):
 			self.close()
 
 	def exit(self):
-		askExit = self.session.openWithCallback(self.doExit,MessageBox,_("Do you really want to exit without saving?"), MessageBox.TYPE_YESNO)
+		askExit = self.session.openWithCallback(self.doExit, MessageBox, _("Do you really want to exit without saving?"), MessageBox.TYPE_YESNO)
 		askExit.setTitle(_("Exit"))
 
-	def doExit(self,answer):
+	def doExit(self, answer):
 		if answer is True:
 			for x in self["config"].list:
 				if len(x) > 1:
@@ -403,7 +403,7 @@ class PaxWeather(ConfigListScreen, Screen):
 
 	def getInternetAvailable(self):
 		import ping
-		r = ping.doOne("8.8.8.8",1.5)
+		r = ping.doOne("8.8.8.8", 1.5)
 		if r != None and r <= 1.5:
 			return True
 		else:
