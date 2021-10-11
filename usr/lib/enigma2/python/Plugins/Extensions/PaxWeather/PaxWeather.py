@@ -16,6 +16,7 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
+from __future__ import absolute_import
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.ChoiceBox import ChoiceBox
@@ -399,7 +400,7 @@ class PaxWeather(ConfigListScreen, Screen):
 			self.mylist()
 
 	def getInternetAvailable(self):
-		import ping
+		from . import ping
 		r = ping.doOne("8.8.8.8",1.5)
 		if r != None and r <= 1.5:
 			return True

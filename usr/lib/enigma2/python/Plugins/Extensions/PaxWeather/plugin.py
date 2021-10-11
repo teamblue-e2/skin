@@ -15,13 +15,15 @@
 #  If you think this license infringes any rights,
 #  please contact me at ochzoetna@gmail.com
 
+from __future__ import absolute_import
 from Plugins.Plugin import PluginDescriptor
 from Components.config import config
 from Components.Language import language
 from os import environ
 import gettext
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
-import PaxWeather
+from . import PaxWeather
+import importlib
 
 lang = language.getLanguage()
 environ["LANGUAGE"] = lang[:2]
@@ -36,7 +38,7 @@ def _(txt):
 	return t
 
 def main(session, **kwargs):
-	reload(PaxWeather)
+	importlib.reload(PaxWeather)
 	try:
 		session.open(PaxWeather.PaxWeather)
 	except:
