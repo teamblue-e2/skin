@@ -28,7 +28,10 @@ from Components.ConfigList import ConfigListScreen
 from Components.Sources.StaticText import StaticText
 from Components.Label import Label
 from Components.Language import language
-import gettext, time, os, requests
+import gettext
+import time
+import os
+import requests
 from enigma import eTimer
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from shutil import move, copyfile
