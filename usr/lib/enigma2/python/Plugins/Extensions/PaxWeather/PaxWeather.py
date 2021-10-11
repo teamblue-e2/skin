@@ -139,7 +139,7 @@ class PaxWeather(ConfigListScreen, Screen):
 		self.timer.callback.append(self.updateMylist)
 		self.onLayoutFinish.append(self.updateMylist)
 
-		self.actCity=""
+		self.actCity = ""
 		self.InternetAvailable = self.getInternetAvailable()
 
 	def mylist(self):
