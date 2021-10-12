@@ -23,7 +23,7 @@ from os import environ
 import gettext
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from . import PaxWeather
-import importlib
+from sys import version_info
 
 lang = language.getLanguage()
 environ["LANGUAGE"] = lang[:2]
@@ -38,7 +38,11 @@ def _(txt):
 	return t
 
 def main(session, **kwargs):
-	importlib.reload(PaxWeather)
+    if version_info[0] >= 3:
+        import importlib
+        importlib.reload(PaxWeather)
+    else:
+        reload(PaxWeather)
 	try:
 		session.open(PaxWeather.PaxWeather)
 	except:
