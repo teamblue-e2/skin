@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# örlgrey <ochzoetna@gmail.com>, 2020.
+# oerlgrey <ochzoetna@gmail.com>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PaxWeather\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 20:24+0200\n"
-"PO-Revision-Date: 2020-10-18 10:07+0200\n"
-"Last-Translator: örlgrey <ochzoetna@gmail.com>\n"
-"Language-Team: örlgrey & Apachi70\n"
+"PO-Revision-Date: 2022-07-09 12:16+0200\n"
+"Last-Translator: oerlgrey <ochzoetna@gmail.com>\n"
+"Language-Team: oerlgrey\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: PaxWeather.py
@@ -69,24 +69,40 @@ msgstr ""
 "Bitte überprüfen Sie Ihre Einstellungen."
 
 #: PaxWeather.py
-msgid "Systemplugin \"weathercomponenthandler\" was installed successfully."
-msgstr "Systemplugin \"weathercomponenthandler\" wurde erfolgreich installiert."
+msgid ""
+"Systemplugin \"weathercomponenthandler\" was installed successfully.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+"Systemplugin \"weathercomponenthandler\" wurde erfolgreich installiert.\n"
+"Wollen Sie jetzt neu starten?"
+
+#: PaxWeather.py
+msgid ""
+"After installing Systemplugin \"weathercomponenthandler\" you have to restart the GUI.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+"Nach der Installation des Systemplugins \"weathercomponenthandler\" müssen Sie die GUI neu starten.\n"
+"Wollen Sie jetzt neu starten?"
 
 #: PaxWeather.py
 msgid "Systemplugin \"weathercomponenthandler\" could not be installed."
 msgstr "Systemplugin \"weathercomponenthandler\" konnte nicht installiert werden."
 
 #: PaxWeather.py
-msgid "Do you really want to reboot now?"
-msgstr "Wollen Sie jetzt neu starten?"
-
-#: PaxWeather.py
 msgid "Do you really want to exit without saving?"
 msgstr "Wollen Sie wirklich beenden, ohne zu speichern?"
 
 #: PaxWeather.py
-msgid "Restart GUI"
-msgstr "GUI neu starten"
+msgid "Restart GUI?"
+msgstr "GUI neu starten?"
+
+#: PaxWeather.py
+msgid "Install Plugin?"
+msgstr "Plugin installieren?"
+
+#: PaxWeather.py
+msgid "Exit?"
+msgstr "Beenden?"
 
 #: PaxWeather.py
 msgid ""

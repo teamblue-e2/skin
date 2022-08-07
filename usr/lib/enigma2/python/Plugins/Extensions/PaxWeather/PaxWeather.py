@@ -2,7 +2,7 @@
 #
 #  PaxWeather Plugin for teamBlue-image
 #
-#  Coded/Modified/Adapted by örlgrey
+#  Coded/Modified/Adapted by oerlgrey
 #  Based on teamBlue image source code
 #  Thankfully inspired by MyMetrix by iMaxxx
 #
@@ -28,15 +28,22 @@ from Components.ConfigList import ConfigListScreen
 from Components.Sources.StaticText import StaticText
 from Components.Label import Label
 from Components.Language import language
-import gettext
-import time
-import os
-import requests
+import gettext, time, os, requests
 from enigma import eTimer
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from shutil import move, copyfile
-from lxml import etree
 from xml.etree.cElementTree import fromstring
+
+python3 = False
+
+try:
+	import six
+	if six.PY2:
+		python3 = False
+	else:
+		python3 = True
+except ImportError:
+	python3 = False
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -78,6 +85,8 @@ config.plugins.PaxWeather.list = ConfigSelection(default="", choices=SearchResul
 
 config.plugins.PaxWeather.cityname = ConfigText(default="")
 config.plugins.PaxWeather.gmcode = ConfigText(default="")
+
+state = "ok"
 
 class PaxWeather(ConfigListScreen, Screen):
 	skin = """
@@ -139,7 +148,6 @@ class PaxWeather(ConfigListScreen, Screen):
 		self.timer.callback.append(self.updateMylist)
 		self.onLayoutFinish.append(self.updateMylist)
 
-		self.actCity = ""
 		self.InternetAvailable = self.getInternetAvailable()
 
 	def mylist(self):
@@ -198,6 +206,7 @@ class PaxWeather(ConfigListScreen, Screen):
 			self.session.open(MessageBox, _('No valid location found.'), MessageBox.TYPE_INFO, timeout=10)
 
 	def checkCode(self):
+		global python3
 		if self.InternetAvailable and config.plugins.PaxWeather.activate.value == "weather-on":
 			option = self["config"].getCurrent()[1]
 			if option.value == "auto-ip":
@@ -208,14 +217,17 @@ class PaxWeather(ConfigListScreen, Screen):
 					data_gc = fromstring(res_gc.text)
 
 					for weather in data_gc.findall("./weather"):
-						ipcity = weather.get('weatherlocationname').encode("utf-8", 'ignore')
-						code = weather.get('weatherlocationcode').split('wc:')[1]
-						iplist.append((ipcity, code))
+						if python3:
+							ipcity = weather.get('weatherlocationname')
+						else:
+							ipcity = weather.get('weatherlocationname').encode("utf-8", 'ignore')
+						weathercode = weather.get('weatherlocationcode')
+						iplist.append((ipcity, weathercode + "//" + ipcity))
 
 					def CodeCallBack(callback):
 						callback = callback and callback[1]
 						if callback:
-							config.plugins.PaxWeather.gmcode.value = str(callback)
+							config.plugins.PaxWeather.gmcode.value = str(callback.split("//")[0])
 							config.plugins.PaxWeather.gmcode.save()
 							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout=10)
 					self.session.openWithCallback(CodeCallBack, ChoiceBox, title=_("Choose your location:"), list=iplist)
@@ -230,14 +242,17 @@ class PaxWeather(ConfigListScreen, Screen):
 					data_gc = fromstring(res_gc.text)
 
 					for weather in data_gc.findall("./weather"):
-						city = weather.get('weatherlocationname').encode("utf-8", 'ignore')
-						code = weather.get('weatherlocationcode').split('wc:')[1]
-						citylist.append((city, code))
+						if python3:
+							city = weather.get('weatherlocationname')
+						else:
+							city = weather.get('weatherlocationname').encode("utf-8", 'ignore')
+						code = weather.get('weatherlocationcode')
+						citylist.append((city, code + "//" + city))
 
 					def LocationCallBack(callback):
 						callback = callback and callback[1]
 						if callback:
-							config.plugins.PaxWeather.gmcode.value = str(callback)
+							config.plugins.PaxWeather.gmcode.value = str(callback.split("//")[0])
 							config.plugins.PaxWeather.gmcode.save()
 							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout=10)
 					self.session.openWithCallback(LocationCallBack, ChoiceBox, title=_("Choose your location:"), list=citylist)
@@ -246,20 +261,19 @@ class PaxWeather(ConfigListScreen, Screen):
 					self.session.open(MessageBox, _('No valid Weather-Code found.'), MessageBox.TYPE_INFO, timeout=10)
 
 			if option.value == "weatherplugin":
-				if self.InternetAvailable:
-					try:
-						check_installed = os.popen("opkg list-installed enigma2-plugin-systemplugins-weathercomponenthandler | cut -d ' ' -f1").read()
-						if "enigma2-plugin-systemplugins-weathercomponenthandler" in str(check_installed):
+				try:
+					check_installed = os.popen("opkg list-installed enigma2-plugin-systemplugins-weathercomponenthandler | cut -d ' ' -f1").read()
+					if "enigma2-plugin-systemplugins-weathercomponenthandler" in str(check_installed):
+						global state
+						if state == "ok":
 							from Plugins.Extensions.WeatherPlugin.setup import MSNWeatherPluginEntriesListConfigScreen
 							self.session.open(MSNWeatherPluginEntriesListConfigScreen)
 						else:
-							self.askInstall()
-					except:
+							self.askAgain()
+					else:
 						self.askInstall()
-				else:
-					self.session.open(MessageBox, _("Your box needs an internet connection to display the weather widget.\nPlease solve the problem."), MessageBox.TYPE_INFO, timeout=10)
-					config.plugins.PaxWeather.activate.value = "weather-off"
-					self.mylist()
+				except:
+					self.askInstall()
 
 	def VirtualKeyBoardCallBack(self, callback):
 		try:
@@ -281,7 +295,7 @@ class PaxWeather(ConfigListScreen, Screen):
 
 	def askInstall(self):
 		askInstall = self.session.openWithCallback(self.doInstall, MessageBox, _("Systemplugin \"weathercomponenthandler\" is not installed.\nDo you want to install the plugin now?"), MessageBox.TYPE_YESNO)
-		askInstall.setTitle(_("Restart GUI"))
+		askInstall.setTitle(_("Install Plugin?"))
 
 	def doInstall(self, answer):
 		if answer is True:
@@ -289,8 +303,9 @@ class PaxWeather(ConfigListScreen, Screen):
 			os.system("opkg install enigma2-plugin-systemplugins-weathercomponenthandler")
 			check_installed = os.popen("opkg list-installed enigma2-plugin-systemplugins-weathercomponenthandler | cut -d ' ' -f1").read()
 			if "enigma2-plugin-systemplugins-weathercomponenthandler" in str(check_installed):
-				self.session.open(MessageBox, _("Systemplugin \"weathercomponenthandler\" was installed successfully."), MessageBox.TYPE_INFO, timeout=10)
-				self.mylist()
+				global state
+				state = "restart"
+				self.askReboot()
 			else:
 				self.session.open(MessageBox, _("Systemplugin \"weathercomponenthandler\" could not be installed."), MessageBox.TYPE_INFO, timeout=10)
 				config.plugins.PaxWeather.activate.value = "weather-off"
@@ -299,9 +314,19 @@ class PaxWeather(ConfigListScreen, Screen):
 			config.plugins.PaxWeather.activate.value = "weather-off"
 			self.mylist()
 
-	def reboot(self):
-		restartbox = self.session.openWithCallback(self.restartGUI, MessageBox, _("Do you really want to reboot now?"), MessageBox.TYPE_YESNO)
-		restartbox.setTitle(_("Restart GUI"))
+	def askReboot(self):
+		askReboot = self.session.openWithCallback(self.doReboot, MessageBox, _("Systemplugin \"weathercomponenthandler\" was installed successfully.\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
+		askReboot.setTitle(_("Restart GUI?"))
+
+	def askAgain(self):
+		askAgain = self.session.openWithCallback(self.doReboot, MessageBox, _("After installing Systemplugin \"weathercomponenthandler\" you have to restart the GUI.\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
+		askAgain.setTitle(_("Restart GUI?"))
+
+	def doReboot(self, answer):
+		if answer is True:
+			self.session.open(TryQuitMainloop, 3)
+		else:
+			self.mylist()
 
 	def save(self):
 		for x in self["config"].list:
@@ -358,7 +383,7 @@ class PaxWeather(ConfigListScreen, Screen):
 	def restart(self):
 		configfile.save()
 		restartbox = self.session.openWithCallback(self.restartGUI, MessageBox, _("GUI needs a restart to apply the settings.\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
-		restartbox.setTitle(_("Restart GUI"))
+		restartbox.setTitle(_("Restart GUI?"))
 
 	def appendSkinFile(self, appendFileName):
 		"""
@@ -389,7 +414,7 @@ class PaxWeather(ConfigListScreen, Screen):
 
 	def exit(self):
 		askExit = self.session.openWithCallback(self.doExit, MessageBox, _("Do you really want to exit without saving?"), MessageBox.TYPE_YESNO)
-		askExit.setTitle(_("Exit"))
+		askExit.setTitle(_("Exit?"))
 
 	def doExit(self, answer):
 		if answer is True:
