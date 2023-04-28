@@ -195,38 +195,20 @@
 	</screen>
 	<screen name="PANEL_WEATHER_WIDGET">
 		<ePixmap name="" position="920,0" size="360,51" pixmap="GigabluePaxV2/construct/general/weather-back.png" alphatest="blend" zPosition="-1"/>
-		<widget backgroundColor="Paxbg1" font="Regular; 32" foregroundColor="PaxFont1" halign="left" noWrap="1" position="957,2" render="Label" size="80,45" source="session.MSNWeather" transparent="1" zPosition="15">
-			<convert type="PaxWeather">tempnow</convert>
-		</widget>
-		<widget backgroundColor="Paxbg1" font="Meteo; 42" foregroundColor="PaxFont1" halign="left" noWrap="1" position="1042,2" render="Label" size="48,48" source="session.MSNWeather" transparent="1" valign="center" zPosition="15">
-			<convert type="PaxWeather">meteonow</convert>
-		</widget>
-		<widget backgroundColor="Paxbg3" font="Regular; 16" foregroundColor="PaxFont1" halign="left" noWrap="1" position="1148,1" render="Label" size="44,26" source="session.MSNWeather" transparent="1" valign="center" zPosition="15">
-			<convert type="PaxWeather">highnext</convert>
-		</widget>
-		<widget backgroundColor="Paxbg3" font="Regular; 16" foregroundColor="PaxFont1" halign="left" noWrap="1" position="1142,23" render="Label" size="44,26" source="session.MSNWeather" transparent="1" valign="center" zPosition="15">
-			<convert type="PaxWeather">lownext</convert>
-		</widget>
-		<widget backgroundColor="Paxbg3" font="Meteo; 42" foregroundColor="PaxFont1" halign="left" noWrap="1" position="1210,2" render="Label" size="48,48" source="session.MSNWeather" transparent="1" valign="center" zPosition="15">
-			<convert type="PaxWeather">meteonext</convert>
-		</widget>
-	</screen>
-	<screen name="PANEL_WEATHER_WIDGET2">
-		<ePixmap name="" position="920,0" size="360,51" pixmap="GigabluePaxV2/construct/general/weather-back.png" alphatest="blend" zPosition="-1"/>
 		<widget backgroundColor="Paxbg1" font="Regular; 32" foregroundColor="PaxFont1" halign="left" noWrap="1" position="957,2" render="Label" size="80,45" source="session.CurrentService" transparent="1" zPosition="15">
-			<convert type="PaxWeather2">tempnow</convert>
+			<convert type="Pax2Weather">Day_0,DayTemp</convert>
 		</widget>
 		<widget backgroundColor="Paxbg1" font="Meteo; 42" foregroundColor="PaxFont1" halign="left" noWrap="1" position="1042,2" render="Label" size="48,48" source="session.CurrentService" transparent="1" valign="center" zPosition="15">
-			<convert type="PaxWeather2">meteonow</convert>
+			<convert type="Pax2Weather">Day_0,MeteoFont</convert>
 		</widget>
 		<widget backgroundColor="Paxbg3" font="Regular; 16" foregroundColor="PaxFont1" halign="left" noWrap="1" position="1148,1" render="Label" size="44,26" source="session.CurrentService" transparent="1" valign="center" zPosition="15">
-			<convert type="PaxWeather2">highnext</convert>
+			<convert type="Pax2Weather">Day_1,MaxTemp</convert>
 		</widget>
 		<widget backgroundColor="Paxbg3" font="Regular; 16" foregroundColor="PaxFont1" halign="left" noWrap="1" position="1142,23" render="Label" size="44,26" source="session.CurrentService" transparent="1" valign="center" zPosition="15">
-			<convert type="PaxWeather2">lownext</convert>
+			<convert type="Pax2Weather">Day_1,MinTemp</convert>
 		</widget>
 		<widget backgroundColor="Paxbg3" font="Meteo; 42" foregroundColor="PaxFont1" halign="left" noWrap="1" position="1210,2" render="Label" size="48,48" source="session.CurrentService" transparent="1" valign="center" zPosition="15">
-			<convert type="PaxWeather2">meteonext</convert>
+			<convert type="Pax2Weather">Day_1,MeteoFont</convert>
 		</widget>
 	</screen>
 	<screen name="PANEL_WINDOW_FULL">

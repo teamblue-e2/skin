@@ -23,7 +23,7 @@ from Screens.ChoiceBox import ChoiceBox
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Screens.Standby import TryQuitMainloop
 from Components.ActionMap import ActionMap
-from Components.config import config, configfile, ConfigYesNo, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigNumber, ConfigText, ConfigInteger, ConfigClock, ConfigSlider, ConfigBoolean
+from Components.config import config, configfile, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigText
 from Components.ConfigList import ConfigListScreen
 from Components.Sources.StaticText import StaticText
 from Components.Label import Label
@@ -32,10 +32,8 @@ import gettext, time, os, requests
 from enigma import eTimer
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from shutil import move, copyfile
-from xml.etree.cElementTree import fromstring
 
 python3 = False
-
 try:
 	import six
 	if six.PY2:
@@ -71,22 +69,17 @@ config.plugins.PaxWeather.activate = ConfigSelection(default="weather-off", choi
 
 config.plugins.PaxWeather.searchby = ConfigSelection(default="auto-ip", choices=[
 				("auto-ip", _("IP")),
-				("location", _("Enter location manually")),
-				("weatherplugin", _("WeatherPlugin"))
+				("location", _("Enter location manually"))
 				])
-				
+
 config.plugins.PaxWeather.refreshInterval = ConfigSelection(default="0", choices=[
 				("0", _("0")),
 				("120", _("120"))
 				])
 
-SearchResultList = []
-config.plugins.PaxWeather.list = ConfigSelection(default="", choices=SearchResultList)
-
 config.plugins.PaxWeather.cityname = ConfigText(default="")
-config.plugins.PaxWeather.gmcode = ConfigText(default="")
-
-state = "ok"
+config.plugins.PaxWeather.latitude = ConfigText(default="")
+config.plugins.PaxWeather.longitude = ConfigText(default="")
 
 class PaxWeather(ConfigListScreen, Screen):
 	skin = """
@@ -133,7 +126,7 @@ class PaxWeather(ConfigListScreen, Screen):
 			"right": self.keyRight,
 			"red": self.exit,
 			"green": self.save,
-			"yellow": self.checkCode,
+			"yellow": self.getWeatherData,
 			"cancel": self.exit,
 			"ok": self.OK,
 		}, -2)
@@ -157,9 +150,9 @@ class PaxWeather(ConfigListScreen, Screen):
 		list = []
 		list.append(getConfigListEntry(_("PaxWeather"), config.plugins.PaxWeather.activate, _("Activate or deactivate the weather widget.")))
 		if config.plugins.PaxWeather.activate.value == "weather-on":
-			list.append(getConfigListEntry(_("Search option"), config.plugins.PaxWeather.searchby, _("Choose from different options to enter your settings.\nPress the yellow button to search for the weather code.")))
+			list.append(getConfigListEntry(_("Search option"), config.plugins.PaxWeather.searchby, _("Choose from different options to enter your settings.\nThen press the yellow button to search for the coordinates.")))
 			if config.plugins.PaxWeather.searchby.value == "location":
-				list.append(getConfigListEntry(_("Location "), config.plugins.PaxWeather.cityname, _("Enter your location.\nPress OK to use the virtual keyboard.\nPress the yellow button to search for the weather code.")))
+				list.append(getConfigListEntry(_("Location "), config.plugins.PaxWeather.cityname, _("Enter your location.\nPress OK to use the virtual keyboard.\nThen press the yellow button to search for the coordinates.")))
 
 		self["config"].list = list
 		self["config"].l.setList(list)
@@ -173,10 +166,8 @@ class PaxWeather(ConfigListScreen, Screen):
 
 	def showYellowText(self):
 		option = self["config"].getCurrent()[1]
-		if option.value == "auto-ip" or option.value == "location" or option == config.plugins.PaxWeather.cityname:
-			self["key_yellow"].text = _("Search Code")
-		elif option.value == "weatherplugin":
-			self["key_yellow"].text = _("WeatherPlugin")
+		if option in (config.plugins.PaxWeather.searchby, config.plugins.PaxWeather.cityname):
+			self["key_yellow"].text = _("Find coordinates")
 		else:
 			self["key_yellow"].text = ""
 
@@ -196,93 +187,63 @@ class PaxWeather(ConfigListScreen, Screen):
 		self["config"].instance.moveSelection(self["config"].instance.moveUp)
 		self.mylist()
 
-	def getCityByIP(self):
-		try:
-			res_city = requests.get('http://ip-api.com/json/?lang=de&fields=status,city', timeout=1)
-			data_city = res_city.json()
-			if data_city['status'] == 'success':
-				return str(data_city['city'])
-		except:
-			self.session.open(MessageBox, _('No valid location found.'), MessageBox.TYPE_INFO, timeout=10)
-
-	def checkCode(self):
-		global python3
+	def getWeatherData(self):
 		if self.InternetAvailable and config.plugins.PaxWeather.activate.value == "weather-on":
 			option = self["config"].getCurrent()[1]
-			if option.value == "auto-ip":
-				cityip = self.getCityByIP()
-				iplist = []
+			if option.value == "auto-ip" or (option.value == "location" and config.plugins.PaxWeather.cityname.value in ("", " ")) or (option == config.plugins.PaxWeather.cityname and config.plugins.PaxWeather.cityname.value in ("", " ")):
+				self.getCityByIP(False)
+			elif (option.value == "location" and not config.plugins.PaxWeather.cityname.value in ("", " ")) or (option == config.plugins.PaxWeather.cityname and not config.plugins.PaxWeather.cityname.value in ("", " ")):
 				try:
-					res_gc = requests.get('http://weather.service.msn.com/find.aspx?src=windows&outputview=search&weasearchstr=%s&culture=de-DE' % str(cityip), timeout=1)
-					data_gc = fromstring(res_gc.text)
-
-					for weather in data_gc.findall("./weather"):
-						if python3:
-							ipcity = weather.get('weatherlocationname')
-						else:
-							ipcity = weather.get('weatherlocationname').encode("utf-8", 'ignore')
-						weathercode = weather.get('weatherlocationcode')
-						iplist.append((ipcity, weathercode + "//" + ipcity))
-
-					def CodeCallBack(callback):
-						callback = callback and callback[1]
-						if callback:
-							config.plugins.PaxWeather.gmcode.value = str(callback.split("//")[0])
-							config.plugins.PaxWeather.gmcode.save()
-							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout=10)
-					self.session.openWithCallback(CodeCallBack, ChoiceBox, title=_("Choose your location:"), list=iplist)
-
-				except:
-					self.session.open(MessageBox, _('No valid location found.'), MessageBox.TYPE_INFO, timeout=10)
-
-			if option.value == "location" or option == config.plugins.PaxWeather.cityname:
-				citylist = []
-				try:
-					res_gc = requests.get('http://weather.service.msn.com/find.aspx?src=windows&outputview=search&weasearchstr=%s&culture=de-DE' % str(config.plugins.PaxWeather.cityname.value), timeout=1)
-					data_gc = fromstring(res_gc.text)
-
-					for weather in data_gc.findall("./weather"):
-						if python3:
-							city = weather.get('weatherlocationname')
-						else:
-							city = weather.get('weatherlocationname').encode("utf-8", 'ignore')
-						code = weather.get('weatherlocationcode')
-						citylist.append((city, code + "//" + city))
-
-					def LocationCallBack(callback):
-						callback = callback and callback[1]
-						if callback:
-							config.plugins.PaxWeather.gmcode.value = str(callback.split("//")[0])
-							config.plugins.PaxWeather.gmcode.save()
-							self.session.open(MessageBox, _("Weather-Code found:\n") + str(config.plugins.PaxWeather.gmcode.value), MessageBox.TYPE_INFO, timeout=10)
-					self.session.openWithCallback(LocationCallBack, ChoiceBox, title=_("Choose your location:"), list=citylist)
-
-				except:
-					self.session.open(MessageBox, _('No valid Weather-Code found.'), MessageBox.TYPE_INFO, timeout=10)
-
-			if option.value == "weatherplugin":
-				try:
-					check_installed = os.popen("opkg list-installed enigma2-plugin-systemplugins-weathercomponenthandler | cut -d ' ' -f1").read()
-					if "enigma2-plugin-systemplugins-weathercomponenthandler" in str(check_installed):
-						global state
-						if state == "ok":
-							from Plugins.Extensions.WeatherPlugin.setup import MSNWeatherPluginEntriesListConfigScreen
-							self.session.open(MSNWeatherPluginEntriesListConfigScreen)
-						else:
-							self.askAgain()
+					res = requests.request('get', 'http://dev.virtualearth.net/REST/v1/Locations/' + str(config.plugins.PaxWeather.cityname.value) + '?&key=Amdqp42KR1c0kHZjTSFXtovl5Y-YridPCqZFguFnvFk6TbW-ITF8jdINSt0jqUQ2', timeout=3)
+					data = res.json()
+					reslist = []
+					for idx, locations in enumerate(data['resourceSets'][0]['resources']):
+						city = data['resourceSets'][0]['resources'][int(idx)]['address']['locality']
+						region = data['resourceSets'][0]['resources'][int(idx)]['address']['countryRegion']
+						lat = data['resourceSets'][0]['resources'][int(idx)]['geocodePoints'][0]['coordinates'][0]
+						lon = data['resourceSets'][0]['resources'][int(idx)]['geocodePoints'][0]['coordinates'][1]
+						reslist.append((city + " / " + region, lat, lon))
+					if len(reslist) > 0:
+						self.session.openWithCallback(self.LocationCallBack, ChoiceBox, list=reslist)
 					else:
-						self.askInstall()
+						self.getCityByIP(True)
 				except:
-					self.askInstall()
+					self.getCityByIP(True)
 
-	def VirtualKeyBoardCallBack(self, callback):
+	def LocationCallBack(self, callback):
+		if callback:
+			config.plugins.PaxWeather.latitude.value = str(callback[1])
+			config.plugins.PaxWeather.latitude.save()
+			config.plugins.PaxWeather.longitude.value = str(callback[2])
+			config.plugins.PaxWeather.longitude.save()
+			self.session.open(MessageBox, _("Location found:") + "\n" + str(callback[0]) + "\n\n" + _("latitude: ") + str(callback[1]) + "\n" + _("longitude: ") + str(callback[2]), MessageBox.TYPE_INFO, timeout=8)
+
+	def getCityByIP(self, failed):
+		city = ""
+		lat = ""
+		lon = ""
+
 		try:
-			if callback:
-				self["config"].getCurrent()[1].value = callback
-			else:
-				pass
+			res_city = requests.get('http://ip-api.com/json/?lang=de&fields=status,city,lat,lon,country', timeout=2)
+			data = res_city.json()
+			if data['status'] == 'success':
+				city = data['city']
+				region = data['country']
+				lat = data['lat']
+				lon = data['lon']
+				if failed:
+					config.plugins.PaxWeather.cityname.value = ""
+					config.plugins.PaxWeather.cityname.save()
+					self.session.open(MessageBox, _("No valid location found.") + "\n" + _("Fallback to IP.") + "\n\n" + _("Location found:") + "\n" + str(city) + " / " + str(region) + "\n\n" + _("latitude: ") + str(lat) + "\n" + _("longitude: ") + str(lon), MessageBox.TYPE_INFO, timeout=10)
+				else:
+					self.session.open(MessageBox, _("Location found:") + "\n" + str(city) + " / " + str(region) + "\n\n" + _("latitude: ") + str(lat) + "\n" + _("longitude: ") + str(lon), MessageBox.TYPE_INFO, timeout=8)
 		except:
 			pass
+
+		config.plugins.PaxWeather.latitude.value = str(lat)
+		config.plugins.PaxWeather.latitude.save()
+		config.plugins.PaxWeather.longitude.value = str(lon)
+		config.plugins.PaxWeather.longitude.save()
 
 	def OK(self):
 		option = self["config"].getCurrent()[1]
@@ -293,40 +254,12 @@ class PaxWeather(ConfigListScreen, Screen):
 			self.session.openWithCallback(self.VirtualKeyBoardCallBack, VirtualKeyBoard, title=title, text=text)
 			config.plugins.PaxWeather.cityname.save()
 
-	def askInstall(self):
-		askInstall = self.session.openWithCallback(self.doInstall, MessageBox, _("Systemplugin \"weathercomponenthandler\" is not installed.\nDo you want to install the plugin now?"), MessageBox.TYPE_YESNO)
-		askInstall.setTitle(_("Install Plugin?"))
-
-	def doInstall(self, answer):
-		if answer is True:
-			os.system('opkg update')
-			os.system("opkg install enigma2-plugin-systemplugins-weathercomponenthandler")
-			check_installed = os.popen("opkg list-installed enigma2-plugin-systemplugins-weathercomponenthandler | cut -d ' ' -f1").read()
-			if "enigma2-plugin-systemplugins-weathercomponenthandler" in str(check_installed):
-				global state
-				state = "restart"
-				self.askReboot()
-			else:
-				self.session.open(MessageBox, _("Systemplugin \"weathercomponenthandler\" could not be installed."), MessageBox.TYPE_INFO, timeout=10)
-				config.plugins.PaxWeather.activate.value = "weather-off"
-				self.mylist()
-		else:
-			config.plugins.PaxWeather.activate.value = "weather-off"
-			self.mylist()
-
-	def askReboot(self):
-		askReboot = self.session.openWithCallback(self.doReboot, MessageBox, _("Systemplugin \"weathercomponenthandler\" was installed successfully.\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
-		askReboot.setTitle(_("Restart GUI?"))
-
-	def askAgain(self):
-		askAgain = self.session.openWithCallback(self.doReboot, MessageBox, _("After installing Systemplugin \"weathercomponenthandler\" you have to restart the GUI.\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
-		askAgain.setTitle(_("Restart GUI?"))
-
-	def doReboot(self, answer):
-		if answer is True:
-			self.session.open(TryQuitMainloop, 3)
-		else:
-			self.mylist()
+	def VirtualKeyBoardCallBack(self, callback):
+		try:
+			if callback:
+				self["config"].getCurrent()[1].value = callback
+		except:
+			pass
 
 	def save(self):
 		for x in self["config"].list:
@@ -339,33 +272,19 @@ class PaxWeather(ConfigListScreen, Screen):
 
 		if config.plugins.PaxWeather.activate.value == "weather-on":
 			if self.InternetAvailable:
-				if config.plugins.PaxWeather.searchby.value == "weatherplugin":
-					check_installed = os.popen("opkg list-installed enigma2-plugin-systemplugins-weathercomponenthandler | cut -d ' ' -f1").read()
-					if "enigma2-plugin-systemplugins-weathercomponenthandler" in str(check_installed):
-						self.skinSearchAndReplace.append(['<!-- <panel name="PANEL_WEATHER_WIDGET_OFF"/> -->', '<panel name="PANEL_WEATHER_WIDGET"/>'])
-						self.skinSearchAndReplace.append(['<panel name="PANEL_WEATHER_WIDGET2"/>', '<panel name="PANEL_WEATHER_WIDGET"/>'])
-						self.appendSkinFile(self.xmlfile)
-						self.generateSkin()
-					else:
-						self.session.open(MessageBox, _("Systemplugin \"weathercomponenthandler\" is not installed.\nPlease check your settings."), MessageBox.TYPE_INFO, timeout=10)
-						config.plugins.PaxWeather.activate.value = "weather-off"
-						self.mylist()
-				else:
-					self.skinSearchAndReplace.append(['<!-- <panel name="PANEL_WEATHER_WIDGET_OFF"/> -->', '<panel name="PANEL_WEATHER_WIDGET2"/>'])
-					self.skinSearchAndReplace.append(['<panel name="PANEL_WEATHER_WIDGET"/>', '<panel name="PANEL_WEATHER_WIDGET2"/>'])
-					self.appendSkinFile(self.xmlfile)
-					self.generateSkin()
+				self.skinSearchAndReplace.append(['<!-- <panel name="PANEL_WEATHER_WIDGET_OFF"/> -->', '<panel name="PANEL_WEATHER_WIDGET"/>'])
+				self.appendSkinFile(self.xmlfile)
+				self.generateSkin()
 			else:
 				self.session.open(MessageBox, _("Your box needs an internet connection to display the weather widget.\nPlease solve the problem."), MessageBox.TYPE_INFO, timeout=10)
 				config.plugins.PaxWeather.activate.value = "weather-off"
 				self.mylist()
 		else:
-			self.skinSearchAndReplace.append(['<panel name="PANEL_WEATHER_WIDGET2"/>', '<!-- <panel name="PANEL_WEATHER_WIDGET_OFF"/> -->'])
 			self.skinSearchAndReplace.append(['<panel name="PANEL_WEATHER_WIDGET"/>', '<!-- <panel name="PANEL_WEATHER_WIDGET_OFF"/> -->'])
 			self.appendSkinFile(self.xmlfile)
 			self.generateSkin()
 
-		if config.plugins.PaxWeather.activate.value == "weather-on" and self.InternetAvailable and not config.plugins.PaxWeather.searchby.value == "weatherplugin":
+		if self.InternetAvailable and config.plugins.PaxWeather.activate.value == "weather-on":
 			config.plugins.PaxWeather.refreshInterval.value = "120"
 			config.plugins.PaxWeather.refreshInterval.save()
 		else:

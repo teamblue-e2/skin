@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PaxWeather\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 20:24+0200\n"
-"PO-Revision-Date: 2022-07-09 12:16+0200\n"
+"PO-Revision-Date: 2023-04-28 17:52+0200\n"
 "Last-Translator: oerlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: oerlgrey\n"
 "Language: de\n"
@@ -18,93 +18,46 @@ msgstr ""
 "X-Generator: Poedit 2.4.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: PaxWeather.py
 msgid "PaxWeather"
 msgstr "PaxWetter"
 
-#: PaxWeather.py
 msgid "PaxWeather-Settings"
 msgstr "PaxWetter-Einstellungen"
 
-#: PaxWeather.py
 msgid "Activate or deactivate the weather widget."
 msgstr "Aktivieren oder Deaktivieren Sie das Wetter-Widget."
 
-#: PaxWeather.py
 msgid ""
 "Choose from different options to enter your settings.\n"
-"Press the yellow button to search for the weather code."
+"Then press the yellow button to search for the coordinates."
 msgstr ""
 "Wählen Sie aus verschiedenen Optionen um Ihre Einstellungen vorzunehmen.\n"
-"Drücken Sie die gelbe Taste um nach dem Wetter-Code zu suchen."
+"Drücken Sie dann die gelbe Taste um nach den Koordinaten zu suchen."
 
-#: PaxWeather.py
 msgid ""
 "Enter your location.\n"
 "Press OK to use the virtual keyboard.\n"
-"Press the yellow button to search for the weather code."
+"Then press the yellow button to search for the coordinates."
 msgstr ""
 "Geben Sie Ihren Standort ein.\n"
 "Drücken Sie OK um die Virtuelle Tastatur zu verwenden.\n"
-"Drücken Sie die gelbe Taste um nach dem Wetter-Code zu suchen."
+"Drücken Sie dann die gelbe Taste um nach den Koordinaten zu suchen."
 
-#: PaxWeather.py
 msgid "Enter your location:"
 msgstr "Geben Sie Ihren Standort ein:"
 
-#: PaxWeather.py
-msgid ""
-"Systemplugin \"weathercomponenthandler\" is not installed.\n"
-"Do you want to install the plugin now?"
-msgstr ""
-"Systemplugin \"weathercomponenthandler\" ist nicht installiert.\n"
-"Möchten Sie das Plugin jetzt installieren?"
-
-#: PaxWeather.py
-msgid ""
-"Systemplugin \"weathercomponenthandler\" is not installed.\n"
-"Please check your settings."
-msgstr ""
-"Systemplugin \"weathercomponenthandler\" ist nicht installiert.\n"
-"Bitte überprüfen Sie Ihre Einstellungen."
-
-#: PaxWeather.py
-msgid ""
-"Systemplugin \"weathercomponenthandler\" was installed successfully.\n"
-"Do you want to Restart the GUI now?"
-msgstr ""
-"Systemplugin \"weathercomponenthandler\" wurde erfolgreich installiert.\n"
-"Wollen Sie jetzt neu starten?"
-
-#: PaxWeather.py
-msgid ""
-"After installing Systemplugin \"weathercomponenthandler\" you have to restart the GUI.\n"
-"Do you want to Restart the GUI now?"
-msgstr ""
-"Nach der Installation des Systemplugins \"weathercomponenthandler\" müssen Sie die GUI neu starten.\n"
-"Wollen Sie jetzt neu starten?"
-
-#: PaxWeather.py
-msgid "Systemplugin \"weathercomponenthandler\" could not be installed."
-msgstr "Systemplugin \"weathercomponenthandler\" konnte nicht installiert werden."
-
-#: PaxWeather.py
 msgid "Do you really want to exit without saving?"
 msgstr "Wollen Sie wirklich beenden, ohne zu speichern?"
 
-#: PaxWeather.py
 msgid "Restart GUI?"
 msgstr "GUI neu starten?"
 
-#: PaxWeather.py
 msgid "Install Plugin?"
 msgstr "Plugin installieren?"
 
-#: PaxWeather.py
 msgid "Exit?"
 msgstr "Beenden?"
 
-#: PaxWeather.py
 msgid ""
 "GUI needs a restart to apply the settings.\n"
 "Do you want to Restart the GUI now?"
@@ -112,7 +65,6 @@ msgstr ""
 "Zum Aktivieren der Einstellungen muss die Oberfläche neu gestartet werden.\n"
 "Wollen Sie jetzt neu starten?"
 
-#: PaxWeather.py
 msgid ""
 "Your box needs an internet connection to display the weather widget.\n"
 "Please solve the problem."
@@ -120,38 +72,26 @@ msgstr ""
 "Ihre Box benötigt eine Internetverbindung, um das Wetter-Widget anzuzeigen.\n"
 "Bitte lösen Sie das Problem."
 
-#: PaxWeather.py
 msgid "Enter location manually"
 msgstr "Standort manuell eingeben"
 
-#: PaxWeather.py
 msgid "No valid location found."
 msgstr "Keinen gültigen Standort gefunden."
 
-#: PaxWeather.py
-msgid "Location found:\n"
-msgstr "Standort gefunden:\n"
+msgid "Fallback to IP."
+msgstr "Rückgriff auf IP."
 
-#: PaxWeather.py
-msgid "Weather-Code found:\n"
-msgstr "Wetter-Code gefunden:\n"
+msgid "Location found:"
+msgstr "Standort gefunden:"
 
-#: PaxWeather.py
 msgid "Choose your location:"
 msgstr "Wählen Sie Ihren Standort:"
 
-#: PaxWeather.py
-msgid "Search Code"
-msgstr "Suche Code"
-
-#: PaxWeather.py
 msgid "Search option"
 msgstr "Suchoption"
 
-#: PaxWeather.py
 msgid "Location "
 msgstr "Standort"
 
-#: PaxWeather.py
-msgid "Check location"
-msgstr "Überprüfe Standort"
+msgid "Find coordinates"
+msgstr "Koordinaten suchen"
