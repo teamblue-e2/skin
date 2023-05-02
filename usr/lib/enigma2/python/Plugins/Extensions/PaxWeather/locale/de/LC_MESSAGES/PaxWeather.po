@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PaxWeather\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-17 20:24+0200\n"
-"PO-Revision-Date: 2023-04-28 17:52+0200\n"
+"PO-Revision-Date: 2023-05-02 22:43+0200\n"
 "Last-Translator: oerlgrey <ochzoetna@gmail.com>\n"
 "Language-Team: oerlgrey\n"
 "Language: de\n"
@@ -95,3 +95,9 @@ msgstr "Standort"
 
 msgid "Find coordinates"
 msgstr "Koordinaten suchen"
+
+msgid "No location set."
+msgstr "Kein Standort festgelegt."
+
+msgid "You have no location entered."
+msgstr "Sie haben keinen Ort eingegeben."

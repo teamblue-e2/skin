@@ -26,6 +26,7 @@ from Components.ActionMap import ActionMap
 from Components.config import config, configfile, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigText
 from Components.ConfigList import ConfigListScreen
 from Components.Sources.StaticText import StaticText
+from Components.Sources.CanvasSource import CanvasSource
 from Components.Label import Label
 from Components.Language import language
 import gettext, time, os, requests
@@ -78,6 +79,7 @@ config.plugins.PaxWeather.refreshInterval = ConfigSelection(default="0", choices
 				])
 
 config.plugins.PaxWeather.cityname = ConfigText(default="")
+config.plugins.PaxWeather.cityfound = ConfigText(default="")
 config.plugins.PaxWeather.latitude = ConfigText(default="")
 config.plugins.PaxWeather.longitude = ConfigText(default="")
 
@@ -90,7 +92,8 @@ class PaxWeather(ConfigListScreen, Screen):
 				<ePixmap position="0,0" size="940,53" pixmap="/usr/share/enigma2/GigabluePaxV2/construct/menu-top.png" alphatest="blend" zPosition="-2"/>
 				<ePixmap position="0,265" size="1280,242" pixmap="/usr/share/enigma2/GigabluePaxV2/construct/menu-band.png" alphatest="blend" zPosition="-2"/>
 				<widget source="Title" render="Label" position="369,0" size="540,46" font="SetrixHD; 35" backgroundColor="#10000000" transparent="1"/>
-				<widget name="config" position="492,86" size="700,150" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#10000000" transparent="1"/>
+				<widget name="config" position="492,86" size="700,120" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#10000000" transparent="1"/>
+				<widget source="canvas" render="Canvas" position="658,220" size="368,207" backgroundColor="#00000000" />
 				<eLabel position="476,70" zPosition="-1" size="735,585" backgroundColor="#10000000"/>
 				<widget source="help" render="Label" position="492,380" size="700,310" backgroundColor="#10000000" transparent="1" zPosition="1" foregroundColor="#00fcc000" font="Regular; 20" halign="center" valign="center"/>
 				<widget source="key_red" render="Label" position="500,685" size="180,26" zPosition="2" font="Regular; 20" halign="left" backgroundColor="#10000000" transparent="1"/>
@@ -114,6 +117,7 @@ class PaxWeather(ConfigListScreen, Screen):
 		self.xmlfile = "/usr/lib/enigma2/python/Plugins/Extensions/PaxWeather/skin.xml"
 		self.skinfile = "/usr/share/enigma2/GigabluePaxV2/skin.xml"
 		self.skinfile_tmp = self.skinfile + ".tmp"
+		self["canvas"] = CanvasSource()
 
 		list = []
 		ConfigListScreen.__init__(self, list)
@@ -158,6 +162,17 @@ class PaxWeather(ConfigListScreen, Screen):
 		self["config"].l.setList(list)
 		self.updateHelp()
 		self.showYellowText()
+		self.showPreview()
+
+	def showPreview(self):
+		option = self["config"].getCurrent()[1]
+		if option in (config.plugins.PaxWeather.searchby, config.plugins.PaxWeather.cityname):
+			if config.plugins.PaxWeather.cityfound.value != "" and config.plugins.PaxWeather.latitude.value != "" and config.plugins.PaxWeather.longitude.value != "":
+				self.showText(27, str(config.plugins.PaxWeather.cityfound.value) + "\n" + "lat: " + str(config.plugins.PaxWeather.latitude.value) + "\n" + "lon: " + str(config.plugins.PaxWeather.longitude.value))
+			else:
+				self.showText(27, _("No location set."))
+		else:
+			self.showText(27, _(" "))
 
 	def updateHelp(self):
 		cur = self["config"].getCurrent()
@@ -188,35 +203,42 @@ class PaxWeather(ConfigListScreen, Screen):
 		self.mylist()
 
 	def getWeatherData(self):
-		if self.InternetAvailable and config.plugins.PaxWeather.activate.value == "weather-on":
-			option = self["config"].getCurrent()[1]
-			if option.value == "auto-ip" or (option.value == "location" and config.plugins.PaxWeather.cityname.value in ("", " ")) or (option == config.plugins.PaxWeather.cityname and config.plugins.PaxWeather.cityname.value in ("", " ")):
-				self.getCityByIP(False)
-			elif (option.value == "location" and not config.plugins.PaxWeather.cityname.value in ("", " ")) or (option == config.plugins.PaxWeather.cityname and not config.plugins.PaxWeather.cityname.value in ("", " ")):
-				try:
-					res = requests.request('get', 'http://dev.virtualearth.net/REST/v1/Locations/' + str(config.plugins.PaxWeather.cityname.value) + '?&key=Amdqp42KR1c0kHZjTSFXtovl5Y-YridPCqZFguFnvFk6TbW-ITF8jdINSt0jqUQ2', timeout=3)
-					data = res.json()
-					reslist = []
-					for idx, locations in enumerate(data['resourceSets'][0]['resources']):
-						city = data['resourceSets'][0]['resources'][int(idx)]['address']['locality']
-						region = data['resourceSets'][0]['resources'][int(idx)]['address']['countryRegion']
-						lat = data['resourceSets'][0]['resources'][int(idx)]['geocodePoints'][0]['coordinates'][0]
-						lon = data['resourceSets'][0]['resources'][int(idx)]['geocodePoints'][0]['coordinates'][1]
-						reslist.append((city + " / " + region, lat, lon))
-					if len(reslist) > 0:
-						self.session.openWithCallback(self.LocationCallBack, ChoiceBox, list=reslist)
-					else:
-						self.getCityByIP(True)
-				except:
-					self.getCityByIP(True)
+		option = self["config"].getCurrent()[1]
+		if option.value == "auto-ip" or (option.value == "location" and config.plugins.PaxWeather.cityname.value == "") or (option == config.plugins.PaxWeather.cityname and config.plugins.PaxWeather.cityname.value == ""):
+			if option.value == "auto-ip":
+				self.getCityByIP("ip")
+			else:
+				self.getCityByIP("empty")
+		elif (option.value == "location" and config.plugins.PaxWeather.cityname.value != "") or (option == config.plugins.PaxWeather.cityname and config.plugins.PaxWeather.cityname.value != ""):
+			reslist = []
+			try:
+				res = requests.get('http://dev.virtualearth.net/REST/v1/Locations/' + str(config.plugins.PaxWeather.cityname.value) + '?&key=Amdqp42KR1c0kHZjTSFXtovl5Y-YridPCqZFguFnvFk6TbW-ITF8jdINSt0jqUQ2', timeout=3)
+				data = res.json()
+				for idx, locations in enumerate(data['resourceSets'][0]['resources']):
+					city = str(data['resourceSets'][0]['resources'][int(idx)]['name'])
+					if city:
+						lat = str(data['resourceSets'][0]['resources'][int(idx)]['geocodePoints'][0]['coordinates'][0])
+						lon = str(data['resourceSets'][0]['resources'][int(idx)]['geocodePoints'][0]['coordinates'][1])
+						reslist.append((city, lat, lon))
+			except:
+				pass
+
+			if len(reslist) > 0:
+				self.session.openWithCallback(self.LocationCallBack, ChoiceBox, list=reslist)
+			else:
+				self.getCityByIP("fallback")
 
 	def LocationCallBack(self, callback):
 		if callback:
+			self.session.open(MessageBox, _("Location found:") + "\n" + str(callback[0]) + "\n\n" + _("latitude: ") + str(callback[1]) + "\n" + _("longitude: ") + str(callback[2]), MessageBox.TYPE_INFO, timeout=8)
+			city = str(callback[0]).split(",")[0]
+			config.plugins.PaxWeather.cityfound.value = city
+			config.plugins.PaxWeather.cityfound.save()
 			config.plugins.PaxWeather.latitude.value = str(callback[1])
 			config.plugins.PaxWeather.latitude.save()
 			config.plugins.PaxWeather.longitude.value = str(callback[2])
 			config.plugins.PaxWeather.longitude.save()
-			self.session.open(MessageBox, _("Location found:") + "\n" + str(callback[0]) + "\n\n" + _("latitude: ") + str(callback[1]) + "\n" + _("longitude: ") + str(callback[2]), MessageBox.TYPE_INFO, timeout=8)
+			self.showPreview()
 
 	def getCityByIP(self, failed):
 		city = ""
@@ -231,19 +253,24 @@ class PaxWeather(ConfigListScreen, Screen):
 				region = data['country']
 				lat = data['lat']
 				lon = data['lon']
-				if failed:
+				if failed == "fallback":
 					config.plugins.PaxWeather.cityname.value = ""
 					config.plugins.PaxWeather.cityname.save()
 					self.session.open(MessageBox, _("No valid location found.") + "\n" + _("Fallback to IP.") + "\n\n" + _("Location found:") + "\n" + str(city) + " / " + str(region) + "\n\n" + _("latitude: ") + str(lat) + "\n" + _("longitude: ") + str(lon), MessageBox.TYPE_INFO, timeout=10)
+				elif failed == "empty":
+					self.session.open(MessageBox, _("You have no location entered.") + "\n" + _("Fallback to IP.") + "\n\n" + _("Location found:") + "\n" + str(city) + " / " + str(region) + "\n\n" + _("latitude: ") + str(lat) + "\n" + _("longitude: ") + str(lon), MessageBox.TYPE_INFO, timeout=10)
 				else:
 					self.session.open(MessageBox, _("Location found:") + "\n" + str(city) + " / " + str(region) + "\n\n" + _("latitude: ") + str(lat) + "\n" + _("longitude: ") + str(lon), MessageBox.TYPE_INFO, timeout=8)
 		except:
 			pass
 
+		config.plugins.PaxWeather.cityfound.value = str(city)
+		config.plugins.PaxWeather.cityfound.save()
 		config.plugins.PaxWeather.latitude.value = str(lat)
 		config.plugins.PaxWeather.latitude.save()
 		config.plugins.PaxWeather.longitude.value = str(lon)
 		config.plugins.PaxWeather.longitude.save()
+		self.showPreview()
 
 	def OK(self):
 		option = self["config"].getCurrent()[1]
@@ -265,8 +292,6 @@ class PaxWeather(ConfigListScreen, Screen):
 		for x in self["config"].list:
 			if len(x) > 1:
 				x[1].save()
-			else:
-				pass
 
 		self.skinSearchAndReplace = []
 
@@ -339,9 +364,7 @@ class PaxWeather(ConfigListScreen, Screen):
 		if answer is True:
 			for x in self["config"].list:
 				if len(x) > 1:
-						x[1].cancel()
-				else:
-						pass
+					x[1].cancel()
 			self.close()
 		else:
 			self.mylist()
@@ -353,3 +376,13 @@ class PaxWeather(ConfigListScreen, Screen):
 			return True
 		else:
 			return False
+
+	def showText(self, fontsize, text):
+		from enigma import gFont, RT_HALIGN_CENTER, RT_VALIGN_CENTER
+		c = self["canvas"]
+		c.fill(0, 0, 368, 207, self.RGB(0, 0, 0))
+		c.writeText(0, 0, 368, 207, self.RGB(255, 255, 255), self.RGB(0, 0, 0), gFont("Regular", fontsize), text, RT_HALIGN_CENTER + RT_VALIGN_CENTER)
+		c.flush()
+
+	def RGB(self, r, g, b):
+		return (r<<16)|(g<<8)|b
