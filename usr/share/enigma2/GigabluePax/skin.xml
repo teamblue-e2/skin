@@ -1536,12 +1536,13 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<ePixmap pixmap="GigabluePaxV2/buttons/key_yellow.png" position="785,680" size="30,40" alphatest="blend"/>
 		<ePixmap pixmap="GigabluePaxV2/buttons/key_blue.png" position="990,680" size="30,40" alphatest="blend"/>
 	</screen>
-	<screen name="MultiBootSelector" position="0,0" size="1280,720" title="MultiBootSelector" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="MultibootSelection" position="0,0" size="1280,720" title="MultiBootSelector" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
 		<panel name="TITLE_UC"/>
-		<widget name="config" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="list" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 		<ePixmap pixmap="GigabluePaxV2/construct/menu/main/power.png" position="149,284" size="200,200" alphatest="blend"/>
-		<panel name="PANEL_BUTTONBAR_RG_OK_X"/>
+		<widget source="description" render="Label" position="517,540" size="726,54" font="Regular;20" backgroundColor="Paxbg1" halign="center" valign="center" transparent="1" foregroundColor="PaxFont2"/>
+		<panel name="PANEL_BUTTONBAR_RGY_OK_X"/>
 	</screen>
 	<screen name="MultiBootWizard" position="0,0" size="1280,720" title="MultiBoot Image Manager" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
@@ -2241,9 +2242,9 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			</convert>
 		</widget>
 	</screen>
-	<screen name="FlashOnline" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
+	<screen name="SelectImage" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_WINDOW_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RGY_X"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 		<ePixmap pixmap="GigabluePaxV2/construct/plugins/flashonline.png" position="149,284" size="200,200" alphatest="blend"/>
 		<panel name="TITLE_UC"/>
 		<widget name="list" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
