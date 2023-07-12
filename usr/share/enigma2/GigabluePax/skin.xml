@@ -1669,16 +1669,15 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="TITLE_UC"/>
 		<panel name="PANEL_BUTTONBAR_OK_X"/>
 	</screen>
-	<screen name="EPGImportConfig" position="0,0" size="1280,720" title="EPGRefresh Configuration" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="PANEL_MENU"/>
+	<screen name="EPGImportConfig" position="0,0" size="1280,720" title="EPGImport Configuration" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_WINDOW_MENU"/>
 		<panel name="BAR_ICON_SYS_EPG"/>
 		<panel name="TITLE_UC"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
 		<widget name="config" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="status" position="517,520" size="726,80" font="Regular;20" backgroundColor="Paxbg1" transparent="1"/>
-		<widget name="statusbar" source="statusbar" render="Label" position="517,600" size="730,26" font="Regular;20"/>
+		<widget name="statusbar" render="Label" position="517,600" size="730,26" font="Regular;20"/>
 	</screen>
-
 	<screen name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
@@ -2326,6 +2325,14 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="BAR_ICON_SYS_SOFT"/>
 		<panel name="TITLE_UC"/>
 		<widget name="text" position="517,80" size="726,551" font="Regular;21" foregroundColor="PaxFont1" backgroundColor="Paxbg1" transparent="1"/>
+	</screen>
+	<screen name="BluetoothDevicesManager" position="0,0" size="1280,720" title="Bluetooth Devices" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="BAR_ICON_SYS_EPG"/>
+		<panel name="TITLE_UC"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
+		<widget name="devicelist" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="ConnStatus" render="Label" position="517,600" size="730,26" font="Regular;20"/>
 	</screen>
 	<screen name="BackupSelection" position="0, 0" flags="wfNoBorder" transparent="0" title="Select files/folders to backup..." backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_WINDOW_MENU"/>
