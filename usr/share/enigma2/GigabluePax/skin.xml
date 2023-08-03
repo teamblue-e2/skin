@@ -1669,7 +1669,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="TITLE_UC"/>
 		<panel name="PANEL_BUTTONBAR_OK_X"/>
 	</screen>
-	<screen name="EPGImportConfig" position="0,0" size="1280,720" title="EPGImport Configuration" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="EPGImportConfig" position="0,0" size="1280,720" title="EPG Import Configuration" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
 		<panel name="BAR_ICON_SYS_EPG"/>
 		<panel name="TITLE_UC"/>
@@ -1677,6 +1677,46 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="config" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="status" position="517,520" size="726,80" font="Regular;20" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="statusbar" render="Label" position="517,600" size="730,26" font="Regular;20"/>
+	</screen>
+	<screen name="EPGImportSources" position="0,0" size="1280,720" title="EPG Import Sources" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="BAR_ICON_SYS_EPG"/>
+		<panel name="TITLE_UC"/>
+		<panel name="PANEL_BUTTONBAR_RGY_OK_X"/>
+		<widget name="list" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+	</screen>
+	<screen name="EPGImportLog" position="0,0" size="1280,720" title="EPG Import Log" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="BAR_ICON_SYS_EPG"/>
+		<panel name="TITLE_UC"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
+		<widget name="list" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+	</screen>
+	<screen name="filtersServicesSetup" position="0,0" size="1280,720" title="Ignore services list" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="BAR_ICON_SYS_EPG"/>
+		<panel name="TITLE_UC"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
+		<widget source="list" render="Listbox" position="517,99" size="726,525" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (10, 5), size = (420, 23), font = 0, flags = RT_HALIGN_LEFT, text = 0),
+					MultiContentEntryText(pos = (20, 30), size = (410, 23), font = 1, flags = RT_HALIGN_LEFT, text = 1),
+					MultiContentEntryText(pos = (200, 30), size = (230, 23), font = 2, flags = RT_HALIGN_LEFT, text = 2),
+				],
+				"fonts": [gFont("SetrixHD", 21), gFont("SetrixHD", 19), gFont("SetrixHD", 16)],
+				"itemHeight": 70
+				}
+			</convert>
+		</widget>
+		<widget name="introduction" position="517,621" size="726,27" font="Regular;20" halign="center" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont2" transparent="1"/>
+	</screen>
+	<screen name="filtersServicesSelection" position="0,0" size="1280,720" title="Select service to add..." flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="BAR_ICON_SYS_EPG"/>
+		<panel name="TITLE_UC"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
+		<widget name="list" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
