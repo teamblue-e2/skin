@@ -2607,7 +2607,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="DNSInfo_Text" position="1010,451" size="200,34" zPosition="2" font="Regular;20" halign="center" valign="center" foregroundColors="#8c8c93,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="DNSInfo" position="1010,450" size="200,35" pixmaps="GigabluePaxV2/construct/general/lan-seloff.png,GigabluePaxV2/construct/general/lan-sel.png" zPosition="1" alphatest="blend"/>
 		<widget name="EditSettings_Text" position="519,530" size="300,34" zPosition="2" font="Regular;20" halign="center" valign="center" foregroundColors="grey,grey,#ffffff" backgroundColor="Paxbg1" transparent="1"/>
-		<widget name="EditSettingsButton" position="519,530" size="300,35" pixmaps="GigabluePaxV2/construct/general/lan-seloff.png,GigabluePaxV2/construct/general/lan-sel300.png" zPosition="2" alphatest="blend"/>
+		<widget name="EditSettingsButton" position="519,530" size="300,35" pixmaps="GigabluePaxV2/construct/general/lan-seloff.png,GigabluePaxV2/construct/general/lan-sel300.png" zPosition="1" alphatest="blend"/>
 		<widget name="InfoText" position="517,118" size="726,387" zPosition="25" font="Regular;20" valign="center" halign="center" transparent="0"/>
 	</screen>
 	<screen name="NetworkAdapterSelection" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
