@@ -1311,7 +1311,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<eLabel name="progressbar-back" position="229,650" size="1029,1" backgroundColor="PaxLine3"/>
-		<widget source="session.Event_Now" render="Progress" pixmap="GigabluePaxV2/colors/00001ec9.png" backgroundColor="PaxProgress" position="229,648" size="1029,5" zPosition="7" transparent="1">
+		<widget source="session.Event_Now" render="Progress" pixmap="GigabluePaxV2/colors/00001ec9.png" position="229,648" size="1029,5" zPosition="7" transparent="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="1136,656" size="50,28" font="Regular; 19" halign="right" backgroundColor="Paxbg1" foregroundColor="PaxFont1" transparent="1" noWrap="1" valign="top">
