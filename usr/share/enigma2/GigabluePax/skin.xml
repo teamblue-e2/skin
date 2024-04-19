@@ -667,6 +667,7 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget name="description" position="517,540" size="726,108" font="Regular; 20" halign="center" backgroundColor="Paxbg1" transparent="1" zPosition="2" valign="center" foregroundColor="PaxFont2"/>
+		<widget name="footnote" position="517,570" size="726,108" font="Regular; 20" halign="center" backgroundColor="Paxbg1" transparent="1" zPosition="2" valign="center" foregroundColor="PaxFont2"/>
 	</screen>
 	<screen name="PANEL_WIZARD">
 		<panel name="PANEL_KEY_EXIT"/>
