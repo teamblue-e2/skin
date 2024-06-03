@@ -720,6 +720,9 @@
 	<screen name="BAR_ICON_SYS_SOFT">
 		<ePixmap pixmap="GigabluePaxV2/construct/menu/system/software_management.png" position="149,284" size="200,200" alphatest="blend"/>
 	</screen>
+	<screen name="BAR_ICON_SYS_FLON">
+		<ePixmap pixmap="GigabluePaxV2/construct/menu/system/flashonline.png" position="149,284" size="200,200" alphatest="blend"/>
+	</screen>
 	<!-- SCREENS -->
 	<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_GIGABLUE_TOP"/>
@@ -912,12 +915,12 @@
 			<convert type="MenuEntryCompare">devices_menu</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/general.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
+		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/settings-2.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
 			<convert type="MenuEntryCompare">general_menu</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/system.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
-			<convert type="MenuEntryCompare">system_setup</convert>
+			<convert type="MenuEntryCompare">system_menu</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/reset.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
@@ -928,8 +931,12 @@
 			<convert type="MenuEntryCompare">software_manager</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
+		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/flashonline.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
+			<convert type="MenuEntryCompare">flash_image</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
-	<screen name="menu_setup" position="0,0" size="1280,720" title="Setup menu" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="menu_setup_selection" position="0,0" size="1280,720" title="Setup menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/audio.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
 			<convert type="MenuEntryCompare">audio_menu</convert>
@@ -940,11 +947,11 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/setup/scan.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
-			<convert type="MenuEntryCompare">service_searching_selection</convert>
+			<convert type="MenuEntryCompare">scan</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/setup/system.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
-			<convert type="MenuEntryCompare">system_selection</convert>
+			<convert type="MenuEntryCompare">system</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/setup/softcam.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
@@ -962,7 +969,22 @@
 	</screen>
 	<screen name="menu_ui_menu" position="0,0" size="1280,720" title="UI menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
-		<ePixmap pixmap="GigabluePaxV2/construct/menu/system/ui.png" position="149,284" size="200,200" alphatest="blend"/>
+		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/ui.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
+			<convert type="MenuEntryCompare">userinterface</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/ui.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
+			<convert type="MenuEntryCompare">language_setup</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/gui.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
+			<convert type="MenuEntryCompare">primary_skin_selector</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/ui.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
+			<convert type="MenuEntryCompare">osd_position_setup</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
 	<screen name="menu_frontpanel_menu" position="0,0" size="1280,720" title="Frontpanel menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
@@ -986,7 +1008,7 @@
 	</screen>
 	<screen name="menu_general_menu" position="0,0" size="1280,720" title="General menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
-		<ePixmap pixmap="GigabluePaxV2/construct/menu/system/general.png" position="149,284" size="200,200" alphatest="blend"/>
+		<ePixmap pixmap="GigabluePaxV2/construct/menu/system/settings-2.png" position="149,284" size="200,200" alphatest="blend"/>
 	</screen>
 	<screen name="menu_scan" position="0,0" size="1280,720" title="Scan menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
@@ -1011,14 +1033,19 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
+	<screen name="menu_timer" position="0,0" size="1280,720" title="Timer menu" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_MENU"/>
+		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/main/timer.png" position="149,284" size="200,200" alphatest="blend">
+		</widget>
+	</screen>
 	<screen name="menu_mainmenu" position="0,0" size="1312,720" title="Main menu" flags="wfNoBorder" transparent="0" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/main/timer.png" position="149,284" size="200,200" alphatest="blend">
-			<convert type="MenuEntryCompare">timer_menu</convert>
+			<convert type="MenuEntryCompare">timer</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/main/info.png" position="149,284" size="200,200" alphatest="blend">
-			<convert type="MenuEntryCompare">info_screen</convert>
+			<convert type="MenuEntryCompare">information</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/main/plugins.png" position="149,284" size="200,200" alphatest="blend">
@@ -1038,7 +1065,7 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/main/power.png" position="149,284" size="200,200" alphatest="blend">
-			<convert type="MenuEntryCompare">standby_restart_list</convert>
+			<convert type="MenuEntryCompare">shutdown</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/main/dvd.png" position="149,284" size="200,200" alphatest="blend">
@@ -2302,21 +2329,21 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	<screen name="SelectImage" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_WINDOW_MENU"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
-		<ePixmap pixmap="GigabluePaxV2/construct/plugins/flashonline.png" position="149,284" size="200,200" alphatest="blend"/>
+		<panel name="BAR_ICON_SYS_FLON"/>
 		<panel name="TITLE_UC"/>
 		<widget name="list" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="FlashOnline" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_WINDOW_MENU"/>
 		<panel name="PANEL_BUTTONBAR_RGY_X"/>
-		<ePixmap pixmap="GigabluePaxV2/construct/plugins/flashonline.png" position="149,284" size="200,200" alphatest="blend"/>
+		<panel name="BAR_ICON_SYS_FLON"/>
 		<panel name="TITLE_UC"/>
 		<widget name="list" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="doFlashImage" position="0, 0" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_WINDOW_MENU"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
-		<ePixmap pixmap="GigabluePaxV2/construct/plugins/flashonline.png" position="149,284" size="200,200" alphatest="blend"/>
+		<panel name="BAR_ICON_SYS_FLON"/>
 		<eLabel text="Flash On the fly (select a image)" position="345,2" size="564,45" font="SetrixHD; 32" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
 		<widget name="imageList" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
