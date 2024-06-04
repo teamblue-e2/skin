@@ -613,7 +613,7 @@
 		<panel name="PANEL_KEY_GREEN_1_2_WIDE"/>
 		<panel name="PANEL_KEY_INFO_2"/>
 		<panel name="PANEL_KEY_EXIT"/>
-		<ePixmap name="" position="543,680" size="900,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
+		<ePixmap name="" position="500,680" size="900,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_INFO_X">
 		<panel name="PANEL_KEY_INFO_2"/>
@@ -2002,10 +2002,10 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="lab3" position="100,180" size="0,0" font="Regular;20" foregroundColor="PaxFont1" backgroundColor="Paxbg1" valign="center" transparent="1"/>
 	</screen>
 	<screen name="ScanSimple" position="0,0" size="1280,720" title="Service scan" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="PANEL_BUTTONBAR_INFO_X"/>
 		<panel name="BAR_ICON_SET_SCAN"/>
 		<panel name="TITLE_UC"/>
 		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="PANEL_BUTTONBAR_RG_INFO_X"/>
 		<widget name="header" position="517,79" size="726,33" font="Regular;24" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="config" position="517,79" size="726,510" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="footer" position="517,621" size="726,27" font="Regular;20" halign="center" valign="center" backgroundColor="Paxbg1" foregroundColor="PaxFont2" transparent="1"/>
