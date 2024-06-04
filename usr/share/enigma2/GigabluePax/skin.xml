@@ -877,11 +877,11 @@
 		<panel name="PANEL_MENU"/>
 		<ePixmap pixmap="GigabluePaxV2/construct/menu/main/power.png" position="149,284" size="200,200" alphatest="blend"/>
 	</screen>
-	<screen name="menu_audio_menu" position="0,0" size="1280,720" title="Audio menu" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="menu_audio" position="0,0" size="1280,720" title="Audio menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
 		<panel name="BAR_ICON_SYS_AUDIO"/>
 	</screen>
-	<screen name="menu_video_menu" position="0,0" size="1280,720" title="Video menu" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="menu_video" position="0,0" size="1280,720" title="Video menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
 		<ePixmap pixmap="GigabluePaxV2/construct/menu/system/video.png" position="149,284" size="200,200" alphatest="blend"/>
 	</screen>
@@ -936,14 +936,14 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
-	<screen name="menu_setup_selection" position="0,0" size="1280,720" title="Setup menu" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="menu_setup" position="0,0" size="1280,720" title="Setup menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/audio.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
-			<convert type="MenuEntryCompare">audio_menu</convert>
+			<convert type="MenuEntryCompare">audio</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/system/video.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
-			<convert type="MenuEntryCompare">video_menu</convert>
+			<convert type="MenuEntryCompare">video</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="GigabluePaxV2/construct/menu/setup/scan.png" position="149,284" size="200,200" alphatest="blend" zPosition="1">
@@ -994,7 +994,7 @@
 		<panel name="PANEL_MENU"/>
 		<ePixmap pixmap="GigabluePaxV2/construct/menu/system/recording.png" position="149,284" size="200,200" alphatest="blend"/>
 	</screen>
-	<screen name="menu_epg_menu" position="0,0" size="1280,720" title="EPG menu" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="menu_epg" position="0,0" size="1280,720" title="EPG menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
 		<panel name="BAR_ICON_SYS_EPG"/>
 	</screen>
@@ -1089,7 +1089,7 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
-	<screen name="menu_harddisk_menu" position="0,0" size="1280,720" title="Scan menu" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="menu_harddisk" position="0,0" size="1280,720" title="Scan menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_MENU"/>
 		<panel name="BAR_ICON_DEVICES"/>
 	</screen>
