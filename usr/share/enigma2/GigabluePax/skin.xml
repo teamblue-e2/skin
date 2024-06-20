@@ -3555,7 +3555,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	</screen>
 	<screen name="SleepTimerSetup" position="0, 0" flags="wfNoBorder" title="SleepTimerSetup" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_WINDOW_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RG_OK_X"/>
+		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
 		<panel name="TITLE_UC"/>
 		<ePixmap pixmap="GigabluePaxV2/construct/menu/main/timer.png" position="149,284" size="200,200" alphatest="blend"/>
 		<widget name="config" position="517,79" size="726,450" font="Regular;20" itemHeight="30" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
