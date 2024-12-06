@@ -3699,4 +3699,9 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="entrylist" position="517,86" size="726,540" itemHeight="60" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
 	</screen>
+	<screen name="VPS_Setup" position="0,0" size="1280,720" title="VPS Setup" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="PANEL_GIGABLUE_TOP"/>
+		<ePixmap position="149,284" size="200,200" zPosition="2" pixmap="GigabluePaxV2/construct/menu/main/setup.png" transparent="1" alphatest="blend"/>
+		<panel name="PANEL_SETTINGS_SETUP"/>
+	</screen>
 </skin>
