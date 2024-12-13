@@ -1309,6 +1309,13 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget name="yellow" position="270,415" zPosition="1" size="135,40" transparent="1" alphatest="on" />
 		<widget name="blue" position="405,415" zPosition="1" size="135,40" transparent="1" alphatest="on" />
 	</screen>
+	<screen name="TextBox" position="center,center" size="1280,720" title="Choose" flags="wfNoBorder" backgroundColor="Paxbg2">
+		<panel name="PANEL_BUTTONBAR_OK_X"/>
+		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="TITLE_UC"/>
+		<ePixmap pixmap="GigabluePaxV2/construct/menu/main/info.png" position="149,284" size="200,200" alphatest="blend"/>
+		<widget name="text" position="517,79" size="726,570" font="SetrixHD; 25"/>
+	</screen>
 	<screen name="InfoBar" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720">
 		<panel name="PANEL_GIGABLUE_TOP"/>
 		<!-- InfoWidget -->
