@@ -666,8 +666,8 @@
 			<convert type="MenuEntryCompare">ui_menu</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget name="description" position="517,540" size="726,108" font="Regular; 20" halign="center" backgroundColor="Paxbg1" transparent="1" zPosition="2" valign="center" foregroundColor="PaxFont2"/>
-		<widget name="footnote" position="517,570" size="726,108" font="Regular; 20" halign="center" backgroundColor="Paxbg1" transparent="1" zPosition="2" valign="center" foregroundColor="PaxFont2"/>
+		<widget name="description" position="517,540" size="726,108" font="Regular; 18" halign="center" backgroundColor="Paxbg1" transparent="1" zPosition="2" valign="center" foregroundColor="PaxFont2"/>
+		<widget name="footnote" position="517,570" size="726,108" font="Regular; 18" halign="center" backgroundColor="Paxbg1" transparent="1" zPosition="2" valign="center" foregroundColor="PaxFont2"/>
 	</screen>
 	<screen name="PANEL_WIZARD">
 		<panel name="PANEL_KEY_EXIT"/>
@@ -1768,15 +1768,6 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<widget source="Event" render="Label" position="517,536" size="726,108" font="Regular;20" backgroundColor="Paxbg1" foregroundColor="PaxFont2" transparent="1" valign="top">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-	</screen>
-	<screen name="HdmiCECSetupScreen" position="0,0" size="1280,720" title="HDMI-CEC Configuration" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
-		<ePixmap pixmap="GigabluePaxV2/construct/plugins/hdmicec.png" position="149,284" size="200,200" alphatest="blend"/>
-		<panel name="TITLE_UC"/>
-		<panel name="PANEL_WINDOW_MENU"/>
-		<widget name="config" position="517,79" size="726,480" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
-		<widget source="current_address" render="Label" position="517,594" size="726,27" font="Regular;20" foregroundColor="PaxFont2" halign="center" transparenz="1"/>
-		<widget source="fixed_address" render="Label" position="517,621" size="726,27" font="Regular;20" foregroundColor="PaxFont2" halign="center" transparenz="1"/>
 	</screen>
 	<screen name="OpenWebifConfig" position="0,0" size="1280,720" title="OpenWebif Configuration" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_BUTTONBAR_RG_X"/>
