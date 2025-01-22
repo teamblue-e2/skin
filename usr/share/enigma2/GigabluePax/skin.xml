@@ -30,6 +30,7 @@
 		<color name="orange" value="#00f47d19"/>
 		<color name="rds_text_bg" value="#00003258"/>
 		<color name="red" value="#00f23d21"/>
+		<color name="white" value="#00ffffff"/>
 		<color name="rssviewtop" value="#45005050"/>
 		<color name="transparent" value="#ff002b57"/>
 		<color name="transpBlack" value="#80000000"/>
@@ -75,6 +76,7 @@
 		<parameter name="ChoicelistName" value="45,1,1147,29" />
 		<parameter name="ChoicelistNameSingle" value="45,1,685,29" />
 		<parameter name="ChoicelistIcon" value="5,2,40,30" />
+		<parameter name="ChoicelistButtonIcon" value="5,1,40,30" />
 		<parameter name="ChoicelistDash" value="0,24,1147,20" />
 		<!-- ConfigList -->
 		<parameter name="ConfigListSliderSeparation" value="300" />
@@ -247,6 +249,14 @@
 		<widget objectTypes="key_red,Label,Button" name="key_red" position="601,685" size="180,27" zPosition="1" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
 		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="601,685" size="180,27" zPosition="2" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
+	<screen name="PANEL_KEY_RED_3_1_PW">
+		<ePixmap objectTypes="key_red,Button,Label" pixmap="GigabluePaxV2/buttons/key_red.png" position="486,680" size="30,40" alphatest="blend"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Pixmap" pixmap="GigabluePaxV2/buttons/key_red.png" position="486,680" size="30,40" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget objectTypes="key_red,Label,Button" name="key_red" position="511,685" size="210,27" zPosition="1" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="511,685" size="210,27" zPosition="2" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
+	</screen>
 	<screen name="PANEL_KEY_RED_4_2">
 		<ePixmap objectTypes="key_red,Button,Label" pixmap="GigabluePaxV2/buttons/key_red.png" position="287,680" size="30,40" alphatest="blend"/>
 		<widget objectTypes="key_red,StaticText" source="key_red" render="Pixmap" pixmap="GigabluePaxV2/buttons/key_red.png" position="287,680" size="30,40" alphatest="blend">
@@ -270,6 +280,14 @@
 		</widget>
 		<widget objectTypes="key_green,Label,Button" name="key_green" position="810,685" size="180,27" zPosition="1" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
 		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="810,685" size="180,27" zPosition="2" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
+	</screen>
+	<screen name="PANEL_KEY_GREEN_2_1_PW">
+		<ePixmap objectTypes="key_green,Button,Label" pixmap="GigabluePaxV2/buttons/key_green.png" position="725,680" size="30,40" alphatest="blend"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Pixmap" pixmap="GigabluePaxV2/buttons/key_green.png" position="725,680" size="30,40" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget objectTypes="key_green,Label,Button" name="key_green" position="750,685" size="210,27" zPosition="1" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="750,685" size="210,27" zPosition="2" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="PANEL_KEY_GREEN_2_2">
 		<ePixmap objectTypes="key_green,Button,Label" pixmap="GigabluePaxV2/buttons/key_green.png" position="705,680" size="30,40" alphatest="blend"/>
@@ -310,6 +328,14 @@
 		</widget>
 		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="1015,685" size="180,27" zPosition="1" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
 		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="1015,685" size="180,27" zPosition="2" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
+	</screen>
+	<screen name="PANEL_KEY_YELLOW_1_1_PW">
+		<ePixmap objectTypes="key_yellow,Button,Label" pixmap="GigabluePaxV2/buttons/key_yellow.png" position="960,680" size="30,40" alphatest="blend"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Pixmap" pixmap="GigabluePaxV2/buttons/key_yellow.png" position="960,680" size="30,40" alphatest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="985,685" size="210,27" zPosition="1" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="985,685" size="210,27" zPosition="2" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
 	<screen name="PANEL_KEY_YELLOW_2_2">
 		<ePixmap objectTypes="key_yellow,Button,Label" pixmap="GigabluePaxV2/buttons/key_yellow.png" position="705,680" size="30,40" alphatest="blend"/>
@@ -501,6 +527,12 @@
 		<panel name="PANEL_KEY_YELLOW_1_1"/>
 		<ePixmap name="" position="576,680" size="900,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 	</screen>
+	<screen name="PANEL_BUTTONBAR_RGY_PW">
+		<panel name="PANEL_KEY_RED_3_1_PW"/>
+		<panel name="PANEL_KEY_GREEN_2_1_PW"/>
+		<panel name="PANEL_KEY_YELLOW_1_1_PW"/>
+		<ePixmap name="" position="486,680" size="900,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
+	</screen>
 	<screen name="PANEL_BUTTONBAR_RGB">
 		<panel name="PANEL_KEY_RED_3_1"/>
 		<panel name="PANEL_KEY_GREEN_2_1"/>
@@ -514,6 +546,10 @@
 	<screen name="PANEL_BUTTONBAR_RGY_X">
 		<panel name="PANEL_KEY_EXIT"/>
 		<panel name="PANEL_BUTTONBAR_RGY"/>
+	</screen>
+	<screen name="PANEL_BUTTONBAR_RGY_X_PW">
+		<panel name="PANEL_BUTTONBAR_RGY_PW"/>
+		<panel name="PANEL_KEY_EXIT"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_RG_X">
 		<panel name="PANEL_KEY_RED_2_1_WIDE"/>
@@ -614,11 +650,6 @@
 		<panel name="PANEL_KEY_INFO_2"/>
 		<panel name="PANEL_KEY_EXIT"/>
 		<ePixmap name="" position="500,680" size="900,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
-	</screen>
-	<screen name="PANEL_BUTTONBAR_INFO_X">
-		<panel name="PANEL_KEY_INFO_2"/>
-		<panel name="PANEL_KEY_EXIT"/>
-		<ePixmap name="" position="543,680" size="900,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 	</screen>
 	<screen name="PANEL_BUTTONBAR_R_X">
 		<panel name="PANEL_KEY_EXIT"/>
@@ -2010,7 +2041,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	</screen>
 	<screen name="ScanSetup" position="0,0" size="1280,720" title="Service scan" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PANEL_WINDOW_MENU"/>
-		<panel name="PANEL_BUTTONBAR_INFO_X"/>
+		<panel name="PANEL_BUTTONBAR_RG_X"/>
 		<panel name="BAR_ICON_SET_SCAN"/>
 		<eLabel text="Service scan" position="345,2" size="564,45" font="SetrixHD; 32" transparent="1" valign="center" zPosition="0" backgroundColor="Paxbg1"/>
 		<widget name="header" position="517,79" size="726,33" font="Regular;24" backgroundColor="Paxbg1" transparent="1"/>
@@ -2602,7 +2633,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="PANEL_WINDOW_MENU"/>
 		<ePixmap pixmap="GigabluePaxV2/construct/menu/main/timer.png" position="149,284" size="200,200" alphatest="blend"/>
 		<panel name="TITLE_UC"/>
-		<widget name="HelpWindow" position="31,79" size="1,1" zPosition="1" transparent="1" alphatest="blend"/>
+		<widget name="HelpWindow" position="577,544" size="604,125" zPosition="1" transparent="1" alphatest="blend"/>
 		<widget name="config" position="517,80" size="726,570" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" transparent="1"/>
 		<panel name="PANEL_KEY_EXIT"/>
 		<panel name="PANEL_BUTTONBAR_RGY_X"/>
@@ -2623,6 +2654,29 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<panel name="TITLE_UC"/>
 		<widget name="loglist" position="517,79" size="726,480" font="Regular;20" scrollbarMode="showOnDemand" transparent="1"/>
 		<widget name="logentry" position="517,580" size="726,80" font="Regular;18" backgroundColor="Paxbg1" transparent="1"/>
+	</screen>
+	<screen name="CronTimers" position="0, 0" flags="wfNoBorder" title="CronManager" transparent="0" backgroundColor="transparent" size="1280, 720">
+		<panel name="PANEL_WINDOW_MENU"/>
+		<ePixmap pixmap="GigabluePaxV2/construct/menu/main/timer.png" position="149,284" size="200,200" alphatest="blend"/>
+		<panel name="TITLE_UC"/>
+		<widget name="lab1" position="517,82" size="100,29" font="Regular;20" foregroundColor="PaxFont1" valign="top" backgroundColor="Paxbg1" noWrap="1" transparent="1" />
+		<widget name="labdisabled" position="637,82" size="100,29" font="Regular;20" foregroundColor="white" valign="top" halign="center" backgroundColor="red" zPosition="2" />
+		<widget name="labactive" position="637,82" size="100,29" font="Regular;20" foregroundColor="white" valign="top" halign="center" backgroundColor="green" zPosition="2" />
+		<widget name="lab2" position="805,82" size="180,29" font="Regular;20" foregroundColor="PaxFont1" valign="top" backgroundColor="Paxbg1" noWrap="1" transparent="1" />
+		<widget name="labstop" position="990,82" size="100,29" font="Regular;20" foregroundColor="white" valign="top" halign="center" backgroundColor="red" zPosition="2" />
+		<widget name="labrun" position="990,82" size="100,29" font="Regular;20" foregroundColor="white" valign="top" halign="center" backgroundColor="green" zPosition="2" />
+		<widget backgroundColor="Paxbg1" source="list" render="Listbox" position="517,130" size="726,510" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (5, 1), size = (716, 27), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+		<widget backgroundColor="Paxbg1" name="key" foregroundColor="PaxFont2" font="Regular;20" position="517,585" size="726,27" halign="center" valign="center" transparent="1" />
+		<panel name="PANEL_BUTTONBAR_RGYB_OK_X"/>
 	</screen>
 	<screen name="NumericalTextInputHelpDialog" position="578,523" size="604,125" backgroundColor="Paxbg1" flags="wfNoBorder" zPosition="8">
 		<widget name="key1" position="	1, 1" size="200,30" font="Console;21" halign="center" valign="center"/>
@@ -2816,7 +2870,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	</screen>
 	<screen name="NetworkPassword" position="0, 0" flags="wfNoBorder" title="Password" transparent="0" backgroundColor="transparent" size="1280, 720">
 	 	<panel name="PANEL_WINDOW_MENU"/>
-		<panel name="PANEL_BUTTONBAR_RGY_X"/>
+		<panel name="PANEL_BUTTONBAR_RGY_X_PW"/>
 		<panel name="BAR_ICON_NETWORK"/>
 		<panel name="TITLE_UC"/>
 		<widget name="config" position="517,79" size="726,330" font="Regular;20" itemHeight="30" backgroundColor="Paxbg1" foregroundColor="PaxFont1" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
