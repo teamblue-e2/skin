@@ -582,7 +582,7 @@
 	</screen>
 	<screen name="PANEL_BUTTONBAR_RGB_MENU_X">
 		<panel name="PANEL_KEY_RED_3_2"/>
-		<panel name="PANEL_KEY_GREEN_2_3"/>
+		<panel name="PANEL_KEY_GREEN_2_2"/>
 		<panel name="PANEL_KEY_BLUE_1_2"/>
 		<panel name="PANEL_KEY_MENU_2"/>
 		<panel name="PANEL_KEY_EXIT"/>
@@ -700,14 +700,23 @@
 		<widget name="description" position="517,540" size="726,108" font="Regular; 18" halign="center" backgroundColor="Paxbg1" transparent="1" zPosition="2" valign="center" foregroundColor="PaxFont2"/>
 		<widget name="footnote" position="517,570" size="726,108" font="Regular; 18" halign="center" backgroundColor="Paxbg1" transparent="1" zPosition="2" valign="center" foregroundColor="PaxFont2"/>
 	</screen>
-	<screen name="PANEL_WIZARD">
-		<panel name="PANEL_KEY_EXIT"/>
-		<panel name="PANEL_KEY_OK_2"/>
+	<screen name="PANEL_WIZARD_OLD">
+		<panel name="PANEL_BUTTONBAR_OK_X"/>
 		<panel name="PANEL_WINDOW_MENU"/>
 		<ePixmap pixmap="GigabluePaxV2/construct/plugins/wizard.png" position="149,284" size="200,200" alphatest="blend"/>
-		<ePixmap pixmap="GigabluePaxV2/buttons/key_red.png" position="794,680" size="30,40" alphatest="blend"/>
-		<ePixmap name="" position="798,680" size="400,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
-		<widget name="languagetext" position="823,685" size="270,27" zPosition="1" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
+		<widget name="config" position="517,382" size="726,270" font="Regular;20" itemHeight="30" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>
+	</screen>
+	<screen name="PANEL_WIZARD">
+		<panel name="PANEL_BUTTONBAR_OK_X"/>
+		<panel name="PANEL_WINDOW_MENU"/>
+		<ePixmap pixmap="GigabluePaxV2/construct/plugins/wizard.png" position="149,284" size="200,200" alphatest="blend"/>
+		<widget name="backtext" position="375,685" size="300,27" zPosition="1" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
+		<ePixmap pixmap="GigabluePaxV2/buttons/key_red.png" position="350,680" size="30,40" alphatest="blend"/>
+		<widget name="languagetext" position="630,685" size="300,27" zPosition="1" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
+		<ePixmap pixmap="GigabluePaxV2/buttons/key_yellow.png" position="605,680" size="30,40" alphatest="blend"/>
+		<widget name="nexttext" position="885,685" size="300,27" zPosition="1" font="Regular; 20" halign="left" backgroundColor="Paxbg1" transparent="1"/>
+		<ePixmap pixmap="GigabluePaxV2/buttons/key_blue.png" position="860,680" size="30,40" alphatest="blend"/>
+		<ePixmap name="" position="350,680" size="900,40" pixmap="GigabluePaxV2/construct/general/button-back.png" zPosition="-2" alphatest="blend"/>
 		<widget name="config" position="517,382" size="726,270" font="Regular;20" itemHeight="30" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	<screen name="PANEL_MENU">
@@ -1899,7 +1908,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		<eLabel name="" position="0,160" size="1280,60" zPosition="-1"/>
 	</screen>
 	<screen name="DefaultWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
-	  <panel name="PANEL_WIZARD"/>
+	  <panel name="PANEL_WIZARD_OLD"/>
 	  <eLabel text="Default Wizard" position="345,2" size="564,45" font="SetrixHD; 32" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
 	  <widget name="text" position="517,79" size="726,290" font="SetrixHD;26" backgroundColor="Paxbg1" transparent="1"/>
 	  <widget source="list" render="Listbox" position="517,382" size="726,245" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
@@ -1925,7 +1934,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	  </widget>
 	</screen>
 	<screen name="RestoreWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
-	  <panel name="PANEL_WIZARD"/>
+	  <panel name="PANEL_WIZARD_OLD"/>
 	  <eLabel text="Restore wizard" position="345,2" size="564,45" font="SetrixHD; 32" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
 	  <widget name="text" position="517,79" size="726,290" font="SetrixHD;26" backgroundColor="Paxbg1" transparent="1"/>
 	  <widget source="list" render="Listbox" position="517,382" size="726,245" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
@@ -1938,7 +1947,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	  </widget>
 	</screen>
 	<screen name="ImageWizard" position="0,0" size="1280,720" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
-	  <panel name="PANEL_WIZARD"/>
+	  <panel name="PANEL_WIZARD_OLD"/>
 	  <eLabel text="Image Wizard" position="345,2" size="564,45" font="SetrixHD; 32" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
 	  <widget name="text" position="517,79" size="726,290" font="SetrixHD;26" backgroundColor="Paxbg1" transparent="1"/>
 	  <widget source="list" render="Listbox" position="517,382" size="726,245" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
@@ -1964,7 +1973,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 	  </widget>
 	</screen>
 	<screen name="LanguageWizard" position="0, 0" flags="wfNoBorder" title="Welcome..." transparent="0" backgroundColor="transparent" size="1280, 720">
-		<panel name="PANEL_WIZARD"/>
+		<panel name="PANEL_WIZARD_OLD"/>
 		<eLabel text="Language Wizard" position="345,2" size="564,45" font="SetrixHD; 32" transparent="1" valign="top" zPosition="0" backgroundColor="Paxbg1"/>
 		<widget name="text" position="517,79" size="726,290" font="SetrixHD;26" backgroundColor="Paxbg1" transparent="1"/>
 		<widget name="wizard" position="517,382" size="726,270" font="Regular;20" itemHeight="30" zPosition="14" scrollbarMode="showOnDemand" transparent="1"/>
