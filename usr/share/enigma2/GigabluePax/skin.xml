@@ -1452,6 +1452,10 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
+		<widget alphatest="blend" pixmap="GigabluePaxV2/construct/iconbar/softcsa.png" render="Pixmap" position="352,10" size="59,30" source="session.CurrentService" zPosition="2">
+			<convert type="ServiceInfo">IsSoftCSA</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="GigabluePaxV2/icons/stream.png" size="26,23" position="1110,697" zPosition="1" alphatest="blend">
 			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide"/>
