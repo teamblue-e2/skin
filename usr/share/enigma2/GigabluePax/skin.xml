@@ -2850,6 +2850,14 @@ self.instance.move(ePoint(int(deskwidth - newwidth)/2,int(deskheight - newheight
 		</widget>
 		<widget source="introduction" render="Label" position="517,621" size="726,27" font="Regular;20" halign="center" foregroundColor="PaxFont2" backgroundColor="Paxbg1" transparent="1"/>
 	</screen>
+	<screen name="NetworkMountsMenu" position="0, 0" flags="wfNoBorder" title="Network Neighbourhood" transparent="0" size="1280, 720" backgroundColor="Paxbg1">
+		<panel name="PANEL_WINDOW_MENU"/>
+		<panel name="PANEL_BUTTONBAR_R_X"/>
+		<panel name="BAR_ICON_NETWORK"/>
+		<panel name="TITLE_UC"/>
+		<widget name="menulist" position="517,79" size="726,390" font="Regular;20" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="Paxbg1" transparent="1"/>
+		<widget source="introduction" render="Label" position="517,621" size="726,27" font="Regular;20" halign="center" foregroundColor="PaxFont2" backgroundColor="Paxbg1" transparent="1"/>
+	</screen>
 	<screen name="NetworkBrowser" position="0, 0" flags="wfNoBorder" title="Network Neighbourhood" transparent="0" backgroundColor="transparent" size="1280, 720">
 		<panel name="PANEL_WINDOW_MENU"/>
 		<panel name="PANEL_BUTTONBAR_RGYB_X"/>
